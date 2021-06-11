@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +8,12 @@ public class GenerationManager : Singleton<GenerationManager>
 {
     private List<ScriptableObject> scriptableObjects;
     public int chunkSize = 40;
-    [SerializeField]private int seed = 123456;
+    [SerializeField] private int seed = 123456;
     public int worldWidth = 256;
     public int worldHeight = 256;
     private Vector2 perlinOffset;
     private readonly float perlinOffsetMax = 10000f;
-    
+
     public BlockData defaultBlock;
 
 
@@ -33,8 +34,8 @@ public class GenerationManager : Singleton<GenerationManager>
                     continue;
 
                 BlockData blockData = defaultBlock;
-                
-                
+
+
                 // Бегаем по блокам и проверяем шанс
                 for (int i = 0; i < scriptableObjects.Count; i++)
                 {
@@ -46,18 +47,22 @@ public class GenerationManager : Singleton<GenerationManager>
                             blockData = block;
                             break;
                         }
-                     
                     }
-                   
-                }    
-
-                chunk.SetChunkTile(tilePosition, blockData.tile);
+                }
+                chunk.SetChunkTile(tilePosition, defaultBlock.tile);
+                chunk.SetTileChunkData(tilePosition, TileType.NONE);
+                if (blockData.tile != defaultBlock.tile)
+                {
+                    chunk.SetChunkTile(tilePosition, blockData.tile, true);
+                    chunk.SetTileChunkData(tilePosition, blockData.type);
+                }
             }
         }
+
         yield return null;
     }
-    
-    
+
+
     public bool CheckPerlinLevel(Vector3Int tilePosition, float perlinSpeed, float perlinLevel)
     {
         return (Mathf.PerlinNoise(

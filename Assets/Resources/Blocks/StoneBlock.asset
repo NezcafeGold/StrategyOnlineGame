@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: StoneBlock
   m_EditorClassIdentifier: 
   title: Stone
-  type: 0
+  type: 3
   tile: {fileID: 11400000, guid: e0ae9229c2b81fc4c8ed7a716f63f034, type: 2}
-  sprite: {fileID: 414792519180449094, guid: 19ca3b6a8aaec3b4794ca2325aa1a03b, type: 3}
   perlinLevel: 0.3
   perlinSpeed: 0.065

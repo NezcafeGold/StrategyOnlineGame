@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: New Block Data
   m_EditorClassIdentifier: 
   title: ' '
-  type: 0
+  type: 4
   tile: {fileID: 11400000, guid: a80ffc7fcc1aaa1418666888b03ec475, type: 2}
-  sprite: {fileID: 0}
   perlinLevel: 0.17
   perlinSpeed: 0.054

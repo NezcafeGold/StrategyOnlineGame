@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: WoodBlock
   m_EditorClassIdentifier: 
   title: Wood
-  type: 0
+  type: 2
   tile: {fileID: 11400000, guid: 474cb040f4dc6cb40891b8b451a5c17f, type: 2}
-  sprite: {fileID: -5192724919019581033, guid: 19ca3b6a8aaec3b4794ca2325aa1a03b, type: 3}
   perlinLevel: 0.35
   perlinSpeed: 0.054

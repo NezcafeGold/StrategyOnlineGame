@@ -7,16 +7,11 @@ public class Chunk : MonoBehaviour
 {
     public Vector3Int Position { get; private set; }
     public Vector3Int ChunkPosition { get; private set; }
-    public TileType[,] tileType;
-    public Tilemap tileMap;
+    public TileChunk [,] baseTileType, layerTileType;
+    public Tilemap baseTileMap, layerTileMap;
     private BoxCollider2D chunkCollider;
     private bool isUnloading = false;
-    public enum TileType
-    {
-        DIRT,
-        WOOD,
-        STONE
-    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +19,10 @@ public class Chunk : MonoBehaviour
         ChunkPosition = new Vector3Int(
             Position.x / GenerationManager.Instance.chunkSize,
             Position.y / GenerationManager.Instance.chunkSize, 0);
-        tileType = new TileType[
+        baseTileType = new TileChunk[
+            GenerationManager.Instance.chunkSize, 
+            GenerationManager.Instance.chunkSize];
+        layerTileType = new TileChunk[
             GenerationManager.Instance.chunkSize, 
             GenerationManager.Instance.chunkSize];
         
@@ -50,11 +48,38 @@ public class Chunk : MonoBehaviour
         isUnloading = true;
     }
 
-    public void SetChunkTile(Vector3Int tilePosition, Tile blockTile)
+    public void SetChunkTile(Vector3Int tilePosition, Tile blockTile, bool isLayerTileMap = false)
     {
         if (isUnloading)
             return;
         Vector3Int relativePosition = tilePosition - Position;
-        tileMap.SetTile(relativePosition, blockTile);
+        
+        if (isLayerTileMap)
+            layerTileMap.SetTile(relativePosition, blockTile);
+        else
+            baseTileMap.SetTile(relativePosition, blockTile);
+            
     }
+    
+    public void SetTileChunkData(Vector3Int position, TileType type)
+    {
+        if (isUnloading)
+            return;
+
+        Vector3Int relativePosition = position - Position;
+        TileChunk tileChunk = new TileChunk();
+        tileChunk.TileType = type;
+
+        layerTileType[relativePosition.x, relativePosition.y] = tileChunk;
+    }
+    
+    public TileChunk GetTileChunkData(Vector3Int position)
+    {
+        if (isUnloading)
+            return null;
+
+        Vector3Int relativePosition = position - Position;
+        return layerTileType[relativePosition.x, relativePosition.y];
+    }
+    
 }
