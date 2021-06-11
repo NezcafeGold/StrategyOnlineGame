@@ -19,17 +19,7 @@ public class GenerationManager : Singleton<GenerationManager>
     private void Awake()
     {
         scriptableObjects = Resources.LoadAll<ScriptableObject>("Blocks").ToList();
-        ///seed = (int) System.DateTime.Now.Ticks;
-       //  GenerateWorldBase();
     }
-
-//    public void GenerateWorldBase()
-//    {
-//        UnityEngine.Random.InitState(seed);
-//        perlinOffset = new Vector2(
-//            UnityEngine.Random.Range(0f, perlinOffsetMax),
-//            UnityEngine.Random.Range(0f, perlinOffsetMax));
-//    }
 
     public IEnumerator GenerateChunk(Chunk chunk)
     {
