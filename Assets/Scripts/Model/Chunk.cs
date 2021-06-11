@@ -7,7 +7,7 @@ public class Chunk : MonoBehaviour
 {
     public Vector3Int Position { get; private set; }
     public Vector3Int ChunkPosition { get; private set; }
-    public TileChunk [,] baseTileType, layerTileType;
+    public TileChunk [,] baseTileType, tileChunkLayer;
     public Tilemap baseTileMap, layerTileMap;
     private BoxCollider2D chunkCollider;
     private bool isUnloading = false;
@@ -22,7 +22,7 @@ public class Chunk : MonoBehaviour
         baseTileType = new TileChunk[
             GenerationManager.Instance.chunkSize, 
             GenerationManager.Instance.chunkSize];
-        layerTileType = new TileChunk[
+        tileChunkLayer = new TileChunk[
             GenerationManager.Instance.chunkSize, 
             GenerationManager.Instance.chunkSize];
         
@@ -69,8 +69,10 @@ public class Chunk : MonoBehaviour
         Vector3Int relativePosition = position - Position;
         TileChunk tileChunk = new TileChunk();
         tileChunk.TileType = type;
+        tileChunk.position = (Vector2Int) position;
+        tileChunk.relativePosition = (Vector2Int) relativePosition;
 
-        layerTileType[relativePosition.x, relativePosition.y] = tileChunk;
+        tileChunkLayer[relativePosition.x, relativePosition.y] = tileChunk;
     }
     
     public TileChunk GetTileChunkData(Vector3Int position)
@@ -79,7 +81,7 @@ public class Chunk : MonoBehaviour
             return null;
 
         Vector3Int relativePosition = position - Position;
-        return layerTileType[relativePosition.x, relativePosition.y];
+        return tileChunkLayer[relativePosition.x, relativePosition.y];
     }
     
 }

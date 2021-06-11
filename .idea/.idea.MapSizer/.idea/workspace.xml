@@ -2,26 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b42def61-79ec-4ee7-91d9-b88f49e7685e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/UIManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/UIManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/TileChunk.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/TileChunk.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/TileType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/TileType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Chunk.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Chunk.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Blocks/DirtBlock.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Blocks/DirtBlock.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Blocks/New Block Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Blocks/New Block Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Blocks/StoneBlock.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Blocks/StoneBlock.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Blocks/WoodBlock.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Blocks/WoodBlock.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/CameraMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/CameraMoveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/CameraMove.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/CameraMoveManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GenerationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GenerationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/ChunkLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ChunkLoadManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Chunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Chunk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/BlockData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/BlockData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/TileChunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/TileChunk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/GameMapSaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/GameMapSaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Manager/GenerationManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="52" column="68" selection-start-line="52" selection-start-column="68" selection-end-line="52" selection-end-column="68" />
+            <state relative-caret-position="874">
+              <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
               <folding>
                 <marker date="1623423324458" expanded="true" signature="7:98" ph="..." />
                 <marker date="1623423324458" expanded="true" signature="161:2588" ph="{...}" />
@@ -55,29 +44,295 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Model/Chunk.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Util/GameMapSaver.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+            <state relative-caret-position="459">
+              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
               <folding>
-                <marker date="1623422621880" expanded="false" signature="6:106" ph="..." />
-                <marker date="1623422621880" expanded="true" signature="142:2692" ph="{...}" />
-                <marker date="1623422621880" expanded="true" signature="505:1450" ph="{...}" />
-                <marker date="1623422621880" expanded="true" signature="1484:1568" ph="{...}" />
-                <marker date="1623422621880" expanded="true" signature="1603:1672" ph="{...}" />
-                <marker date="1623422621880" expanded="true" signature="1772:2080" ph="{...}" />
-                <marker date="1623422621880" expanded="true" signature="2154:2429" ph="{...}" />
-                <marker date="1623422621880" expanded="true" signature="2493:2685" ph="{...}" />
+                <marker date="1623442477145" expanded="false" signature="6:107" ph="..." />
+                <marker date="1623442477145" expanded="true" signature="150:1538" ph="{...}" />
+                <marker date="1623442477145" expanded="true" signature="232:1378" ph="{...}" />
+                <marker date="1623442477145" expanded="true" signature="336:1372" ph="{...}" />
+                <marker date="1623442477145" expanded="true" signature="700:1103" ph="{...}" />
+                <marker date="1623442477145" expanded="true" signature="1395:1536" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/32/2a9508e7/File.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="16" column="26" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Model/Chunk.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
+              <folding>
+                <marker date="1623439711511" expanded="true" signature="6:106" ph="..." />
+                <marker date="1623439711511" expanded="true" signature="142:2816" ph="{...}" />
+                <marker date="1623439711511" expanded="true" signature="506:1452" ph="{...}" />
+                <marker date="1623439711511" expanded="true" signature="1486:1570" ph="{...}" />
+                <marker date="1623439711511" expanded="true" signature="1605:1674" ph="{...}" />
+                <marker date="1623439711511" expanded="true" signature="1774:2082" ph="{...}" />
+                <marker date="1623439711511" expanded="true" signature="2156:2552" ph="{...}" />
+                <marker date="1623439711511" expanded="true" signature="2616:2809" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/TotalJSON/ReadMe.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1564">
-              <caret line="106" column="1" lean-forward="true" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
+            <state relative-caret-position="-652">
+              <caret line="45" column="6" selection-start-line="45" selection-end-line="45" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Manager/ChunkLoadManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1623443811187" expanded="true" signature="7:79" ph="..." />
+                <marker date="1623443811187" expanded="true" signature="140:4915" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="596:783" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="821:1042" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="848:1036" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="1082:1269" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="1109:1263" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="1316:1977" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="1482:1730" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="1578:1720" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="1779:1971" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="2022:3338" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="2240:3260" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="2339:3250" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="2958:3236" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="3448:3733" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="3766:3830" ph="{...}" />
+                <marker date="1623443811187" expanded="true" signature="3869:4913" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/TotalJSON/Scripts/JSON.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-102">
+              <caret line="487" column="20" selection-start-line="487" selection-start-column="20" selection-end-line="487" selection-end-column="20" />
+              <folding>
+                <marker date="1623441497619" expanded="false" signature="26:170" ph="..." />
+                <marker date="1623441497619" expanded="true" signature="199:46430" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="203:429" ph="/// Basic JSON object. Instance of this class contains key-value pairs, where key is always string and values can ... " />
+                <marker date="1623441497619" expanded="true" signature="458:46427" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="618:685" ph="/// Creates new empty JSON object. ... " />
+                <marker date="1623441497619" expanded="true" signature="711:828" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="832:1474" ph="/// Creates new JSON object from c## dictionary. ... " />
+                <marker date="1623441497619" expanded="true" signature="1531:2518" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="1567:1704" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="1763:2514" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="1790:2031" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="2064:2195" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="2376:2482" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="2556:2717" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="2589:2630" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="2727:3508" ph="/// Test if another object equals to this object. Always returns false if parameter object is null or it is not i ... " />
+                <marker date="1623441497619" expanded="true" signature="3567:4034" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="3597:3621" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="3655:3679" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="3790:3814" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="3861:4014" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="3902:3928" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="3983:4009" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="4072:4252" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="4141:4228" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="4256:4401" ph="/// Gets the count of key/value pairs in this JSON. ... " />
+                <marker date="1623441497619" expanded="true" signature="4421:4472" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="4430:4468" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="4476:5112" ph="/// Gets all the keys in this JSON object. ... " />
+                <marker date="1623441497619" expanded="true" signature="5136:5360" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="5145:5356" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="5364:5738" ph="/// Check whatever this JSON object contains key/value pair with specified key. ... " />
+                <marker date="1623441497619" expanded="true" signature="5785:6014" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="5813:5960" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="6163:6512" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="6215:6491" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="6237:6262" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="6287:6372" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="6339:6366" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="6399:6486" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="6453:6480" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="6516:6855" ph="/// Gets or sets the value specified by key. Setting value can do both adding new value or replacing old one with ... " />
+                <marker date="1623441497619" expanded="true" signature="6889:6972" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="6898:6925" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="6933:6968" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="6976:7460" ph="/// Gets value specified by key. This method will cause exception if key/value pair doesn't exist. ... " />
+                <marker date="1623441497619" expanded="true" signature="7493:7552" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="7556:8129" ph="/// Gets JSON value specified by key. This method will cause exception if key/value pair doesn't exist or value i ... " />
+                <marker date="1623441497619" expanded="true" signature="8164:8418" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="8250:8285" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="8310:8333" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="8422:9009" ph="/// Gets JNumber value specified by key. This method will cause exception if key/value pair doesn't exist or valu ... " />
+                <marker date="1623441497619" expanded="true" signature="9050:9313" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="9139:9177" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="9202:9225" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="9317:10582" ph="/// Gets integer number specified by key. This method will cause exception if key/value pair doesn't exist, value ... " />
+                <marker date="1623441497619" expanded="true" signature="10615:10786" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="10675:10755" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="10790:11936" ph="/// Gets floating point number specified by key. This method will cause exception if key/value pair doesn't exist ... " />
+                <marker date="1623441497619" expanded="true" signature="11973:12148" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="12033:12115" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="12152:12734" ph="/// Gets string value specified by key. This method will cause exception if key/value pair doesn't exist or value ... " />
+                <marker date="1623441497619" expanded="true" signature="12773:13046" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="12862:12911" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="12936:12959" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="13050:13568" ph="/// Gets c## bool value specified by key. This method will cause exception if key/value pair doesn't exist or valu ... " />
+                <marker date="1623441497619" expanded="true" signature="13603:13826" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="13693:13741" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="13830:14500" ph="/// Gets JArray specified by key. This method will cause exception if key/value pair doesn't exist or value is an ... " />
+                <marker date="1623441497619" expanded="true" signature="14539:14799" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="14627:14664" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="14689:14712" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="14803:15222" ph="/// Check if value specified by key is JNull. This method throws exception if key doesn't exist. ... " />
+                <marker date="1623441497619" expanded="true" signature="15257:15544" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="15298:15374" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="15548:16718" ph="/// Add new key/value pair to this JSON. This method will prevent accidental overwriting old values with same key ... " />
+                <marker date="1623441497619" expanded="true" signature="16763:18277" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="16783:16931" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="16962:17227" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="17250:17396" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="17417:17564" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="17640:17705" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="17729:17958" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="17782:17953" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="17984:18217" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="18039:18212" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="18281:19225" ph="/// Add or replace key/value pair in this JSON. Possible previous value with same key is replaced. ... " />
+                <marker date="1623441497619" expanded="true" signature="19279:20595" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="19299:19456" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="19479:19621" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="19642:19789" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="19865:19930" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="19954:20183" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="20007:20178" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="20209:20442" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="20264:20437" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="20482:20521" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="20599:21696" ph="/// Replace existing key/value pair in this JSON. If there isn't key/value pair with same key, this method will t ... " />
+                <marker date="1623441497619" expanded="true" signature="21745:23162" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="21765:21917" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="21958:22136" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="22159:22305" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="22326:22473" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="22549:22614" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="22638:22867" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="22691:22862" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="22893:23126" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="22948:23121" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="23166:23696" ph="/// Remove value specified by key. This method throws exception if key doesn't exist. ... " />
+                <marker date="1623441497619" expanded="true" signature="23730:24315" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="23750:23887" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="23910:24057" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="24098:24256" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="24321:24541" ph="/// Remove all the key/value pairs from this JSON, leaving it empty. ... " />
+                <marker date="1623441497619" expanded="true" signature="24564:24774" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="24588:24723" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="24976:25153" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="25018:25149" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="25157:25559" ph="/// Turns this JSON object to single JSON formatted string that can be easily stored or sent to another system. ... " />
+                <marker date="1623441497619" expanded="true" signature="25600:25636" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="25640:25839" ph="/// Turns this JSON object to single JSON formatted string using specified settings. ... " />
+                <marker date="1623441497619" expanded="true" signature="25909:25953" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="25957:26670" ph="/// Turns this JSON object to JSON formatted, but easily human readable string. ... " />
+                <marker date="1623441497619" expanded="true" signature="26708:26880" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="26954:27659" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="27000:27180" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="27211:27603" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="27311:27559" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="27330:27378" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="27663:28135" ph="/// Turns JSON formatted string to new JSON object. ... " />
+                <marker date="1623441497619" expanded="true" signature="28202:28412" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="28243:28349" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="28416:29548" ph="/// Turns JSON formatted string to new JSON object. Debug ID is added to any possible exceptions that may occur d ... " />
+                <marker date="1623441497619" expanded="true" signature="29644:30073" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="29685:29857" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="30077:30692" ph="/// Turns JSON formatted string to new JSON object, using specified settings. ... " />
+                <marker date="1623441497619" expanded="true" signature="30800:31324" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="30841:31007" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="31042:31246" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="31439:32427" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="31508:31636" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="31798:31984" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="32108:32309" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="32229:32304" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="32431:33425" ph="/// Turns single string to multiple new JSON objects. Source string may contain any amount of JSON objects, inclu ... " />
+                <marker date="1623441497619" expanded="true" signature="33513:33807" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="33563:33725" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="33811:34590" ph="/// Turns single string to multiple new JSON objects, using specified settings. Source string may contain any amo ... " />
+                <marker date="1623441497619" expanded="true" signature="34719:35244" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="34769:34951" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="34986:35147" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="35380:35952" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="35731:35839" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="35863:35902" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="36105:37745" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="36210:36740" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="36257:36475" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="36286:36353" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="36494:36735" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="36535:36602" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="36820:36876" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="36931:37074" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="37176:37318" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="37430:37510" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="37529:37687" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="37749:38363" ph="/// Serialize object to JSON object, using default settings. ... " />
+                <marker date="1623441497619" expanded="true" signature="38421:38491" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="38495:39213" ph="/// Serialize object to JSON object, using specific settings. ... " />
+                <marker date="1623441497619" expanded="true" signature="39308:39749" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="39419:39554" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="39581:39717" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="39753:40350" ph="/// Deserialize this JSON to object, using default settings. ... " />
+                <marker date="1623441497619" expanded="true" signature="40379:40437" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="40441:41147" ph="/// Deserialize this JSON to object, using specified settings. ... " />
+                <marker date="1623441497619" expanded="true" signature="41215:41308" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="41422:43566" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="41501:42647" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="41567:42642" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="41789:41889" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="42052:42151" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="42253:42619" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="42416:42475" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="42498:42558" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="42846:43394" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="42957:43389" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="43037:43243" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="43303:43383" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="43480:43545" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="43570:43877" ph="/// Sets this JSON and all its childen protected (read only). New values can't be added and old values replaced o ... " />
+                <marker date="1623441497619" expanded="true" signature="43907:44135" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="43984:44131" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="44009:44053" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="44080:44126" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="44139:44443" ph="/// Check whatever this JSON is protected (read only). If it is, it also means that all its childen are protected ... " />
+                <marker date="1623441497619" expanded="true" signature="44472:44502" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="44506:44945" ph="/// Adds this JSON object to editor debug window so content of JSON object can be followed in Unity editor when a ... " />
+                <marker date="1623441497619" expanded="true" signature="44992:45435" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="45103:45373" ph="/* string previousKey=jsonRuntimeDebugContainer.add(debugName,this); ... */" />
+                <marker date="1623441497619" expanded="true" signature="45439:46164" ph="/// Sets debug ID for this JSON object. This ID is added to any possible exception messages that may occur when h ... " />
+                <marker date="1623441497619" expanded="true" signature="46232:46290" ph="{...}" />
+                <marker date="1623441497619" expanded="true" signature="46335:46423" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,70 +340,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Model/TileChunk.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="119">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
               <folding>
-                <marker date="1623419745420" expanded="true" signature="23:59" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Model/TileType.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="20" selection-start-column="20" selection-end-column="20" />
-              <folding>
-                <marker date="1623421023243" expanded="true" signature="20:88" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Manager/ChunkLoadManager.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
-              <caret line="98" column="17" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
-              <folding>
-                <marker date="1623164927329" expanded="false" signature="6:92" ph="..." />
-                <marker date="1623164927329" expanded="true" signature="153:4618" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="513:664" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="702:923" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="729:917" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="967:1154" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="994:1148" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="1205:1871" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="1376:1624" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="1472:1614" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="1673:1865" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="1916:3127" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="2136:3121" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="2235:3111" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="2854:3097" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="3237:3522" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="3555:3619" ph="{...}" />
-                <marker date="1623164927329" expanded="true" signature="3662:4615" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Manager/CameraMoveManager.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
-              <folding>
-                <marker date="1623421074711" expanded="true" signature="67:2140" ph="{...}" />
-                <marker date="1623421074711" expanded="true" signature="507:695" ph="{...}" />
-                <marker date="1623421074711" expanded="true" signature="718:768" ph="{...}" />
-                <marker date="1623421074711" expanded="true" signature="796:988" ph="{...}" />
-                <marker date="1623421074711" expanded="true" signature="1016:1565" ph="{...}" />
-                <marker date="1623421074711" expanded="true" signature="1082:1202" ph="{...}" />
-                <marker date="1623421074711" expanded="true" signature="1224:1493" ph="{...}" />
-                <marker date="1623421074711" expanded="true" signature="1598:2138" ph="{...}" />
+                <marker date="1623439704250" expanded="true" signature="43:149" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -157,8 +352,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Manager/UIManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            <state relative-caret-position="340">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <marker date="1623425406933" expanded="true" signature="6:63" ph="..." />
                 <marker date="1623425406933" expanded="true" signature="103:1024" ph="{...}" />
@@ -172,22 +367,240 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/af/7f45f827/Vector3Int.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/TotalJSON/Scripts/JArray.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="82" column="19" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Util/GameMapSaver.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="17">
+              <caret line="485" column="46" selection-start-line="485" selection-start-column="46" selection-end-line="485" selection-end-column="46" />
               <folding>
-                <marker date="1623407561590" expanded="true" signature="62:236" ph="{...}" />
-                <marker date="1623407561590" expanded="true" signature="134:155" ph="{...}" />
-                <marker date="1623407561590" expanded="true" signature="213:234" ph="{...}" />
+                <marker date="1591121204000" expanded="false" signature="28:128" ph="..." />
+                <marker date="1591121204000" expanded="true" signature="157:44400" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="161:405" ph="/// JSON array that may contain any number of JValue objects, including zero (empty array). Objects in array stay ... " />
+                <marker date="1591121204000" expanded="true" signature="436:44397" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="504:580" ph="/// Creates a new empty instance of JArray. ... " />
+                <marker date="1591121204000" expanded="true" signature="608:671" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="675:1168" ph="/// Creates new JArray object from system list or array of objects. ... " />
+                <marker date="1591121204000" expanded="true" signature="1214:1620" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="1243:1369" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="1414:1616" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="1503:1594" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="1658:2168" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="1686:1730" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="1796:1885" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="1924:2062" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="1966:2057" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="2172:2652" ph="/// Test if another object equals to this object. Always returns false if parameter object is null or it is not i ... " />
+                <marker date="1591121204000" expanded="true" signature="2705:3071" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="2735:2759" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="2795:2819" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="2911:2935" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="2973:3051" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="3020:3046" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="3109:3233" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="3168:3209" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="3237:3353" ph="/// Gets the length of this array. ... " />
+                <marker date="1591121204000" expanded="true" signature="3374:3418" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="3383:3414" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="3422:3682" ph="/// Gets or sets (replaces) the value specified by index. ... " />
+                <marker date="1591121204000" expanded="true" signature="3715:3799" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="3724:3753" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="3761:3795" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="3803:4231" ph="/// Get value from specific index in this array. ... " />
+                <marker date="1591121204000" expanded="true" signature="4263:4684" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="4281:4431" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="4460:4655" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="4688:5287" ph="/// Gets JSON value from specific index in this array. This method will cause exception if value is anything else ... " />
+                <marker date="1591121204000" expanded="true" signature="5321:5519" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="5375:5410" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="5435:5458" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="5523:6137" ph="/// Gets JNumber value from specific index in this array. This method will cause exception if value is anything e ... " />
+                <marker date="1591121204000" expanded="true" signature="6177:6384" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="6234:6272" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="6297:6320" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="6388:7723" ph="/// Gets integer number from specific index in this array. This method will cause exception if key/value pair doe ... " />
+                <marker date="1591121204000" expanded="true" signature="7755:7904" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="7817:7873" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="7908:9134" ph="/// Gets floating point number from specific index in this array. This method will cause exception if key/value p ... " />
+                <marker date="1591121204000" expanded="true" signature="9170:9323" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="9232:9290" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="9327:9944" ph="/// Gets C## string value from specific index in this array. This method will cause exception if value is anything ... " />
+                <marker date="1591121204000" expanded="true" signature="9982:10199" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="10039:10088" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="10113:10136" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="10203:10769" ph="/// Gets C## bool value from specific index in this array. This method will cause exception if value is anything e ... " />
+                <marker date="1591121204000" expanded="true" signature="10803:10970" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="10861:10909" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="10974:11583" ph="/// Gets JArray value from specific index in this array. This method will cause exception if value is anything el ... " />
+                <marker date="1591121204000" expanded="true" signature="11621:11825" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="11677:11714" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="11739:11762" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="11829:12234" ph="/// Check if value in specified index is JNull. ... " />
+                <marker date="1591121204000" expanded="true" signature="12268:12647" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="12286:12426" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="12455:12607" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="12651:13355" ph="/// Add new value to end of this array. ... " />
+                <marker date="1591121204000" expanded="true" signature="13388:14312" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="13412:13536" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="13557:13680" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="13756:13821" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="13845:14050" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="13898:14045" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="14076:14285" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="14131:14280" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="14316:15464" ph="/// Replace value to specific index in this array. Array length won't change. ... " />
+                <marker date="1591121204000" expanded="true" signature="15514:16782" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="15532:15676" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="15705:15861" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="15884:16004" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="16025:16148" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="16224:16289" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="16313:16518" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="16366:16513" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="16544:16753" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="16599:16748" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="16786:17867" ph="/// Insert new value to specific index. Just like when using Add method, nothing is replaced and array length wil ... " />
+                <marker date="1591121204000" expanded="true" signature="17916:19197" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="17934:18077" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="18105:18262" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="18285:18412" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="18433:18556" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="18632:18697" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="18721:18926" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="18774:18921" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="18952:19161" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="19007:19156" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="19201:19694" ph="/// Remove value from specific index. After this array length will be one less than before. ... " />
+                <marker date="1591121204000" expanded="true" signature="19729:20225" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="19747:19876" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="19905:20046" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="20069:20194" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="20229:20807" ph="/// Removes first instance of value that equals to parameter value. ... " />
+                <marker date="1591121204000" expanded="true" signature="20856:21425" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="20880:21005" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="21107:21188" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="21227:21321" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="21271:21316" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="21429:21644" ph="/// Remove all the values from this JArray, leaving it empty. ... " />
+                <marker date="1591121204000" expanded="true" signature="21667:21827" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="21691:21804" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="21837:22350" ph="/// Check whatever this JArray object contains specified value. ... " />
+                <marker date="1591121204000" expanded="true" signature="22407:22719" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="22510:22591" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="22628:22698" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="22668:22693" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="22723:23091" ph="/// Check whatever this JArray object or recursively any of child objects contains specified object. ... " />
+                <marker date="1591121204000" expanded="true" signature="23139:23474" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="23177:23453" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="23199:23224" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="23249:23334" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="23301:23328" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="23361:23448" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="23415:23442" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="23478:23671" ph="/// Check whatever this JArray object is empty (length is 0). ... " />
+                <marker date="1591121204000" expanded="true" signature="23696:23730" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="23734:24481" ph="/// Gets all the values in this JArray object as system array. ... " />
+                <marker date="1591121204000" expanded="true" signature="24507:24675" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="24516:24671" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="24616:24648" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="24679:25067" ph="/// Get this array as JSON array. All the values in this array must be JSON or JNull objects. ... " />
+                <marker date="1591121204000" expanded="true" signature="25098:25414" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="25191:25393" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="25220:25260" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="25290:25317" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="25418:25726" ph="/// Get this array as integer array. All the values in this array must be numbers inside integer range. ... " />
+                <marker date="1591121204000" expanded="true" signature="25755:26031" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="25846:26010" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="25878:25931" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="26035:26334" ph="/// Get this array as long array. All the values in this array must be numbers inside long range. ... " />
+                <marker date="1591121204000" expanded="true" signature="26365:26644" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="26458:26623" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="26490:26544" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="26648:26950" ph="/// Get this array as float array. All the values in this array must be numbers inside float range. ... " />
+                <marker date="1591121204000" expanded="true" signature="26983:27265" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="27078:27244" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="27110:27165" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="27269:27590" ph="/// Get this array as double-precision float array. All the values in this array must be numbers inside double ra ... " />
+                <marker date="1591121204000" expanded="true" signature="27625:27910" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="27722:27889" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="27754:27810" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="27914:28222" ph="/// Get this array as decimal array. All the values in this array must be numbers inside decimal range. ... " />
+                <marker date="1591121204000" expanded="true" signature="28259:28547" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="28358:28526" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="28390:28447" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="28551:28925" ph="/// Get this array as string array. All the values in this array must be strings or nulls. ... " />
+                <marker date="1591121204000" expanded="true" signature="28960:29302" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="29057:29281" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="29089:29145" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="29175:29202" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="29306:29592" ph="/// Get this array as boolean array. All the values in this array must be booleans. ... " />
+                <marker date="1591121204000" expanded="true" signature="29623:29905" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="29716:29884" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="29749:29804" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="29909:30289" ph="/// Get this array as arrays. All the values in this array must be other arrays or nulls. ... " />
+                <marker date="1591121204000" expanded="true" signature="30324:30650" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="30421:30629" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="30452:30494" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="30524:30551" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="30654:30970" ph="/// Turns this JSON array to single JSON formatted string. ... " />
+                <marker date="1591121204000" expanded="true" signature="31011:31068" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="31072:31336" ph="/// Turns this JSON array to single JSON formatted string using specified settings. ... " />
+                <marker date="1591121204000" expanded="true" signature="31406:31567" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="31571:32286" ph="/// Turns this JSON array to string JSON formatted, but easily human readable string. ... " />
+                <marker date="1591121204000" expanded="true" signature="32324:32496" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="32570:32943" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="32595:32887" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="32695:32843" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="32714:32762" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="32947:33418" ph="/// Turns JSON array formatted string to new JSON array object. ... " />
+                <marker date="1591121204000" expanded="true" signature="33486:33694" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="33526:33631" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="33698:34750" ph="/// Turns JSON array formatted string to new JSON array object. Debug ID is added to this parse operation, which  ... " />
+                <marker date="1591121204000" expanded="true" signature="34847:35273" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="34887:35058" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="35277:35900" ph="/// Turns JSON array formatted string to new JSON array object, using specified settings. ... " />
+                <marker date="1591121204000" expanded="true" signature="36009:36533" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="36049:36214" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="36249:36455" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="36649:37529" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="36717:36844" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="37005:37190" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="37306:37507" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="37427:37502" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="37625:38567" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="37729:38061" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="37776:37904" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="37923:38056" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="38142:38181" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="38307:38366" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="38385:38543" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="38571:39034" ph="/// Serialize object to new JArray object, using default settings. ... " />
+                <marker date="1591121204000" expanded="true" signature="39094:39164" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="39168:39721" ph="/// Serialize object to JArray object, using specific settings. ... " />
+                <marker date="1591121204000" expanded="true" signature="39818:40265" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="39929:40064" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="40093:40231" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="40269:40685" ph="/// Deserialize this JArray to object, using default settings. ... " />
+                <marker date="1591121204000" expanded="true" signature="40714:40772" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="40776:41291" ph="/// Deserialize this JArray to object, using specified settings. ... " />
+                <marker date="1591121204000" expanded="true" signature="41359:41452" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="41566:42232" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="41643:41886" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="41752:41863" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="41961:42043" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="42118:42211" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="42279:42803" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="42417:42771" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="42511:42766" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="42608:42650" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="42726:42760" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="42807:43116" ph="/// Sets this JArray and all its childen protected (read only). New values can't be added and old values replaced ... " />
+                <marker date="1591121204000" expanded="true" signature="43146:43360" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="43209:43356" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="43234:43278" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="43305:43351" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="43364:43670" ph="/// Check whatever this JArray is protected (read only). If it is, it also means that all its childen are protect ... " />
+                <marker date="1591121204000" expanded="true" signature="43699:43729" ph="{...}" />
+                <marker date="1591121204000" expanded="true" signature="43733:44174" ph="/// Adds this JArray object to editor debug window so content of JSON object can be followed in Unity editor when ... " />
+                <marker date="1591121204000" expanded="true" signature="44221:44393" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -197,7 +610,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>panning</find>
       <find>seed</find>
       <find>tileMapBlocksFront</find>
       <find>mapType</find>
@@ -217,7 +629,6 @@
       <find>PerformLoadChunks</find>
       <find>worldWidth</find>
       <find>box</find>
-      <find>loadBoundaries</find>
       <find>tileType</find>
       <find>baseTileMap</find>
       <find>position</find>
@@ -226,6 +637,9 @@
       <find>hit</find>
       <find>ray</find>
       <find>collider</find>
+      <find>JArray</find>
+      <find>chunksToLoad</find>
+      <find>loadBoundaries</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -235,13 +649,18 @@
     <setting file="file://$PROJECT_DIR$/Assets/Modern UI Pack/Editor/UIManagerEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Tooltip/TooltipContent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Modern UI Pack/Editor/ContextMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/af/7f45f827/Vector3Int.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/31/ed37d32d/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Chunk.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/GenerationManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/ChunkLoadManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefab/Chunk.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/CameraMoveManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObject/BlockData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -252,12 +671,20 @@
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/GameMapSaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TotalJSON/Scripts/JArray.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BCE5E9CF-72A6-4554-937D-40E2CE78291E/9d/7e9195e4/Tilemap.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/TileType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/32/2a9508e7/File.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Rendering/UIGradient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TotalJSON/Scripts/JSON.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Fixes/LayoutGroupPositionFix.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -272,18 +699,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ChunkLoadManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Chunk.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/ChunkLoadManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Util/GameMapSaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Tile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/TileChunk.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/TileType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/BlockData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/CameraMoveManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/ClickManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/ClickChunkManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Chunk.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/GenerationManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/TotalJSON/ReadMe.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/TileChunk.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Chunk.cs" />
+        <option value="$PROJECT_DIR$/Assets/TotalJSON/Scripts/JSON.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/GameMapSaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/ChunkLoadManager.cs" />
       </list>
     </option>
   </component>
@@ -363,6 +792,12 @@
             </path>
             <path>
               <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
+              <item name="TotalJSON" type="1045f7f1:UnityExplorerNode" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
               <item name="Packages" type="4e2708dd:PackagesRoot" />
             </path>
           </expand>
@@ -426,12 +861,12 @@
       <workItem from="1622890117523" duration="12381000" />
       <workItem from="1622994246299" duration="8248000" />
       <workItem from="1623142316070" duration="8987000" />
-      <workItem from="1623406617647" duration="11524000" />
+      <workItem from="1623406617647" duration="23089000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52569000" />
+    <option name="totallyTimeSpent" value="64134000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -444,9 +879,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28518122" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4" visible="true" weight="0.17217484" />
+      <window_info id="Structure" order="1" sideWeight="0.6" side_tool="true" visible="true" weight="0.17217484" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
@@ -454,11 +890,11 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.28602383" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.14409535" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32936078" />
       <window_info anchor="bottom" id="Performance Profiler" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
@@ -466,7 +902,7 @@
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Unit Tests" order="13" />
       <window_info anchor="bottom" id="Terminal" order="14" />
-      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.14409535" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -492,15 +928,9 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
-        <watch expression="scriptableObjects" language="C#" custom="RiderImportsList:" />
-        <watch expression="perlinOffset" language="C#" custom="RiderImportsList:" />
-        <watch expression="tileType" language="C#" custom="RiderImportsList:" />
-        <watch expression="hit.collider.GetComponent&lt;Chunk&gt;()" language="C#" custom="RiderImportsList:" />
-        <watch expression="this.h" />
-        <watch expression="loadBoundaries" language="C#" custom="RiderImportsList:" />
-        <watch expression="boxColl.bounds.max.x" language="C#" custom="RiderImportsList:" />
-        <watch expression="ray.collider.gameObject" language="C#" custom="RiderImportsList:" />
-        <watch expression="ray.collider.gameObject" language="C#" custom="RiderImportsList:" />
+        <watch expression="chunksToLoad" language="C#" custom="RiderImportsList:" />
+        <watch expression="chunksToLoad" />
+        <watch expression="ch" language="C#" custom="RiderImportsList:" />
       </configuration>
     </watches-manager>
   </component>
@@ -630,6 +1060,18 @@ hit.collider.GetComponent&lt;Chunk&gt;()</expression-string>
     </expressions>
     <expressions id="watch">
       <expression>
+        <expression-string>ch</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>chunksToLoad</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>ray.collider.gameObject</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
@@ -677,64 +1119,58 @@ hit.collider.GetComponent&lt;Chunk&gt;()</expression-string>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>chunkRoot</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>ray.collider</expression-string>
+        <expression-string>chunksToLoad</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>tileChunk.TileType</expression-string>
+        <expression-string>t.GetChild(i).gameObject.CompareTag(&quot;Chunk&quot;)</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>GetChunk(worldPosition)</expression-string>
+        <expression-string>t.GetChild(i).gameObject.CompareTag(&quot;Chun2k&quot;)</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>!GetChunk(worldPosition)</expression-string>
+        <expression-string>t.GetComponent&lt;Chunk&gt;()</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>hit = Physics2D.Raycast(             new Vector2(position.x, position.y),             Vector2.zero, 0f);</expression-string>
+        <expression-string>t.Get</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>hit.collider.GetComponent&lt;Chunk&gt;()</expression-string>
+        <expression-string>ch</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>hit</expression-string>
+        <expression-string>&quot;Example&quot; + ch.Position.x + &quot; &quot; + ch.Position.y + &quot;.txt&quot;;</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>boxColl.bounds.max.x.ToString()</expression-string>
+        <expression-string>@&quot;Example&quot; + ch.Position.x + &quot; &quot; + ch.Position.y + &quot;.txt&quot;;</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>boxColl.bounds.max</expression-string>
+        <expression-string>ChunkLoadManager.Instance.chunksToLoad;</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -834,78 +1270,10 @@ hit.collider.GetComponent&lt;Chunk&gt;()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Util/GameMapSaver.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1623407561590" expanded="true" signature="62:236" ph="{...}" />
-            <marker date="1623407561590" expanded="true" signature="134:155" ph="{...}" />
-            <marker date="1623407561590" expanded="true" signature="213:234" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/af/7f45f827/Vector3Int.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="82" column="19" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Model/TileType.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-          <folding>
-            <marker date="1623421023243" expanded="true" signature="20:88" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Manager/ChunkLoadManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="98" column="17" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
-          <folding>
-            <marker date="1623164927329" expanded="false" signature="6:92" ph="..." />
-            <marker date="1623164927329" expanded="true" signature="153:4618" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="513:664" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="702:923" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="729:917" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="967:1154" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="994:1148" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="1205:1871" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="1376:1624" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="1472:1614" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="1673:1865" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="1916:3127" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="2136:3121" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="2235:3111" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="2854:3097" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="3237:3522" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="3555:3619" ph="{...}" />
-            <marker date="1623164927329" expanded="true" signature="3662:4615" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Manager/GenerationManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="52" column="68" selection-start-line="52" selection-start-column="68" selection-end-line="52" selection-end-column="68" />
-          <folding>
-            <marker date="1623423324458" expanded="true" signature="7:98" ph="..." />
-            <marker date="1623423324458" expanded="true" signature="161:2588" ph="{...}" />
-            <marker date="1623423324458" expanded="true" signature="513:609" ph="{...}" />
-            <marker date="1623423324458" expanded="true" signature="660:2114" ph="{...}" />
-            <marker date="1623423324458" expanded="true" signature="710:2080" ph="{...}" />
-            <marker date="1623423324458" expanded="true" signature="768:2070" ph="{...}" />
-            <marker date="1623423324458" expanded="true" signature="1242:1675" ph="{...}" />
-            <marker date="1623423324458" expanded="true" signature="1380:1657" ph="{...}" />
-            <marker date="1623423324458" expanded="true" signature="1501:1635" ph="{...}" />
-            <marker date="1623423324458" expanded="true" signature="1870:2056" ph="{...}" />
-            <marker date="1623423324458" expanded="true" signature="2212:2586" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -926,10 +1294,531 @@ hit.collider.GetComponent&lt;Chunk&gt;()</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Model/TileType.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+          <folding>
+            <marker date="1623421023243" expanded="true" signature="20:88" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="263" column="16" selection-start-line="263" selection-start-column="16" selection-end-line="263" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/TotalJSON/Scripts/JArray.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="485" column="46" selection-start-line="485" selection-start-column="46" selection-end-line="485" selection-end-column="46" />
+          <folding>
+            <marker date="1591121204000" expanded="false" signature="28:128" ph="..." />
+            <marker date="1591121204000" expanded="true" signature="157:44400" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="161:405" ph="/// JSON array that may contain any number of JValue objects, including zero (empty array). Objects in array stay ... " />
+            <marker date="1591121204000" expanded="true" signature="436:44397" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="504:580" ph="/// Creates a new empty instance of JArray. ... " />
+            <marker date="1591121204000" expanded="true" signature="608:671" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="675:1168" ph="/// Creates new JArray object from system list or array of objects. ... " />
+            <marker date="1591121204000" expanded="true" signature="1214:1620" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="1243:1369" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="1414:1616" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="1503:1594" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="1658:2168" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="1686:1730" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="1796:1885" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="1924:2062" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="1966:2057" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="2172:2652" ph="/// Test if another object equals to this object. Always returns false if parameter object is null or it is not i ... " />
+            <marker date="1591121204000" expanded="true" signature="2705:3071" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="2735:2759" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="2795:2819" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="2911:2935" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="2973:3051" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="3020:3046" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="3109:3233" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="3168:3209" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="3237:3353" ph="/// Gets the length of this array. ... " />
+            <marker date="1591121204000" expanded="true" signature="3374:3418" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="3383:3414" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="3422:3682" ph="/// Gets or sets (replaces) the value specified by index. ... " />
+            <marker date="1591121204000" expanded="true" signature="3715:3799" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="3724:3753" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="3761:3795" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="3803:4231" ph="/// Get value from specific index in this array. ... " />
+            <marker date="1591121204000" expanded="true" signature="4263:4684" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="4281:4431" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="4460:4655" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="4688:5287" ph="/// Gets JSON value from specific index in this array. This method will cause exception if value is anything else ... " />
+            <marker date="1591121204000" expanded="true" signature="5321:5519" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="5375:5410" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="5435:5458" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="5523:6137" ph="/// Gets JNumber value from specific index in this array. This method will cause exception if value is anything e ... " />
+            <marker date="1591121204000" expanded="true" signature="6177:6384" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="6234:6272" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="6297:6320" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="6388:7723" ph="/// Gets integer number from specific index in this array. This method will cause exception if key/value pair doe ... " />
+            <marker date="1591121204000" expanded="true" signature="7755:7904" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="7817:7873" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="7908:9134" ph="/// Gets floating point number from specific index in this array. This method will cause exception if key/value p ... " />
+            <marker date="1591121204000" expanded="true" signature="9170:9323" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="9232:9290" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="9327:9944" ph="/// Gets C## string value from specific index in this array. This method will cause exception if value is anything ... " />
+            <marker date="1591121204000" expanded="true" signature="9982:10199" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="10039:10088" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="10113:10136" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="10203:10769" ph="/// Gets C## bool value from specific index in this array. This method will cause exception if value is anything e ... " />
+            <marker date="1591121204000" expanded="true" signature="10803:10970" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="10861:10909" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="10974:11583" ph="/// Gets JArray value from specific index in this array. This method will cause exception if value is anything el ... " />
+            <marker date="1591121204000" expanded="true" signature="11621:11825" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="11677:11714" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="11739:11762" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="11829:12234" ph="/// Check if value in specified index is JNull. ... " />
+            <marker date="1591121204000" expanded="true" signature="12268:12647" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="12286:12426" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="12455:12607" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="12651:13355" ph="/// Add new value to end of this array. ... " />
+            <marker date="1591121204000" expanded="true" signature="13388:14312" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="13412:13536" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="13557:13680" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="13756:13821" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="13845:14050" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="13898:14045" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="14076:14285" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="14131:14280" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="14316:15464" ph="/// Replace value to specific index in this array. Array length won't change. ... " />
+            <marker date="1591121204000" expanded="true" signature="15514:16782" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="15532:15676" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="15705:15861" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="15884:16004" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="16025:16148" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="16224:16289" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="16313:16518" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="16366:16513" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="16544:16753" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="16599:16748" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="16786:17867" ph="/// Insert new value to specific index. Just like when using Add method, nothing is replaced and array length wil ... " />
+            <marker date="1591121204000" expanded="true" signature="17916:19197" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="17934:18077" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="18105:18262" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="18285:18412" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="18433:18556" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="18632:18697" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="18721:18926" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="18774:18921" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="18952:19161" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="19007:19156" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="19201:19694" ph="/// Remove value from specific index. After this array length will be one less than before. ... " />
+            <marker date="1591121204000" expanded="true" signature="19729:20225" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="19747:19876" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="19905:20046" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="20069:20194" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="20229:20807" ph="/// Removes first instance of value that equals to parameter value. ... " />
+            <marker date="1591121204000" expanded="true" signature="20856:21425" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="20880:21005" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="21107:21188" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="21227:21321" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="21271:21316" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="21429:21644" ph="/// Remove all the values from this JArray, leaving it empty. ... " />
+            <marker date="1591121204000" expanded="true" signature="21667:21827" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="21691:21804" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="21837:22350" ph="/// Check whatever this JArray object contains specified value. ... " />
+            <marker date="1591121204000" expanded="true" signature="22407:22719" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="22510:22591" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="22628:22698" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="22668:22693" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="22723:23091" ph="/// Check whatever this JArray object or recursively any of child objects contains specified object. ... " />
+            <marker date="1591121204000" expanded="true" signature="23139:23474" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="23177:23453" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="23199:23224" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="23249:23334" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="23301:23328" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="23361:23448" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="23415:23442" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="23478:23671" ph="/// Check whatever this JArray object is empty (length is 0). ... " />
+            <marker date="1591121204000" expanded="true" signature="23696:23730" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="23734:24481" ph="/// Gets all the values in this JArray object as system array. ... " />
+            <marker date="1591121204000" expanded="true" signature="24507:24675" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="24516:24671" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="24616:24648" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="24679:25067" ph="/// Get this array as JSON array. All the values in this array must be JSON or JNull objects. ... " />
+            <marker date="1591121204000" expanded="true" signature="25098:25414" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="25191:25393" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="25220:25260" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="25290:25317" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="25418:25726" ph="/// Get this array as integer array. All the values in this array must be numbers inside integer range. ... " />
+            <marker date="1591121204000" expanded="true" signature="25755:26031" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="25846:26010" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="25878:25931" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="26035:26334" ph="/// Get this array as long array. All the values in this array must be numbers inside long range. ... " />
+            <marker date="1591121204000" expanded="true" signature="26365:26644" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="26458:26623" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="26490:26544" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="26648:26950" ph="/// Get this array as float array. All the values in this array must be numbers inside float range. ... " />
+            <marker date="1591121204000" expanded="true" signature="26983:27265" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="27078:27244" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="27110:27165" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="27269:27590" ph="/// Get this array as double-precision float array. All the values in this array must be numbers inside double ra ... " />
+            <marker date="1591121204000" expanded="true" signature="27625:27910" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="27722:27889" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="27754:27810" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="27914:28222" ph="/// Get this array as decimal array. All the values in this array must be numbers inside decimal range. ... " />
+            <marker date="1591121204000" expanded="true" signature="28259:28547" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="28358:28526" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="28390:28447" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="28551:28925" ph="/// Get this array as string array. All the values in this array must be strings or nulls. ... " />
+            <marker date="1591121204000" expanded="true" signature="28960:29302" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="29057:29281" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="29089:29145" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="29175:29202" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="29306:29592" ph="/// Get this array as boolean array. All the values in this array must be booleans. ... " />
+            <marker date="1591121204000" expanded="true" signature="29623:29905" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="29716:29884" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="29749:29804" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="29909:30289" ph="/// Get this array as arrays. All the values in this array must be other arrays or nulls. ... " />
+            <marker date="1591121204000" expanded="true" signature="30324:30650" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="30421:30629" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="30452:30494" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="30524:30551" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="30654:30970" ph="/// Turns this JSON array to single JSON formatted string. ... " />
+            <marker date="1591121204000" expanded="true" signature="31011:31068" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="31072:31336" ph="/// Turns this JSON array to single JSON formatted string using specified settings. ... " />
+            <marker date="1591121204000" expanded="true" signature="31406:31567" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="31571:32286" ph="/// Turns this JSON array to string JSON formatted, but easily human readable string. ... " />
+            <marker date="1591121204000" expanded="true" signature="32324:32496" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="32570:32943" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="32595:32887" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="32695:32843" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="32714:32762" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="32947:33418" ph="/// Turns JSON array formatted string to new JSON array object. ... " />
+            <marker date="1591121204000" expanded="true" signature="33486:33694" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="33526:33631" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="33698:34750" ph="/// Turns JSON array formatted string to new JSON array object. Debug ID is added to this parse operation, which  ... " />
+            <marker date="1591121204000" expanded="true" signature="34847:35273" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="34887:35058" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="35277:35900" ph="/// Turns JSON array formatted string to new JSON array object, using specified settings. ... " />
+            <marker date="1591121204000" expanded="true" signature="36009:36533" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="36049:36214" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="36249:36455" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="36649:37529" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="36717:36844" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="37005:37190" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="37306:37507" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="37427:37502" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="37625:38567" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="37729:38061" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="37776:37904" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="37923:38056" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="38142:38181" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="38307:38366" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="38385:38543" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="38571:39034" ph="/// Serialize object to new JArray object, using default settings. ... " />
+            <marker date="1591121204000" expanded="true" signature="39094:39164" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="39168:39721" ph="/// Serialize object to JArray object, using specific settings. ... " />
+            <marker date="1591121204000" expanded="true" signature="39818:40265" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="39929:40064" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="40093:40231" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="40269:40685" ph="/// Deserialize this JArray to object, using default settings. ... " />
+            <marker date="1591121204000" expanded="true" signature="40714:40772" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="40776:41291" ph="/// Deserialize this JArray to object, using specified settings. ... " />
+            <marker date="1591121204000" expanded="true" signature="41359:41452" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="41566:42232" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="41643:41886" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="41752:41863" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="41961:42043" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="42118:42211" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="42279:42803" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="42417:42771" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="42511:42766" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="42608:42650" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="42726:42760" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="42807:43116" ph="/// Sets this JArray and all its childen protected (read only). New values can't be added and old values replaced ... " />
+            <marker date="1591121204000" expanded="true" signature="43146:43360" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="43209:43356" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="43234:43278" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="43305:43351" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="43364:43670" ph="/// Check whatever this JArray is protected (read only). If it is, it also means that all its childen are protect ... " />
+            <marker date="1591121204000" expanded="true" signature="43699:43729" ph="{...}" />
+            <marker date="1591121204000" expanded="true" signature="43733:44174" ph="/// Adds this JArray object to editor debug window so content of JSON object can be followed in Unity editor when ... " />
+            <marker date="1591121204000" expanded="true" signature="44221:44393" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Model/TileChunk.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding>
+            <marker date="1623439704250" expanded="true" signature="43:149" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Model/Chunk.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
+          <folding>
+            <marker date="1623439711511" expanded="true" signature="6:106" ph="..." />
+            <marker date="1623439711511" expanded="true" signature="142:2816" ph="{...}" />
+            <marker date="1623439711511" expanded="true" signature="506:1452" ph="{...}" />
+            <marker date="1623439711511" expanded="true" signature="1486:1570" ph="{...}" />
+            <marker date="1623439711511" expanded="true" signature="1605:1674" ph="{...}" />
+            <marker date="1623439711511" expanded="true" signature="1774:2082" ph="{...}" />
+            <marker date="1623439711511" expanded="true" signature="2156:2552" ph="{...}" />
+            <marker date="1623439711511" expanded="true" signature="2616:2809" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/TotalJSON/ReadMe.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-652">
+          <caret line="45" column="6" selection-start-line="45" selection-end-line="45" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/TotalJSON/Scripts/JSON.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="487" column="20" selection-start-line="487" selection-start-column="20" selection-end-line="487" selection-end-column="20" />
+          <folding>
+            <marker date="1623441497619" expanded="false" signature="26:170" ph="..." />
+            <marker date="1623441497619" expanded="true" signature="199:46430" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="203:429" ph="/// Basic JSON object. Instance of this class contains key-value pairs, where key is always string and values can ... " />
+            <marker date="1623441497619" expanded="true" signature="458:46427" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="618:685" ph="/// Creates new empty JSON object. ... " />
+            <marker date="1623441497619" expanded="true" signature="711:828" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="832:1474" ph="/// Creates new JSON object from c## dictionary. ... " />
+            <marker date="1623441497619" expanded="true" signature="1531:2518" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="1567:1704" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="1763:2514" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="1790:2031" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="2064:2195" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="2376:2482" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="2556:2717" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="2589:2630" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="2727:3508" ph="/// Test if another object equals to this object. Always returns false if parameter object is null or it is not i ... " />
+            <marker date="1623441497619" expanded="true" signature="3567:4034" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="3597:3621" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="3655:3679" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="3790:3814" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="3861:4014" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="3902:3928" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="3983:4009" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="4072:4252" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="4141:4228" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="4256:4401" ph="/// Gets the count of key/value pairs in this JSON. ... " />
+            <marker date="1623441497619" expanded="true" signature="4421:4472" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="4430:4468" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="4476:5112" ph="/// Gets all the keys in this JSON object. ... " />
+            <marker date="1623441497619" expanded="true" signature="5136:5360" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="5145:5356" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="5364:5738" ph="/// Check whatever this JSON object contains key/value pair with specified key. ... " />
+            <marker date="1623441497619" expanded="true" signature="5785:6014" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="5813:5960" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="6163:6512" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="6215:6491" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="6237:6262" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="6287:6372" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="6339:6366" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="6399:6486" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="6453:6480" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="6516:6855" ph="/// Gets or sets the value specified by key. Setting value can do both adding new value or replacing old one with ... " />
+            <marker date="1623441497619" expanded="true" signature="6889:6972" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="6898:6925" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="6933:6968" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="6976:7460" ph="/// Gets value specified by key. This method will cause exception if key/value pair doesn't exist. ... " />
+            <marker date="1623441497619" expanded="true" signature="7493:7552" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="7556:8129" ph="/// Gets JSON value specified by key. This method will cause exception if key/value pair doesn't exist or value i ... " />
+            <marker date="1623441497619" expanded="true" signature="8164:8418" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="8250:8285" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="8310:8333" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="8422:9009" ph="/// Gets JNumber value specified by key. This method will cause exception if key/value pair doesn't exist or valu ... " />
+            <marker date="1623441497619" expanded="true" signature="9050:9313" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="9139:9177" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="9202:9225" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="9317:10582" ph="/// Gets integer number specified by key. This method will cause exception if key/value pair doesn't exist, value ... " />
+            <marker date="1623441497619" expanded="true" signature="10615:10786" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="10675:10755" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="10790:11936" ph="/// Gets floating point number specified by key. This method will cause exception if key/value pair doesn't exist ... " />
+            <marker date="1623441497619" expanded="true" signature="11973:12148" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="12033:12115" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="12152:12734" ph="/// Gets string value specified by key. This method will cause exception if key/value pair doesn't exist or value ... " />
+            <marker date="1623441497619" expanded="true" signature="12773:13046" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="12862:12911" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="12936:12959" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="13050:13568" ph="/// Gets c## bool value specified by key. This method will cause exception if key/value pair doesn't exist or valu ... " />
+            <marker date="1623441497619" expanded="true" signature="13603:13826" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="13693:13741" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="13830:14500" ph="/// Gets JArray specified by key. This method will cause exception if key/value pair doesn't exist or value is an ... " />
+            <marker date="1623441497619" expanded="true" signature="14539:14799" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="14627:14664" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="14689:14712" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="14803:15222" ph="/// Check if value specified by key is JNull. This method throws exception if key doesn't exist. ... " />
+            <marker date="1623441497619" expanded="true" signature="15257:15544" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="15298:15374" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="15548:16718" ph="/// Add new key/value pair to this JSON. This method will prevent accidental overwriting old values with same key ... " />
+            <marker date="1623441497619" expanded="true" signature="16763:18277" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="16783:16931" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="16962:17227" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="17250:17396" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="17417:17564" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="17640:17705" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="17729:17958" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="17782:17953" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="17984:18217" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="18039:18212" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="18281:19225" ph="/// Add or replace key/value pair in this JSON. Possible previous value with same key is replaced. ... " />
+            <marker date="1623441497619" expanded="true" signature="19279:20595" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="19299:19456" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="19479:19621" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="19642:19789" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="19865:19930" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="19954:20183" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="20007:20178" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="20209:20442" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="20264:20437" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="20482:20521" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="20599:21696" ph="/// Replace existing key/value pair in this JSON. If there isn't key/value pair with same key, this method will t ... " />
+            <marker date="1623441497619" expanded="true" signature="21745:23162" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="21765:21917" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="21958:22136" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="22159:22305" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="22326:22473" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="22549:22614" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="22638:22867" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="22691:22862" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="22893:23126" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="22948:23121" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="23166:23696" ph="/// Remove value specified by key. This method throws exception if key doesn't exist. ... " />
+            <marker date="1623441497619" expanded="true" signature="23730:24315" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="23750:23887" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="23910:24057" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="24098:24256" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="24321:24541" ph="/// Remove all the key/value pairs from this JSON, leaving it empty. ... " />
+            <marker date="1623441497619" expanded="true" signature="24564:24774" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="24588:24723" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="24976:25153" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="25018:25149" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="25157:25559" ph="/// Turns this JSON object to single JSON formatted string that can be easily stored or sent to another system. ... " />
+            <marker date="1623441497619" expanded="true" signature="25600:25636" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="25640:25839" ph="/// Turns this JSON object to single JSON formatted string using specified settings. ... " />
+            <marker date="1623441497619" expanded="true" signature="25909:25953" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="25957:26670" ph="/// Turns this JSON object to JSON formatted, but easily human readable string. ... " />
+            <marker date="1623441497619" expanded="true" signature="26708:26880" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="26954:27659" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="27000:27180" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="27211:27603" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="27311:27559" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="27330:27378" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="27663:28135" ph="/// Turns JSON formatted string to new JSON object. ... " />
+            <marker date="1623441497619" expanded="true" signature="28202:28412" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="28243:28349" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="28416:29548" ph="/// Turns JSON formatted string to new JSON object. Debug ID is added to any possible exceptions that may occur d ... " />
+            <marker date="1623441497619" expanded="true" signature="29644:30073" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="29685:29857" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="30077:30692" ph="/// Turns JSON formatted string to new JSON object, using specified settings. ... " />
+            <marker date="1623441497619" expanded="true" signature="30800:31324" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="30841:31007" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="31042:31246" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="31439:32427" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="31508:31636" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="31798:31984" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="32108:32309" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="32229:32304" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="32431:33425" ph="/// Turns single string to multiple new JSON objects. Source string may contain any amount of JSON objects, inclu ... " />
+            <marker date="1623441497619" expanded="true" signature="33513:33807" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="33563:33725" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="33811:34590" ph="/// Turns single string to multiple new JSON objects, using specified settings. Source string may contain any amo ... " />
+            <marker date="1623441497619" expanded="true" signature="34719:35244" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="34769:34951" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="34986:35147" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="35380:35952" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="35731:35839" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="35863:35902" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="36105:37745" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="36210:36740" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="36257:36475" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="36286:36353" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="36494:36735" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="36535:36602" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="36820:36876" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="36931:37074" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="37176:37318" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="37430:37510" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="37529:37687" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="37749:38363" ph="/// Serialize object to JSON object, using default settings. ... " />
+            <marker date="1623441497619" expanded="true" signature="38421:38491" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="38495:39213" ph="/// Serialize object to JSON object, using specific settings. ... " />
+            <marker date="1623441497619" expanded="true" signature="39308:39749" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="39419:39554" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="39581:39717" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="39753:40350" ph="/// Deserialize this JSON to object, using default settings. ... " />
+            <marker date="1623441497619" expanded="true" signature="40379:40437" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="40441:41147" ph="/// Deserialize this JSON to object, using specified settings. ... " />
+            <marker date="1623441497619" expanded="true" signature="41215:41308" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="41422:43566" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="41501:42647" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="41567:42642" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="41789:41889" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="42052:42151" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="42253:42619" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="42416:42475" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="42498:42558" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="42846:43394" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="42957:43389" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="43037:43243" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="43303:43383" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="43480:43545" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="43570:43877" ph="/// Sets this JSON and all its childen protected (read only). New values can't be added and old values replaced o ... " />
+            <marker date="1623441497619" expanded="true" signature="43907:44135" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="43984:44131" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="44009:44053" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="44080:44126" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="44139:44443" ph="/// Check whatever this JSON is protected (read only). If it is, it also means that all its childen are protected ... " />
+            <marker date="1623441497619" expanded="true" signature="44472:44502" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="44506:44945" ph="/// Adds this JSON object to editor debug window so content of JSON object can be followed in Unity editor when a ... " />
+            <marker date="1623441497619" expanded="true" signature="44992:45435" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="45103:45373" ph="/* string previousKey=jsonRuntimeDebugContainer.add(debugName,this); ... */" />
+            <marker date="1623441497619" expanded="true" signature="45439:46164" ph="/// Sets debug ID for this JSON object. This ID is added to any possible exception messages that may occur when h ... " />
+            <marker date="1623441497619" expanded="true" signature="46232:46290" ph="{...}" />
+            <marker date="1623441497619" expanded="true" signature="46335:46423" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/32/2a9508e7/File.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Util/GameMapSaver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding>
+            <marker date="1623442477145" expanded="false" signature="6:107" ph="..." />
+            <marker date="1623442477145" expanded="true" signature="150:1538" ph="{...}" />
+            <marker date="1623442477145" expanded="true" signature="232:1378" ph="{...}" />
+            <marker date="1623442477145" expanded="true" signature="336:1372" ph="{...}" />
+            <marker date="1623442477145" expanded="true" signature="700:1103" ph="{...}" />
+            <marker date="1623442477145" expanded="true" signature="1395:1536" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Manager/UIManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <marker date="1623425406933" expanded="true" signature="6:63" ph="..." />
             <marker date="1623425406933" expanded="true" signature="103:1024" ph="{...}" />
@@ -941,37 +1830,49 @@ hit.collider.GetComponent&lt;Chunk&gt;()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Model/TileChunk.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Manager/GenerationManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="874">
+          <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
           <folding>
-            <marker date="1623419745420" expanded="true" signature="23:59" ph="{...}" />
+            <marker date="1623423324458" expanded="true" signature="7:98" ph="..." />
+            <marker date="1623423324458" expanded="true" signature="161:2588" ph="{...}" />
+            <marker date="1623423324458" expanded="true" signature="513:609" ph="{...}" />
+            <marker date="1623423324458" expanded="true" signature="660:2114" ph="{...}" />
+            <marker date="1623423324458" expanded="true" signature="710:2080" ph="{...}" />
+            <marker date="1623423324458" expanded="true" signature="768:2070" ph="{...}" />
+            <marker date="1623423324458" expanded="true" signature="1242:1675" ph="{...}" />
+            <marker date="1623423324458" expanded="true" signature="1380:1657" ph="{...}" />
+            <marker date="1623423324458" expanded="true" signature="1501:1635" ph="{...}" />
+            <marker date="1623423324458" expanded="true" signature="1870:2056" ph="{...}" />
+            <marker date="1623423324458" expanded="true" signature="2212:2586" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Model/Chunk.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Manager/ChunkLoadManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+        <state>
           <folding>
-            <marker date="1623422621880" expanded="false" signature="6:106" ph="..." />
-            <marker date="1623422621880" expanded="true" signature="142:2692" ph="{...}" />
-            <marker date="1623422621880" expanded="true" signature="505:1450" ph="{...}" />
-            <marker date="1623422621880" expanded="true" signature="1484:1568" ph="{...}" />
-            <marker date="1623422621880" expanded="true" signature="1603:1672" ph="{...}" />
-            <marker date="1623422621880" expanded="true" signature="1772:2080" ph="{...}" />
-            <marker date="1623422621880" expanded="true" signature="2154:2429" ph="{...}" />
-            <marker date="1623422621880" expanded="true" signature="2493:2685" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="7:79" ph="..." />
+            <marker date="1623443811187" expanded="true" signature="140:4915" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="596:783" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="821:1042" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="848:1036" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="1082:1269" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="1109:1263" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="1316:1977" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="1482:1730" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="1578:1720" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="1779:1971" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="2022:3338" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="2240:3260" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="2339:3250" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="2958:3236" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="3448:3733" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="3766:3830" ph="{...}" />
+            <marker date="1623443811187" expanded="true" signature="3869:4913" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/TotalJSON/ReadMe.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1564">
-          <caret line="106" column="1" lean-forward="true" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
         </state>
       </provider>
     </entry>
