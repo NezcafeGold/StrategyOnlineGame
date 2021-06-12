@@ -891,6 +891,7 @@ MonoBehaviour:
   worldWidth: 512
   worldHeight: 512
   defaultBlock: {fileID: 11400000, guid: 89c03ff57d6e52e4986dfdfc50206759, type: 2}
+  outputPath: JSONFILES/ChunkMap.json
 --- !u!1 &1265916444
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,4 +19,7 @@ public class SetupSetting : Singleton<SetupSetting>
     public int worldWidth = 256;
     public int worldHeight = 256;
     public BlockData defaultBlock;
+
+    [Header("JSON")]
+    public string outputPath = @"JSONFILES/ChunkMap.json";
 }

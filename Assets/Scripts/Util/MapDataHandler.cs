@@ -1,46 +1,60 @@
+
+
+
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
+using System.Linq;
+using Leguar.TotalJSON;
 using UnityEngine;
-using LitJson;
 
 public class MapDataHandler : MonoBehaviour
 {
+    private string outputPath;
     private GameObject chunks;
+    //private Dictionary<SerializableVector2Int, Chunk>  
 
     private void Awake()
     {
+        outputPath = SetupSetting.Instance.outputPath;
         chunks = SetupSetting.Instance.chunkRoot;
+        LoadMapFromJson();
     }
 
     public void SaveMapToJson()
     {
         List<Chunk> chunks = ChunkLoadManager.Instance.chunks;
-        var outputPath = @"JSONFILES/ChunkMap.json";
-        StringBuilder sb = new StringBuilder();
-        JsonWriter writer = new JsonWriter(sb);
-
-        writer.WriteObjectStart();
-        writer.WritePropertyName("map");
-        writer.WriteArrayStart();
+        JSON mapJson = new JSON();
+        
+        JArray chunkArrayJson = new JArray();
         foreach (var ch in chunks)
         {
-
-            writer.WriteObjectStart();
-            writer.WritePropertyName("chunk");
-            writer.Write(JsonMapper.ToJson(ch.ChunkPosition));
-            
-            writer.WritePropertyName("tiles");
-            writer.Write(JsonMapper.ToJson(ch.tileChunkLayer));
-            writer.WriteObjectEnd();
+            JSON chunkJson = new JSON();
+            JSON posJson = JSON.Serialize(ch.Position);
+            chunkJson.Add("chunk", posJson);
             
 
+            JArray tilesArrayJson = new JArray();
+
+            foreach (var tileCh in ch.tileChunkLayer)
+            {
+                JSON tileChJson = JSON.Serialize(tileCh);
+                tilesArrayJson.Add(tileChJson);
+                
+            }
+            chunkJson.Add("tiles", tilesArrayJson);
+            
+            chunkArrayJson.Add(chunkJson);
         }
-        writer.WriteArrayEnd();
-        writer.WriteObjectEnd();
-        File.WriteAllText (outputPath, sb.ToString().Replace("\\",""));
-        Debug.Log("Print at " + outputPath);
+       mapJson.Add("map", chunkArrayJson);
+       File.WriteAllText(outputPath, mapJson.CreateString());
+       Debug.Log("Print at " + outputPath);
     }
 
+
+
+    public void LoadMapFromJson()
+    {
+       
+    }
 
 }
