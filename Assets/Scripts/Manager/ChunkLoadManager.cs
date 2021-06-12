@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class ChunkLoadManager : Singleton<ChunkLoadManager>
 {
-    [SerializeField] private bool isMasterClient = false;
-    [SerializeField] private GameObject chunkPrefab;
-    [SerializeField] private GameObject chunkRoot;
-    [SerializeField] private int horizontalChunkVisible = 8;
-    [SerializeField] private int verticalChunkVisible = 6;
+    private bool isMasterClient = false;
+    private GameObject chunkPrefab;
+    private GameObject chunkRoot;
+    private int horizontalChunkVisible = 8;
+    private int verticalChunkVisible = 6;
     
     
     private BoxCollider2D boxColl;
@@ -18,6 +18,15 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
 
     public List<Chunk> chunks;
 
+    void Awake()
+    {
+        var setup = SetupSetting.Instance;
+        isMasterClient = setup.isMasterClient;
+        chunkPrefab = setup.chunkPrefab;
+        chunkRoot = setup.chunkRoot;
+        horizontalChunkVisible = setup.horizontalChunkVisible;
+        verticalChunkVisible = setup.verticalChunkVisible;
+    }
 
     void Start()
     {
@@ -57,7 +66,7 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
             Chunk chunk = child.GetComponent<Chunk>();
             if (chunk != null)
             {
-                if (!loadBoundaries.Contains(chunk.ChunkPosition))
+                if (!loadBoundaries.Contains(new Vector3Int(chunk.ChunkPosition.x, chunk.ChunkPosition.y, 0)))
                     chunksToUnload.Add(chunk);
             }
         }
@@ -82,25 +91,32 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
         {
             for (int v = (int) loadBoundaries.yMax; v >= (int) loadBoundaries.yMin; v--)
             {
-                if ((h < 0 || h >= GenerationManager.Instance.worldWidth / GenerationManager.Instance.chunkSize) ||
-                    (v < 0 || v >= GenerationManager.Instance.worldHeight / GenerationManager.Instance.chunkSize))
+                if ((h < 0 || h >= SetupSetting.Instance.worldWidth / SetupSetting.Instance.chunkSize) ||
+                    (v < 0 || v >= SetupSetting.Instance.worldHeight / SetupSetting.Instance.chunkSize))
                     continue;
                 Vector3Int chunkPosition = new Vector3Int(h, v, 0);
                 Vector3Int worldPosition = new Vector3Int(
-                    h * GenerationManager.Instance.chunkSize,
-                    v * GenerationManager.Instance.chunkSize, 0);
+                    h * SetupSetting.Instance.chunkSize,
+                    v * SetupSetting.Instance.chunkSize, 0);
 
                 if (loadBoundaries.Contains(chunkPosition) && !GetChunk(worldPosition))
                 {
-                    Chunk ch = Instantiate(chunkPrefab, worldPosition, Quaternion.identity, chunkRoot.transform)
-                        .GetComponent<Chunk>();
-                    chunksToLoad.Add(ch);
-                    yield return null;
+                    if (isMasterClient)
+                    {
+                        Chunk ch = Instantiate(chunkPrefab, worldPosition, Quaternion.identity, chunkRoot.transform)
+                            .GetComponent<Chunk>();
+                        chunksToLoad.Add(ch);
+                        yield return null;
+                    }
+                    else
+                    {
+                        //todo: client logic - loading data from json
+                    }
                 }
             }
         }
 
-        if (chunksToLoad.Count > 0)
+        if (chunksToLoad.Count > 0 && isMasterClient)
             chunks = chunksToLoad;
     }
 
@@ -131,12 +147,12 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
                             Vector3.right * horizontalChunkVisible +
                             Vector3.up * verticalChunkVisible;
 
-        int regionStartX = (int) regionStart.x / GenerationManager.Instance.chunkSize;
-        int regionStartY = (int) regionStart.y / GenerationManager.Instance.chunkSize;
-        int regionEndX = ((int) regionEnd.x + GenerationManager.Instance.chunkSize) /
-                         GenerationManager.Instance.chunkSize;
-        int regionEndY = ((int) regionEnd.y + GenerationManager.Instance.chunkSize) /
-                         GenerationManager.Instance.chunkSize;
+        int regionStartX = (int) regionStart.x / SetupSetting.Instance.chunkSize;
+        int regionStartY = (int) regionStart.y / SetupSetting.Instance.chunkSize;
+        int regionEndX = ((int) regionEnd.x + SetupSetting.Instance.chunkSize) /
+                         SetupSetting.Instance.chunkSize;
+        int regionEndY = ((int) regionEnd.y + SetupSetting.Instance.chunkSize) /
+                         SetupSetting.Instance.chunkSize;
         Rect loadBoundaries =
             new Rect(regionStartX, regionStartY, regionEndX - regionStartX, regionEndY - regionStartY);
 

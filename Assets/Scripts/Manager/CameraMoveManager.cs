@@ -20,8 +20,8 @@ public class CameraMoveManager : MonoBehaviour
     {
         cam = Camera.main;
         camSize = cam.orthographicSize;
-        maxX = GenerationManager.Instance.worldWidth;
-        maxY = GenerationManager.Instance.worldHeight;
+        maxX = SetupSetting.Instance.worldWidth;
+        maxY = SetupSetting.Instance.worldHeight;
     }
 
     void LateUpdate()

@@ -300,11 +300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b5ef0b10ffa6fc44916fb75cd4d6564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunkSize: 16
-  seed: 52
-  worldWidth: 512
-  worldHeight: 512
-  defaultBlock: {fileID: 11400000, guid: 89c03ff57d6e52e4986dfdfc50206759, type: 2}
 --- !u!1 &336541261
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d063e6ec9f7b7f4081a77a8124da8ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunks: {fileID: 1716258529}
 --- !u!1 &342272013
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,11 +556,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a535e4ae89cded4bb7d990643d4120f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMasterClient: 1
-  chunkPrefab: {fileID: 1483419911697838, guid: dae560acaef8bc2449e752c38247d5c3, type: 3}
-  chunkRoot: {fileID: 1716258529}
-  horizontalChunkVisible: 1000
-  verticalChunkVisible: 1000
   chunks: []
 --- !u!1 &738406083
 GameObject:
@@ -712,7 +701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 783375495}
   m_Layer: 0
-  m_Name: GameMasterUtils
+  m_Name: Utils
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -833,6 +822,75 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1231306404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1231306405}
+  - component: {fileID: 1231306406}
+  - component: {fileID: 1231306407}
+  m_Layer: 0
+  m_Name: '[SETUP]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1231306405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231306404}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1231306406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231306404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3395c3215f4644d4987dff0da7b4c707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ipAddress: 127.0.0.1
+  port: 54010
+  waitingMessagesFrequency: 2
+--- !u!114 &1231306407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231306404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 179f987861674ed44803bd984ca7f60d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMasterClient: 1
+  chunkPrefab: {fileID: 1483419911697838, guid: dae560acaef8bc2449e752c38247d5c3, type: 3}
+  chunkRoot: {fileID: 1716258529}
+  horizontalChunkVisible: 1000
+  verticalChunkVisible: 1000
+  chunkSize: 16
+  seed: 123456
+  worldWidth: 512
+  worldHeight: 512
+  defaultBlock: {fileID: 11400000, guid: 89c03ff57d6e52e4986dfdfc50206759, type: 2}
 --- !u!1 &1265916444
 GameObject:
   m_ObjectHideFlags: 0

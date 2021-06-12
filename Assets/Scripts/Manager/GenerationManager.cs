@@ -6,19 +6,28 @@ using UnityEngine;
 
 public class GenerationManager : Singleton<GenerationManager>
 {
-    private List<ScriptableObject> scriptableObjects;
-    public int chunkSize = 40;
-    [SerializeField] private int seed = 123456;
-    public int worldWidth = 256;
-    public int worldHeight = 256;
+    
+    private int chunkSize = 40;
+    private int seed = 123456;
+    private int worldWidth = 256;
+    private int worldHeight = 256;
+    private BlockData defaultBlock;
+    
     private Vector2 perlinOffset;
     private readonly float perlinOffsetMax = 10000f;
+    private List<ScriptableObject> scriptableObjects;
 
-    public BlockData defaultBlock;
-
+    
 
     private void Awake()
     {
+        var setup = SetupSetting.Instance;
+        chunkSize = setup.chunkSize;
+        seed = setup.seed;
+        worldWidth = setup.worldWidth;
+        worldHeight = setup.worldHeight;
+        defaultBlock = setup.defaultBlock;
+        
         scriptableObjects = Resources.LoadAll<ScriptableObject>("Blocks").ToList();
     }
 

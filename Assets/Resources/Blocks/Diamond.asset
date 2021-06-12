@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b327906a362dc42409b46b4da114706f, type: 3}
-  m_Name: New Block Data
+  m_Name: Diamond
   m_EditorClassIdentifier: 
-  title: ' '
+  title: Diamond
   type: 4
   tile: {fileID: 11400000, guid: a80ffc7fcc1aaa1418666888b03ec475, type: 2}
   perlinLevel: 0.17
