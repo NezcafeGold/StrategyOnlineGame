@@ -5,10 +5,9 @@ using UnityEngine.Tilemaps;
 [Serializable]
 public class Chunk : MonoBehaviour
 {
-    public SerializableVector2Int Position;
-    public SerializableVector2Int ChunkPosition;
-    public TileChunk[,] baseTileType, tileChunkLayer;
 
+    public ChunkData chunkData;
+    //public SerializableVector2Int Position;
     [SerializeField] private Tilemap baseTileMap, layerTileMap;
     private BoxCollider2D chunkCollider;
     private bool isUnloading = false;
@@ -16,14 +15,12 @@ public class Chunk : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Position = new Vector2Int((int) transform.position.x, (int) transform.position.y);
-        ChunkPosition = new Vector2Int(
-            Position.x / SetupSetting.Instance.chunkSize,
-            Position.y / SetupSetting.Instance.chunkSize);
-        baseTileType = new TileChunk[
-            SetupSetting.Instance.chunkSize,
-            SetupSetting.Instance.chunkSize];
-        tileChunkLayer = new TileChunk[
+        chunkData = new ChunkData();
+        chunkData.Position = new Vector2Int((int) transform.position.x, (int) transform.position.y);
+        chunkData.ChunkPosition = new Vector2Int(
+            chunkData.Position.x / SetupSetting.Instance.chunkSize,
+            chunkData.Position.y / SetupSetting.Instance.chunkSize);
+        chunkData.tileChunkLayer = new TileChunk[
             SetupSetting.Instance.chunkSize,
             SetupSetting.Instance.chunkSize];
 
@@ -39,7 +36,6 @@ public class Chunk : MonoBehaviour
 
     private void LoadChunk()
     {
-        if (SetupSetting.Instance.isMasterClient)
             StartCoroutine(GenerationManager.Instance.GenerateChunk(this));
     }
 
@@ -53,7 +49,7 @@ public class Chunk : MonoBehaviour
     {
         if (isUnloading)
             return;
-        Vector3Int relativePosition = tilePosition - new Vector3Int(Position.x, Position.y, 0);
+        Vector3Int relativePosition = tilePosition - new Vector3Int(chunkData.Position.x, chunkData.Position.y, 0);
 
         if (isLayerTileMap)
             layerTileMap.SetTile(relativePosition, blockTile);
@@ -66,13 +62,14 @@ public class Chunk : MonoBehaviour
         if (isUnloading)
             return;
 
-        Vector3Int relativePosition = position - new Vector3Int(Position.x, Position.y, 0);
+        Vector3Int relativePosition = position - new Vector3Int(chunkData.Position.x, chunkData.Position.y, 0);
         TileChunk tileChunk = new TileChunk();
-        tileChunk.TileType = type;
+        tileChunk.tileType = type;
+        tileChunk.type = type.ToString();
         tileChunk.pos = (Vector2Int) position;
         tileChunk.relPos = (Vector2Int) relativePosition;
 
-        tileChunkLayer[relativePosition.x, relativePosition.y] = tileChunk;
+        chunkData.tileChunkLayer[relativePosition.x, relativePosition.y] = tileChunk;
     }
 
     public TileChunk GetTileChunkData(Vector3Int position)
@@ -80,19 +77,7 @@ public class Chunk : MonoBehaviour
         if (isUnloading)
             return null;
 
-        Vector3Int relativePosition = position - new Vector3Int(Position.x, Position.y, 0);
-        return tileChunkLayer[relativePosition.x, relativePosition.y];
+        Vector3Int relativePosition = position - new Vector3Int(chunkData.Position.x, chunkData.Position.y, 0);
+        return chunkData.tileChunkLayer[relativePosition.x, relativePosition.y];
     }
-
-//    public struct TileData
-//    {
-//        public TileType type;
-//        public SerializableVector2Int pos;
-//
-//        public SerializableVector2Int relPos;
-////        public int xPos;
-////        public int yPos;
-////        public int xRelPos;
-////        public int yRelPos;
-//    }
 }

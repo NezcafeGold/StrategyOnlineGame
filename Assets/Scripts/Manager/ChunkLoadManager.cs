@@ -16,7 +16,7 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
     private bool isUpdatingChunks = false;
     private Rect loadBoundaries;
 
-    public List<Chunk> chunks;
+    public List<Chunk> chunksToMasterMapSave;
 
     void Awake()
     {
@@ -30,7 +30,7 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
 
     void Start()
     {
-        chunks = new List<Chunk>();
+        chunksToMasterMapSave = new List<Chunk>();
         boxColl = Camera.main.GetComponent<BoxCollider2D>();
         StartCoroutine(LoadChunks());
         StartCoroutine(UnloadChunks());
@@ -66,7 +66,7 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
             Chunk chunk = child.GetComponent<Chunk>();
             if (chunk != null)
             {
-                if (!loadBoundaries.Contains(new Vector3Int(chunk.ChunkPosition.x, chunk.ChunkPosition.y, 0)))
+                if (!loadBoundaries.Contains(new Vector3Int(chunk.chunkData.ChunkPosition.x, chunk.chunkData.ChunkPosition.y, 0)))
                     chunksToUnload.Add(chunk);
             }
         }
@@ -84,40 +84,34 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
 
     private IEnumerator PerformLoadChunks()
     {
-        //UpdateBounds();
+        int chunkSize = SetupSetting.Instance.chunkSize;
+        
         loadBoundaries = GetChunkLoadBounds();
         List<Chunk> chunksToLoad = new List<Chunk>();
         for (int h = (int) loadBoundaries.xMax; h >= (int) loadBoundaries.xMin; h--)
         {
             for (int v = (int) loadBoundaries.yMax; v >= (int) loadBoundaries.yMin; v--)
             {
-                if ((h < 0 || h >= SetupSetting.Instance.worldWidth / SetupSetting.Instance.chunkSize) ||
-                    (v < 0 || v >= SetupSetting.Instance.worldHeight / SetupSetting.Instance.chunkSize))
+                if ((h < 0 || h >= SetupSetting.Instance.worldWidth / chunkSize) ||
+                    (v < 0 || v >= SetupSetting.Instance.worldHeight / chunkSize))
                     continue;
                 Vector3Int chunkPosition = new Vector3Int(h, v, 0);
                 Vector3Int worldPosition = new Vector3Int(
-                    h * SetupSetting.Instance.chunkSize,
-                    v * SetupSetting.Instance.chunkSize, 0);
+                    h * chunkSize,
+                    v * chunkSize, 0);
 
                 if (loadBoundaries.Contains(chunkPosition) && !GetChunk(worldPosition))
                 {
-                    if (isMasterClient)
-                    {
                         Chunk ch = Instantiate(chunkPrefab, worldPosition, Quaternion.identity, chunkRoot.transform)
                             .GetComponent<Chunk>();
                         chunksToLoad.Add(ch);
                         yield return null;
-                    }
-                    else
-                    {
-                        //todo: client logic - loading data from json
-                    }
                 }
             }
         }
 
         if (chunksToLoad.Count > 0 && isMasterClient)
-            chunks = chunksToLoad;
+            chunksToMasterMapSave = chunksToLoad;
     }
 
 

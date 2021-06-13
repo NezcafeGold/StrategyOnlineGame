@@ -130,6 +130,7 @@
           </e>
           <e p="Model" t="Include">
             <e p="Chunk.cs" t="Include" />
+            <e p="ChunkData.cs" t="Include" />
             <e p="TileChunk.cs" t="Include" />
             <e p="TileType.cs" t="Include" />
           </e>

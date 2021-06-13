@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour
             if (chunk != null)
             {
                 TileChunk tileChunk = chunk.GetTileChunkData(mousePos);
-                position.SetText(tileChunk.TileType + "\n "+ mousePos + "\n Chunk " + chunk.Position );
+                position.SetText(tileChunk.tileType + "\n "+ mousePos + "\n Chunk " + chunk.chunkData.Position );
           
             }
         }
