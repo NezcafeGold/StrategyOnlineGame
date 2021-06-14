@@ -36,15 +36,8 @@ public class TCPClient : MonoBehaviour
     private void Awake()
     {
         StartClient();
-        SendMessageToServer(@"{
-    ""header"": {
-        ""id"": 1,
-        ""status_code"": 0,
-    }
-    ""body"": {
-        ""email"": ""jklgreentea123@gmail.com""
-    }
-    }""");
+        SendMessageToServer(@"{""header"":{""id"":1,""status_code"":0},""body"":{""email"":""jklgreentea@gmail.com""}}
+");
     }
 
     //Start client and stablish connection with server

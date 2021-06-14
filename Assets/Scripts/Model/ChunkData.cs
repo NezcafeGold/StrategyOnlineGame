@@ -1,3 +1,6 @@
+using System;
+
+[Serializable]
 public class ChunkData
 {
     public SerializableVector2Int Position;

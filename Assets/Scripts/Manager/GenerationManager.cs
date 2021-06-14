@@ -83,7 +83,6 @@ public class GenerationManager : Singleton<GenerationManager>
                 }
             }
         }
-
         yield return null;
     }
 

@@ -189,6 +189,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acfbe60a58c54bacae9574ce62d4965c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chunkData:
+    Position:
+      x: 0
+      y: 0
+    ChunkPosition:
+      x: 0
+      y: 0
   baseTileMap: {fileID: 8195094281186411526}
   layerTileMap: {fileID: 3976982019158387387}
 --- !u!1 &1531213982317236

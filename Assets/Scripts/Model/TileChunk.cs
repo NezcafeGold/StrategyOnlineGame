@@ -1,6 +1,7 @@
 
 using System;
 
+[Serializable]
 public class TileChunk
 {
     [NonSerialized] public TileType tileType;

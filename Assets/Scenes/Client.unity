@@ -209,6 +209,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d063e6ec9f7b7f4081a77a8124da8ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chunkDataMap:
+    _Buckets: ffffffffffffffffffffffff
+    _HashCodes: 000000000000000000000000
+    _Next: 000000000000000000000000
+    _Count: 0
+    _Version: 0
+    _FreeList: -1
+    _FreeCount: 0
+    _Keys:
+    - x: 0
+      y: 0
+    - x: 0
+      y: 0
+    - x: 0
+      y: 0
+    _Values:
+    - Position:
+        x: 0
+        y: 0
+      ChunkPosition:
+        x: 0
+        y: 0
+    - Position:
+        x: 0
+        y: 0
+      ChunkPosition:
+        x: 0
+        y: 0
+    - Position:
+        x: 0
+        y: 0
+      ChunkPosition:
+        x: 0
+        y: 0
 --- !u!1 &342272013
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,14 +783,15 @@ MonoBehaviour:
   isMasterClient: 0
   chunkPrefab: {fileID: 1483419911697838, guid: dae560acaef8bc2449e752c38247d5c3, type: 3}
   chunkRoot: {fileID: 1716258529}
-  horizontalChunkVisible: 120
-  verticalChunkVisible: 80
+  horizontalChunkVisible: 1000
+  verticalChunkVisible: 1000
   chunkSize: 16
   seed: 123456
   worldWidth: 512
   worldHeight: 512
   defaultBlock: {fileID: 11400000, guid: 89c03ff57d6e52e4986dfdfc50206759, type: 2}
-  outputPath: JSONFILES/ChunkMap.json
+  jsonPath: JSONFILES/ChunkMap.json
+  dictionaryPath: JSONFILES/ChunMap.dat
 --- !u!1 &1716258529
 GameObject:
   m_ObjectHideFlags: 0

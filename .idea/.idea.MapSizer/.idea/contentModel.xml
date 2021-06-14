@@ -140,6 +140,7 @@
           <e p="SetupSetting.cs" t="Include" />
           <e p="Util" t="Include">
             <e p="MapDataHandler.cs" t="Include" />
+            <e p="SerializableDictionary.cs" t="Include" />
             <e p="SerializableVector2Int.cs" t="Include" />
             <e p="SerializableVector3Int.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
