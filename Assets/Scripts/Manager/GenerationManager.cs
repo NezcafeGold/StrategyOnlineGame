@@ -5,59 +5,88 @@ using UnityEngine;
 
 public class GenerationManager : Singleton<GenerationManager>
 {
-    private List<ScriptableObject> scriptableObjects;
-    public int chunkSize = 40;
-    [SerializeField]private int seed = 123456;
-    public int worldWidth = 256;
-    public int worldHeight = 256;
+    private int chunkSize = 40;
+    private int seed = 123456;
+    private int worldWidth = 256;
+    private int worldHeight = 256;
+    private BlockData defaultBlock;
+
     private Vector2 perlinOffset;
     private readonly float perlinOffsetMax = 10000f;
-    
-    public BlockData defaultBlock;
+    private List<ScriptableObject> scriptableObjects;
 
 
     private void Awake()
     {
+        var setup = SetupSetting.Instance;
+        chunkSize = setup.chunkSize;
+        seed = setup.seed;
+        worldWidth = setup.worldWidth;
+        worldHeight = setup.worldHeight;
+        defaultBlock = setup.defaultBlock;
+
         scriptableObjects = Resources.LoadAll<ScriptableObject>("Blocks").ToList();
     }
 
     public IEnumerator GenerateChunk(Chunk chunk)
     {
+        ChunkData ch = null;
+        if (!SetupSetting.Instance.isMasterClient)
+            ch = MapDataHandler.Instance.chunkDataMap[chunk.chunkData.Position];
         for (int v = 0; v < chunkSize; v++)
         {
             for (int h = 0; h < chunkSize; h++)
             {
-                Vector3Int tilePosition = new Vector3Int(chunk.Position.x + h, chunk.Position.y + v, 0);
+                Vector3Int tilePosition =
+                    new Vector3Int(chunk.chunkData.Position.x + h, chunk.chunkData.Position.y + v, 0);
                 if ((tilePosition.x < 0 || tilePosition.x >= worldWidth) ||
                     (tilePosition.y < 0 || tilePosition.y >= worldHeight))
                     continue;
 
                 BlockData blockData = defaultBlock;
-                
-                
-                // Бегаем по блокам и проверяем шанс
-                for (int i = 0; i < scriptableObjects.Count; i++)
+
+                if (SetupSetting.Instance.isMasterClient)
                 {
-                    BlockData block = scriptableObjects[i] as BlockData;
-                    if (block != defaultBlock)
+                    // Бегаем по блокам и проверяем шанс
+                    for (int i = 0; i < scriptableObjects.Count; i++)
                     {
-                        if (!CheckPerlinLevel(tilePosition, block.perlinSpeed, block.perlinLevel))
+                        BlockData block = scriptableObjects[i] as BlockData;
+                        if (block != defaultBlock)
+                        {
+                            if (!CheckPerlinLevel(tilePosition, block.perlinSpeed, block.perlinLevel))
+                            {
+                                blockData = block;
+                                break;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < scriptableObjects.Count; i++)
+                    {
+                        BlockData block = scriptableObjects[i] as BlockData;
+                        if (block.type.ToString().Equals(ch.tileChunkLayer[h, v].type))
                         {
                             blockData = block;
                             break;
                         }
-                     
                     }
-                   
-                }    
+                }
 
-                chunk.SetChunkTile(tilePosition, blockData.tile);
+                chunk.SetChunkTile(tilePosition, defaultBlock.tile);
+                chunk.SetTileChunkData(tilePosition, TileType.NONE);
+                if (blockData.tile != defaultBlock.tile)
+                {
+                    chunk.SetChunkTile(tilePosition, blockData.tile, true);
+                    chunk.SetTileChunkData(tilePosition, blockData.type);
+                }
             }
         }
         yield return null;
     }
-    
-    
+
+
     public bool CheckPerlinLevel(Vector3Int tilePosition, float perlinSpeed, float perlinLevel)
     {
         return (Mathf.PerlinNoise(

@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: DirtBlock
   m_EditorClassIdentifier: 
   title: Dirt
-  type: 0
+  type: 1
   tile: {fileID: 11400000, guid: 0ece5ee368efebe4182f8471077b29c1, type: 2}
-  sprite: {fileID: -5991000826040346751, guid: 19ca3b6a8aaec3b4794ca2325aa1a03b, type: 3}
   perlinLevel: 0.6
   perlinSpeed: 0.054
