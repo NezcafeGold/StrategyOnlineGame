@@ -110,7 +110,7 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
             }
         }
 
-        if (chunksToLoad.Count > 0 && isMasterClient)
+        if (chunksToLoad.Count > 0 && isMasterClient && false)
             chunksToMasterMapSave = chunksToLoad;
     }
 

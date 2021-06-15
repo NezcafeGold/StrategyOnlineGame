@@ -23,4 +23,6 @@ public class SetupSetting : Singleton<SetupSetting>
     [Header("DATA")]
     public string jsonPath = @"JSONFILES/ChunkMap.json";
     public string dictionaryPath = @"JSONFILES/ChunMap.dat";
+
+    [Header("Building")] public List<BuildingData> buildingList;
 }

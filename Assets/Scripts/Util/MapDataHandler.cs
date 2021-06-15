@@ -22,8 +22,8 @@ public class MapDataHandler : Singleton<MapDataHandler>
 
     private void Start()
     {
-        if (!SetupSetting.Instance.isMasterClient)
-            StartCoroutine(LoadMapFromJson());
+        //if (!SetupSetting.Instance.isMasterClient)
+            //StartCoroutine(LoadMapFromJson());
     }
 
     public void SaveMapToJson()
@@ -51,7 +51,7 @@ public class MapDataHandler : Singleton<MapDataHandler>
         {
             JSON chunkJson = new JSON();
             JSON posJson = JSON.Serialize(ch.chunkData.Position);
-            chunkJson.Add("chunk", posJson);
+            chunkJson.Add("pos", posJson);  //pos:{x,y}
 
             JArray tilesArrayJson = new JArray();
 
