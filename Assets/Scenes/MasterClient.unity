@@ -2861,8 +2861,7 @@ MonoBehaviour:
   defaultBlock: {fileID: 11400000, guid: 89c03ff57d6e52e4986dfdfc50206759, type: 2}
   jsonPath: JSONFILES/ChunkMap.json
   dictionaryPath: JSONFILES/ChunMap.dat
-  buildingList:
-  - {fileID: 11400000, guid: 0458738a639552b4ba8f90afd97207d6, type: 2}
+  buildingList: []
 --- !u!1 &1258237801
 GameObject:
   m_ObjectHideFlags: 0
@@ -4395,6 +4394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  buildPrefab: {fileID: 11400000, guid: 0458738a639552b4ba8f90afd97207d6, type: 2}
 --- !u!1 &1856101311
 GameObject:
   m_ObjectHideFlags: 0

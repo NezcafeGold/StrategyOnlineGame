@@ -6,7 +6,7 @@ public class BuildingManager : MonoBehaviour
 {
     public BuildingData.BuildingType type;
 
-    private BuildingData buildPrefab;
+    [SerializeField]private BuildingData buildPrefab;
     // Start is called before the first frame update
     void Start()
     {

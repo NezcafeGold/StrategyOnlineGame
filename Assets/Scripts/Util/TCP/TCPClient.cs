@@ -8,8 +8,8 @@ public class TCPClient : MonoBehaviour
 {
     #region Public Variables
 
-    [Header("Network")] public string ipAddress = "127.0.0.1";
-    public int port = 54010;
+    [Header("Network")] public string ipAddress = "46.0.193.126";
+    public int port = 33001;
     public float waitingMessagesFrequency = 2;
 
     #endregion
@@ -33,15 +33,8 @@ public class TCPClient : MonoBehaviour
     #endregion
 
 
-    private void Awake()
-    {
-        StartClient();
-        SendMessageToServer(@"{""header"":{""id"":1,""status_code"":0},""body"":{""email"":""jklgreentea@gmail.com""}}
-");
-    }
-
     //Start client and stablish connection with server
-    protected void StartClient()
+    public void StartClient()
     {
         //Early out
         if (m_Client != null)
@@ -85,7 +78,8 @@ public class TCPClient : MonoBehaviour
         //Start Async Reading from Server and manage the response on MessageReceived function
         do
         {
-            ClientLog("Client is listening server msg...", Color.yellow);
+            //ClientLog("Client is listening server msg...", Color.yellow);
+
             //Start Async Reading from Server and manage the response on MessageReceived function
             m_NetStream.BeginRead(m_Buffer, 0, m_Buffer.Length, MessageReceived, null);
 
@@ -112,13 +106,13 @@ public class TCPClient : MonoBehaviour
                 CloseClient();
                 break;
             default:
-                ClientLog("Received message " + receivedMessage + ", has no special behaviuor", Color.red);
+                //ClientLog("Received message " + receivedMessage + ", has no special behaviuor", Color.red);
                 break;
         }
     }
 
     //Send custom string msg to server
-    protected void SendMessageToServer(string sendMsg)
+    public void SendMessageToServer(string sendMsg)
     {
         //early out if there is nothing connected       
         if (!m_Client.Connected)
@@ -128,7 +122,7 @@ public class TCPClient : MonoBehaviour
         }
 
         //Build message to server
-        byte[] msg = Encoding.ASCII.GetBytes(sendMsg); //Encode message as bytes
+        byte[] msg = Encoding.UTF8.GetBytes(sendMsg.Replace("\u200B", "")); //Encode message as bytes
         //Start Sync Writing
         m_NetStream.Write(msg, 0, msg.Length);
         ClientLog("Msg sended to Server: " + "<b>" + sendMsg + "</b>", Color.blue);
@@ -150,7 +144,7 @@ public class TCPClient : MonoBehaviour
     #region Close Client
 
     //Close client connection
-    private void CloseClient()
+    public void CloseClient()
     {
         ClientLog("Client Closed", Color.red);
 

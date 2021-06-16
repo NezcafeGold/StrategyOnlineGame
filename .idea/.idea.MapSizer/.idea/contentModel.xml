@@ -123,6 +123,10 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Authorization and TCP" t="Include">
+            <e p="Packet.cs" t="Include" />
+            <e p="SubmitData.cs" t="Include" />
+          </e>
           <e p="Manager" t="Include">
             <e p="BuildingManager.cs" t="Include" />
             <e p="CameraMoveManager.cs" t="Include" />
