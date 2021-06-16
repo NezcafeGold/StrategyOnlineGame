@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WoodBlock
   m_EditorClassIdentifier: 
   title: Wood
-  type: 2
+  type: 1
   tile: {fileID: 11400000, guid: 474cb040f4dc6cb40891b8b451a5c17f, type: 2}
-  perlinLevel: 0.35
-  perlinSpeed: 0.054
+  perlinLevel: 0.3
+  perlinSpeed: 0.1

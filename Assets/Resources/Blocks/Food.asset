@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b327906a362dc42409b46b4da114706f, type: 3}
-  m_Name: Diamond
+  m_Name: Food
   m_EditorClassIdentifier: 
-  title: Diamond
-  type: 4
-  tile: {fileID: 11400000, guid: a80ffc7fcc1aaa1418666888b03ec475, type: 2}
-  perlinLevel: 0.17
-  perlinSpeed: 0.054
+  title: Food
+  type: 3
+  tile: {fileID: 11400000, guid: 9dd52db67b0006646b6c741c5cae46a9, type: 2}
+  perlinLevel: 0.28
+  perlinSpeed: 0.11
