@@ -79,5 +79,5 @@ public class Chunk : MonoBehaviour
 
         Vector3Int relativePosition = position - new Vector3Int(chunkData.Position.x, chunkData.Position.y, 0);
         return chunkData.tileChunkLayer[relativePosition.x, relativePosition.y];
-    }
+    }    
 }

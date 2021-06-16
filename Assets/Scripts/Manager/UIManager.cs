@@ -14,17 +14,21 @@ public class UIManager : MonoBehaviour
 
     private void ShowChunkPosition()
     {
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+        if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit2D ray = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
-            if (!ray.collider.gameObject.CompareTag("Chunk"))
-                return;
-            Vector3Int mousePos = Vector3Int.FloorToInt(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-            Chunk chunk = ChunkLoadManager.Instance.GetChunk(mousePos);
-            if (chunk != null)
+            if (!EventSystem.current.IsPointerOverGameObject())
             {
-                TileChunk tileChunk = chunk.GetTileChunkData(mousePos);
-                position.SetText(tileChunk.tileType + "\n " + mousePos + "\n Chunk " + chunk.chunkData.Position);
+                RaycastHit2D ray = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition), 100, LayerMask.GetMask("Chunk"));
+                if (!ray.collider.gameObject.CompareTag("Chunk"))
+                    return;
+                Vector3Int mousePos = Vector3Int.FloorToInt(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                Chunk chunk = ChunkLoadManager.Instance.GetChunk(mousePos);
+                if (chunk != null)
+                {
+                    TileChunk tileChunk = chunk.GetTileChunkData(mousePos);
+                    position.SetText(tileChunk.tileType + "\n " + mousePos + "\n Chunk " +
+                                     chunk.chunkData.Position);
+                }
             }
         }
     }

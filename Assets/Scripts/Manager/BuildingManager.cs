@@ -1,5 +1,5 @@
 
-using CodeMonkey.Utils;
+
 using UnityEngine;
 
 public class BuildingManager : MonoBehaviour
@@ -24,5 +24,6 @@ public class BuildingManager : MonoBehaviour
     {  
         GameObject b = Instantiate(buildPrefab.prefab, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width / 2, Screen.height / 2)), Quaternion.identity);
         b.transform.position = new Vector3(b.transform.position.x, b.transform.position.y, -1);
+        b.transform.SetParent(transform);
     }
 }

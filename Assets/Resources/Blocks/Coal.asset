@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b327906a362dc42409b46b4da114706f, type: 3}
-  m_Name: WoodBlock
+  m_Name: Coal
   m_EditorClassIdentifier: 
-  title: Wood
-  type: 1
-  tile: {fileID: 11400000, guid: 474cb040f4dc6cb40891b8b451a5c17f, type: 2}
-  perlinLevel: 0.3
-  perlinSpeed: 0.1
+  title: Coal
+  type: 4
+  tile: {fileID: 11400000, guid: 2dc64e11cc6846f4a811df762d720440, type: 2}
+  perlinLevel: 0.19
+  perlinSpeed: 0.15

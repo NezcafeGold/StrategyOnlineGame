@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonBuilding : MonoBehaviour
 {
-    [SerializeField] private DragToBuild d;
+    [SerializeField] private Building d;
     [SerializeField] private GameObject buttons;
     [SerializeField] private Type type;
 
@@ -24,8 +24,11 @@ public class ButtonBuilding : MonoBehaviour
 
     public void OnPressedYes()
     {
-        d.dragDisabled = false;
-        buttons.SetActive(false);
+        if (d.canBuild)
+        {
+            d.BuildDone();
+            buttons.SetActive(false);
+        }
     }
 
     public void OnPressedNo()

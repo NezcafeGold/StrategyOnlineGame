@@ -110,7 +110,7 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
             }
         }
 
-        if (chunksToLoad.Count > 0 && isMasterClient && false)
+        if (chunksToLoad.Count > 0 && isMasterClient)
             chunksToMasterMapSave = chunksToLoad;
     }
 
@@ -122,7 +122,7 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
         float fl = Vector3Int.zero == position ? 0 : 0.5f;
         hit = Physics2D.Raycast(
             new Vector2(position.x + fl, position.y + fl),
-            Vector2.zero, 0f);
+            Vector2.zero, 0f, LayerMask.GetMask("Chunk"));
 
         return hit ? hit.collider.GetComponent<Chunk>() : null;
     }

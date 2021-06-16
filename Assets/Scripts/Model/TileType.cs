@@ -4,9 +4,13 @@ using System;
 public enum TileType
 {
     NONE = 0,
-    DIRT = 1,
-    WOOD = 2,
-    STONE = 3,
-    DIAMOND = 4,
-    BUILD = 5
+    WOOD = 1,
+    STONE = 2,
+    FOOD = 3,
+    COAL = 4,
+    SULFUR = 5,
+    COPPER =6,
+    IRON = 7,
+    GOLD = 8,
+    URANUS = 9
 }

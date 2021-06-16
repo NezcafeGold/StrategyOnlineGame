@@ -12,7 +12,6 @@ public class GenerationManager : Singleton<GenerationManager>
     private BlockData defaultBlock;
 
     private Vector2 perlinOffset;
-    private readonly float perlinOffsetMax = 10000f;
     private List<ScriptableObject> scriptableObjects;
 
 

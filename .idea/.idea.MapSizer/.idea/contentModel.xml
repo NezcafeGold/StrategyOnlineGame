@@ -131,13 +131,11 @@
             <e p="UIManager.cs" t="Include" />
           </e>
           <e p="Model" t="Include">
+            <e p="Building.cs" t="Include" />
             <e p="Chunk.cs" t="Include" />
             <e p="ChunkData.cs" t="Include" />
             <e p="TileChunk.cs" t="Include" />
             <e p="TileType.cs" t="Include" />
-          </e>
-          <e p="Property" t="Include">
-            <e p="DragToBuild.cs" t="Include" />
           </e>
           <e p="ScriptableObject" t="Include">
             <e p="BlockData.cs" t="Include" />
