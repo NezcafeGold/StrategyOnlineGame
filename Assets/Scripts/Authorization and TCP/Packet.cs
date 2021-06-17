@@ -10,10 +10,7 @@ public class Packet
 
     public Packet(int id, int statusCode, params KeyValuePair<string, string>[] pairs)
     {
-        this.id = id;
-        this.statusCode = statusCode;
-        uuid = Guid.NewGuid().ToString();
-
+        MakeDefault(id, statusCode);
         string text = "";
         foreach (var pair in pairs)
         {
@@ -23,47 +20,98 @@ public class Packet
         body = text.TrimEnd(',');
     }
 
+    public Packet(int id, int statusCode, params KeyValuePair<string, int>[] pairs)
+    {
+        MakeDefault(id, statusCode);
+        string text = "";
+        foreach (var pair in pairs)
+        {
+            text += $@"""{pair.Key}"":{pair.Value},";
+        }
+
+        body = text.TrimEnd(',');
+    }
+
+    public Packet(int id, int statusCode)
+    {
+        MakeDefault(id, statusCode);
+    }
+
+    private void MakeDefault(int id, int statusCode)
+    {
+        this.id = id;
+        this.statusCode = statusCode;
+        uuid = Guid.NewGuid().ToString();
+    }
+
     public static class Body
     {
         public static KeyValuePair<string, string> Of(string key, string value)
         {
             return new KeyValuePair<string, string>(key, value);
         }
+
+        public static KeyValuePair<string, int> OfInt(string key, int value)
+        {
+            return new KeyValuePair<string, int>(key, value);
+        }
+    }
+
+    public Packet WithoutUUID()
+    {
+        uuid = null;
+        return this;
     }
 
     public override string ToString()
     {
-        return $@"{{""header"":{{""id"":{id},""status_code"":{statusCode}, ""uuid"":""{uuid}""}},""body"":{{{body}}}}}"
-               + Environment.NewLine;
+        if (uuid != null)
+            return
+                $@"{{""header"":{{""id"":{id},""status_code"":{statusCode}, ""uuid"":""{uuid}""}},""body"":{{{body}}}}}"
+                + Environment.NewLine;
+
+        return
+            $@"{{""header"":{{""id"":{id},""status_code"":{statusCode}}},""body"":{{{body}}}}}"
+            + Environment.NewLine;
+    }
+
+    public class PacketKey
+    {
+        public const string HEADER = "header";
+        public const string BODY = "body";
+        public const string ID = "id";
+        public const string STATUS_CODE = "status_code";
     }
 
     public class StatusCode
     {
-        public static readonly int OK_CODE = 0;
+        public const int OK_CODE = 0;
 
-        public static readonly int ERROR_CODE = 1;
+        public const int ERROR_CODE = 1;
 
-        public static readonly int AUTHORIZATION_CODE = 2;
+        public const int AUTHORIZATION_CODE = 2;
 
-        public static readonly int ERROR_AUTHORIZATION_CODE = 3;
+        public const int ERROR_AUTHORIZATION_CODE = 3;
     }
 
     public class SegmentID
     {
-        public static readonly int AUTHORIZATION_CODE = 0;
+        public static readonly int PING_CODE = 0;
 
-        public static readonly int GET_USER_CODE = 1;
+        public const int AUTHORIZATION_CODE = 1;
 
-        public static readonly int GET_INVENTORY_CODE = 2;
+        public const int GET_USER_CODE = 2;
 
-        public static readonly int GET_UNITS_CODE = 3;
+        public const int GET_INVENTORY_CODE = 3;
 
-        public static readonly int GET_RESOURCES_CODE = 4;
+        public const int GET_UNITS_CODE = 4;
 
-        public static readonly int GET_CHUNK_CODE = 5;
+        public const int GET_RESOURCES_CODE = 5;
 
-        public static readonly int GET_TILE_CODE = 6;
+        public const int GET_CHUNK_CODE = 6;
 
-        public static readonly int GET_DATA_MAP_CODE = 7;
+        public const int GET_TILE_CODE = 7;
+
+        public const int GET_DATA_MAP_CODE = 8;
     }
 }

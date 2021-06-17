@@ -7,7 +7,6 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="ButtonBuilding.cs" t="Include" />
         <e p="Modern UI Pack" t="Include">
           <e p="Editor" t="Include">
             <e p="ContextMenu.cs" t="Include" />
@@ -124,13 +123,17 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Authorization and TCP" t="Include">
+            <e p="AuthorizationSubmit.cs" t="Include" />
+            <e p="JSONHandler.cs" t="Include" />
             <e p="Packet.cs" t="Include" />
-            <e p="SubmitData.cs" t="Include" />
+            <e p="PacketHandler.cs" t="Include" />
           </e>
+          <e p="ButtonBuilding.cs" t="Include" />
           <e p="Manager" t="Include">
             <e p="BuildingManager.cs" t="Include" />
             <e p="CameraMoveManager.cs" t="Include" />
             <e p="ChunkLoadManager.cs" t="Include" />
+            <e p="CustomSceneManager.cs" t="Include" />
             <e p="GenerationManager.cs" t="Include" />
             <e p="UIManager.cs" t="Include" />
           </e>
@@ -166,7 +169,24 @@
             <e p="Singleton.cs" t="Include" />
             <e p="TCP" t="Include">
               <e p="TCPClient.cs" t="Include" />
+              <e p="TCPClientOld.cs" t="Include" />
             </e>
+          </e>
+        </e>
+        <e p="ScriptTemplates" t="Include">
+          <e p="50-Mirror__Network Manager-NewNetworkManager.cs.txt" t="Include" />
+          <e p="51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" t="Include" />
+          <e p="52-Mirror__Network Behaviour-NewNetworkBehaviour.cs.txt" t="Include" />
+          <e p="53-Mirror__Network Observer-NewNetworkObserver.cs.txt" t="Include" />
+          <e p="54-Mirror__Network Room Manager-NewNetworkRoomManager.cs.txt" t="Include" />
+          <e p="55-Mirror__Network Room Player-NewNetworkRoomPlayer.cs.txt" t="Include" />
+          <e p="56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" t="Include" />
+        </e>
+        <e p="Simple Scene Fade Load System" t="Include">
+          <e p="ReadMeFirst.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="Fader.cs" t="Include" />
+            <e p="Initiate.cs" t="Include" />
           </e>
         </e>
         <e p="SimpleDragAndDrop" t="Include">

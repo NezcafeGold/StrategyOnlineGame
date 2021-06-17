@@ -2,177 +2,127 @@ using System;
 using System.Collections;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using UnityEngine;
 
-public class TCPClient : MonoBehaviour
+public class TCPClient : Singleton<TCPClient>
 {
-    #region Public Variables
+    #region private members 	
 
-    [Header("Network")] public string ipAddress = "46.0.193.126";
-    public int port = 33001;
-    public float waitingMessagesFrequency = 2;
-
-    #endregion
-
-    #region Private m_Variables
-
-    private TcpClient m_Client;
-    private NetworkStream m_NetStream = null;
-    private byte[] m_Buffer = new byte[49152];
-    private int m_BytesReceived = 0;
-    private string m_ReceivedMessage = "";
-    private IEnumerator m_ListenServerMsgsCoroutine = null;
+    private TcpClient socketConnection;
+    private Thread clientReceiveThread;
+    [SerializeField] private string host = "46.0.193.126";
+    [SerializeField] private int port = 33001;
+    private long milliseconds;
+    private int pingTime = 10;
 
     #endregion
 
-    #region Delegate Variables
-
-    protected Action OnClientStarted = null; //Delegate triggered when client start
-    protected Action OnClientClosed = null; //Delegate triggered when client close
-
-    #endregion
-
-
-    //Start client and stablish connection with server
-    public void StartClient()
+    /// <summary> 	
+    /// Setup socket connection. 	
+    /// </summary> 	
+    public void ConnectToTcpServer()
     {
-        //Early out
-        if (m_Client != null)
+        try
         {
-            ClientLog("There is already a runing client", Color.red);
+            clientReceiveThread = new Thread(new ThreadStart(ListenForData));
+            clientReceiveThread.IsBackground = true;
+            clientReceiveThread.Start();
+            milliseconds = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+            StartCoroutine(PingTCP());
+        }
+        catch (Exception e)
+        {
+            Debug.Log("On client connect exception " + e);
+        }
+    }
+
+    /// <summary> 	
+    /// Runs in background clientReceiveThread; Listens for incomming data. 	
+    /// </summary>     
+    private void ListenForData()
+    {
+        try
+        {
+            socketConnection = new TcpClient(host, port);
+            Byte[] bytes = new Byte[1024];
+            while (true)
+            {
+                try
+                {
+                    using (NetworkStream stream = socketConnection.GetStream())
+                    {
+                        int length;
+                        // Read incomming stream into byte arrary. 					
+                        while ((length = stream.Read(bytes, 0, bytes.Length)) != 0)
+                        {
+                            var incommingData = new byte[length];
+                            Array.Copy(bytes, 0, incommingData, 0, length);
+                            // Convert byte array to string message. 						
+                            string serverMessage = Encoding.ASCII.GetString(incommingData);
+                            Debug.Log("server message received as: " + serverMessage);
+
+                            //HANDLE PACKET
+                            new PacketHandler().Handle(serverMessage);
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    if (e is Leguar.TotalJSON.JValueTypeException)
+                        continue;
+                    Debug.Log(e);
+                    socketConnection.Close();
+                    Debug.Log("CLOSE!");
+                    break;
+                }
+            }
+        }
+        catch (SocketException socketException)
+        {
+            Debug.Log("Socket exception: " + socketException);
+        }
+    }
+
+    /// <summary> 	
+    /// Send message to server using socket connection. 	
+    /// </summary> 	
+    public void SendMessageTCP(string clientMessage)
+    {
+        if (socketConnection == null)
+        {
             return;
         }
 
         try
         {
-            //Create new client
-            m_Client = new TcpClient();
-            //Set and enable client
-            m_Client.Connect(ipAddress, port);
-            ClientLog("Client Started", Color.green);
-            OnClientStarted?.Invoke();
-
-            //Start Listening Server Messages coroutine
-            m_ListenServerMsgsCoroutine = ListenServerMessages();
-            StartCoroutine(m_ListenServerMsgsCoroutine);
-        }
-        catch (SocketException)
-        {
-            ClientLog("Socket Exception: Start Server first", Color.red);
-            CloseClient();
-        }
-    }
-
-    #region Communication Client<->Server
-
-    //Coroutine waiting server messages
-    private IEnumerator ListenServerMessages()
-    {
-        //early out if there is nothing connected       
-        if (!m_Client.Connected)
-            yield break;
-
-        //Stablish Client NetworkStream information
-        m_NetStream = m_Client.GetStream();
-
-        //Start Async Reading from Server and manage the response on MessageReceived function
-        do
-        {
-            //ClientLog("Client is listening server msg...", Color.yellow);
-
-            //Start Async Reading from Server and manage the response on MessageReceived function
-            m_NetStream.BeginRead(m_Buffer, 0, m_Buffer.Length, MessageReceived, null);
-
-            if (m_BytesReceived > 0)
+            // Get a stream object for writing. 			
+            NetworkStream stream = socketConnection.GetStream();
+            if (stream.CanWrite)
             {
-                OnMessageReceived(m_ReceivedMessage);
-                m_BytesReceived = 0;
+                milliseconds = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+                Debug.Log("client sent message: " + clientMessage);
+                // Convert string message to byte array.                 
+                byte[] clientMessageAsByteArray = Encoding.UTF8.GetBytes(clientMessage.Replace("\u200B", ""));
+                // Write byte array to socketConnection stream.                 
+                stream.Write(clientMessageAsByteArray, 0, clientMessageAsByteArray.Length);
+                Debug.Log("Client sent his message - should be received by server");
             }
-
-            yield return new WaitForSeconds(waitingMessagesFrequency);
-        } while (m_BytesReceived >= 0 && m_NetStream != null);
-
-        //The communication is over
-        //CloseClient();
-    }
-
-    //What to do with the received message on client
-    protected virtual void OnMessageReceived(string receivedMessage)
-    {
-        ClientLog("Msg recived on Client: " + "<b>" + receivedMessage + "</b>", Color.green);
-        switch (m_ReceivedMessage)
+        }
+        catch (SocketException socketException)
         {
-            case "Close":
-                CloseClient();
-                break;
-            default:
-                //ClientLog("Received message " + receivedMessage + ", has no special behaviuor", Color.red);
-                break;
+            Debug.Log("Socket exception: " + socketException);
         }
     }
 
-    //Send custom string msg to server
-    public void SendMessageToServer(string sendMsg)
+    private IEnumerator PingTCP()
     {
-        //early out if there is nothing connected       
-        if (!m_Client.Connected)
+        while (true)
         {
-            ClientLog("Socket Error: Stablish Server connection first", Color.red);
-            return;
-        }
-
-        //Build message to server
-        byte[] msg = Encoding.UTF8.GetBytes(sendMsg.Replace("\u200B", "")); //Encode message as bytes
-        //Start Sync Writing
-        m_NetStream.Write(msg, 0, msg.Length);
-        ClientLog("Msg sended to Server: " + "<b>" + sendMsg + "</b>", Color.blue);
-    }
-
-    //AsyncCallback called when "BeginRead" is ended, waiting the message response from server
-    private void MessageReceived(IAsyncResult result)
-    {
-        if (result.IsCompleted && m_Client.Connected)
-        {
-            //build message received from server
-            m_BytesReceived = m_NetStream.EndRead(result);
-            m_ReceivedMessage = Encoding.ASCII.GetString(m_Buffer, 0, m_BytesReceived);
+            yield return new WaitForSecondsRealtime(pingTime);
+            if (milliseconds > pingTime * 1000)
+                SendMessageTCP(new Packet(Packet.SegmentID.PING_CODE, Packet.StatusCode.OK_CODE).WithoutUUID()
+                    .ToString());
         }
     }
-
-    #endregion
-
-    #region Close Client
-
-    //Close client connection
-    public void CloseClient()
-    {
-        ClientLog("Client Closed", Color.red);
-
-        //Reset everything to defaults        
-        if (m_Client.Connected)
-            m_Client.Close();
-
-        if (m_Client != null)
-            m_Client = null;
-
-        OnClientClosed?.Invoke();
-    }
-
-    #endregion
-
-    #region ClientLog
-
-    //Custom Client Log - With Text Color
-    protected virtual void ClientLog(string msg, Color color)
-    {
-        Debug.Log("<b>Client:</b> " + msg);
-    }
-
-    //Custom Client Log - Without Text Color
-    protected virtual void ClientLog(string msg)
-    {
-        Debug.Log("<b>Client:</b> " + msg);
-    }
-
-    #endregion
 }

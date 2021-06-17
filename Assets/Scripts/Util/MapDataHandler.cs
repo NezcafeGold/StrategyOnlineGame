@@ -67,6 +67,9 @@ public class MapDataHandler : Singleton<MapDataHandler>
         }
 
         mapJson.Add("chunkSize", SetupSetting.Instance.chunkSize);
+        mapJson.Add("seed", SetupSetting.Instance.seed);
+        mapJson.Add("width", SetupSetting.Instance.worldWidth);
+        mapJson.Add("height", SetupSetting.Instance.worldHeight);
         mapJson.Add("map", chunkArrayJson);
         File.WriteAllText(jsonPath, mapJson.CreateString());
         Debug.Log("Print at " + jsonPath);

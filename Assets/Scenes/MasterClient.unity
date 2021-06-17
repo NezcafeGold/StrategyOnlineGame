@@ -1317,8 +1317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6409f996984a0499579ac49b47203c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minZoom: 10
-  maxZoom: 50
+  minZoom: 2
+  maxZoom: 10
   keyCode: 325
 --- !u!20 &519420031
 Camera:
@@ -2852,12 +2852,12 @@ MonoBehaviour:
   isMasterClient: 1
   chunkPrefab: {fileID: 1483419911697838, guid: dae560acaef8bc2449e752c38247d5c3, type: 3}
   chunkRoot: {fileID: 1716258529}
-  horizontalChunkVisible: 120
-  verticalChunkVisible: 80
+  horizontalChunkVisible: 1000
+  verticalChunkVisible: 1000
   chunkSize: 16
   seed: 2147483647
-  worldWidth: 250
-  worldHeight: 250
+  worldWidth: 512
+  worldHeight: 512
   defaultBlock: {fileID: 11400000, guid: 89c03ff57d6e52e4986dfdfc50206759, type: 2}
   jsonPath: JSONFILES/ChunkMap.json
   dictionaryPath: JSONFILES/ChunMap.dat
