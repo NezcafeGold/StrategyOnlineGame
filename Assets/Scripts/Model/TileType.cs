@@ -9,7 +9,7 @@ public enum TileType
     FOOD = 3,
     COAL = 4,
     SULFUR = 5,
-    COPPER =6,
+    COPPER = 6,
     IRON = 7,
     GOLD = 8,
     URANUS = 9

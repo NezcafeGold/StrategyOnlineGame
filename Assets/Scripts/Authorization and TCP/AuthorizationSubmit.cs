@@ -31,14 +31,9 @@ public class AuthorizationSubmit : MonoBehaviour
     {
         tcpClient.ConnectToTcpServer();
         yield return new WaitForSecondsRealtime(0.1f);
-        tcpClient.SendMessageTCP(new Packet(Packet.SegmentID.AUTHORIZATION_CODE,
+        tcpClient.SendMessageTCP(new Packet(Packet.SegmentID.AUTHORIZATION_ID,
             Packet.StatusCode.AUTHORIZATION_CODE,
             Packet.Body.Of("email", email),
             Packet.Body.Of("password", password)).ToString());
-        //SendMessageTCP(new Packet(Packet.SegmentID.GET_USER_CODE, Packet.StatusCode.OK_CODE).ToString());
-
-        yield return new WaitForSecondsRealtime(2f);
-        tcpClient.SendMessageTCP(new Packet(Packet.SegmentID.GET_CHUNK_CODE,
-            Packet.StatusCode.OK_CODE, Packet.Body.OfInt("x", 24), Packet.Body.OfInt("y", 16)).ToString());
     }
 }

@@ -18,6 +18,11 @@ public class TCPClient : Singleton<TCPClient>
 
     #endregion
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     /// <summary> 	
     /// Setup socket connection. 	
     /// </summary> 	
@@ -45,7 +50,7 @@ public class TCPClient : Singleton<TCPClient>
         try
         {
             socketConnection = new TcpClient(host, port);
-            Byte[] bytes = new Byte[1024];
+            Byte[] bytes = new Byte[10000];
             while (true)
             {
                 try
@@ -63,7 +68,8 @@ public class TCPClient : Singleton<TCPClient>
                             Debug.Log("server message received as: " + serverMessage);
 
                             //HANDLE PACKET
-                            new PacketHandler().Handle(serverMessage);
+                            //PacketHandler.Instance.actions.Enqueue(() => PacketHandler.Instance.Handle(serverMessage));
+                            PacketHandler.Instance().Handle(serverMessage);
                         }
                     }
                 }
@@ -113,6 +119,10 @@ public class TCPClient : Singleton<TCPClient>
         {
             Debug.Log("Socket exception: " + socketException);
         }
+        catch (ObjectDisposedException e)
+        {
+            Debug.Log(e);
+        }
     }
 
     private IEnumerator PingTCP()
@@ -121,7 +131,7 @@ public class TCPClient : Singleton<TCPClient>
         {
             yield return new WaitForSecondsRealtime(pingTime);
             if (milliseconds > pingTime * 1000)
-                SendMessageTCP(new Packet(Packet.SegmentID.PING_CODE, Packet.StatusCode.OK_CODE).WithoutUUID()
+                SendMessageTCP(new Packet(Packet.SegmentID.PING_ID, Packet.StatusCode.OK_CODE).WithoutUUID()
                     .ToString());
         }
     }

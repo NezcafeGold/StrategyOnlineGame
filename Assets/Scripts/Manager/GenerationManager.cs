@@ -31,7 +31,11 @@ public class GenerationManager : Singleton<GenerationManager>
     {
         ChunkData ch = null;
         if (!SetupSetting.Instance.isMasterClient)
-            ch = MapDataHandler.Instance.chunkDataMap[chunk.chunkData.Position];
+        {
+           // ch = PlayerData.Instance.GetChunk(chunk.chunkData.Position);
+        }
+
+        //TODO: TCP
         for (int v = 0; v < chunkSize; v++)
         {
             for (int h = 0; h < chunkSize; h++)
@@ -65,7 +69,7 @@ public class GenerationManager : Singleton<GenerationManager>
                     for (int i = 0; i < scriptableObjects.Count; i++)
                     {
                         BlockData block = scriptableObjects[i] as BlockData;
-                        if (block.type.ToString().Equals(ch.tileChunkLayer[h, v].type))
+                        if (block.type.Equals(chunk.chunkData.tileChunkLayer[h, v].tileType))
                         {
                             blockData = block;
                             break;
@@ -82,6 +86,7 @@ public class GenerationManager : Singleton<GenerationManager>
                 }
             }
         }
+
         yield return null;
     }
 

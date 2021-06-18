@@ -124,6 +124,9 @@
         <e p="Scripts" t="Include">
           <e p="Authorization and TCP" t="Include">
             <e p="AuthorizationSubmit.cs" t="Include" />
+            <e p="Data" t="Include">
+              <e p="PlayerData.cs" t="Include" />
+            </e>
             <e p="JSONHandler.cs" t="Include" />
             <e p="Packet.cs" t="Include" />
             <e p="PacketHandler.cs" t="Include" />
@@ -163,6 +166,11 @@
               <e p="World_Mesh.cs" t="Include" />
             </e>
             <e p="MapDataHandler.cs" t="Include" />
+            <e p="Messenger" t="Include">
+              <e p="Callback.cs" t="Include" />
+              <e p="GameEvent.cs" t="Include" />
+              <e p="Messenger.cs" t="Include" />
+            </e>
             <e p="SerializableDictionary.cs" t="Include" />
             <e p="SerializableVector2Int.cs" t="Include" />
             <e p="SerializableVector3Int.cs" t="Include" />

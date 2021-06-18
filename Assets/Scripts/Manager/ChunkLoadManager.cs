@@ -88,6 +88,28 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
         
         loadBoundaries = GetChunkLoadBounds();
         List<Chunk> chunksToLoad = new List<Chunk>();
+//        for (int h = (int) loadBoundaries.xMax/2; h >= (int) loadBoundaries.xMin/2; h--)
+//        {
+//            for (int v = (int) loadBoundaries.yMax/2; v >= (int) loadBoundaries.yMin/2; v--)
+//            {
+//                if ((h < 0 || h >= SetupSetting.Instance.worldWidth / chunkSize) ||
+//                    (v < 0 || v >= SetupSetting.Instance.worldHeight / chunkSize))
+//                    continue;
+//                Vector3Int chunkPosition = new Vector3Int(h, v, 0);
+//                Vector3Int worldPosition = new Vector3Int(
+//                    h * chunkSize,
+//                    v * chunkSize, 0);
+//
+//                if (loadBoundaries.Contains(chunkPosition) && !GetChunk(worldPosition))
+//                {
+//                        Chunk ch = Instantiate(chunkPrefab, worldPosition, Quaternion.identity, chunkRoot.transform)
+//                            .GetComponent<Chunk>();
+//                        chunksToLoad.Add(ch);
+//                        yield return null;
+//                }
+//            }
+//        }
+        
         for (int h = (int) loadBoundaries.xMax; h >= (int) loadBoundaries.xMin; h--)
         {
             for (int v = (int) loadBoundaries.yMax; v >= (int) loadBoundaries.yMin; v--)
@@ -102,10 +124,10 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
 
                 if (loadBoundaries.Contains(chunkPosition) && !GetChunk(worldPosition))
                 {
-                        Chunk ch = Instantiate(chunkPrefab, worldPosition, Quaternion.identity, chunkRoot.transform)
-                            .GetComponent<Chunk>();
-                        chunksToLoad.Add(ch);
-                        yield return null;
+                    Chunk ch = Instantiate(chunkPrefab, worldPosition, Quaternion.identity, chunkRoot.transform)
+                        .GetComponent<Chunk>();
+                    chunksToLoad.Add(ch);
+                    yield return null;
                 }
             }
         }
@@ -113,6 +135,7 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
         if (chunksToLoad.Count > 0 && isMasterClient)
             chunksToMasterMapSave = chunksToLoad;
     }
+
 
 
     // Возвращает чанк в заданной позиции по бохколлайдеру))

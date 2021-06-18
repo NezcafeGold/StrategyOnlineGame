@@ -1317,8 +1317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6409f996984a0499579ac49b47203c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minZoom: 2
-  maxZoom: 10
+  minZoom: 5
+  maxZoom: 15
   keyCode: 325
 --- !u!20 &519420031
 Camera:
@@ -2849,11 +2849,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179f987861674ed44803bd984ca7f60d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMasterClient: 1
+  isMasterClient: 0
   chunkPrefab: {fileID: 1483419911697838, guid: dae560acaef8bc2449e752c38247d5c3, type: 3}
   chunkRoot: {fileID: 1716258529}
-  horizontalChunkVisible: 1000
-  verticalChunkVisible: 1000
+  horizontalChunkVisible: 90
+  verticalChunkVisible: 60
   chunkSize: 16
   seed: 2147483647
   worldWidth: 512
@@ -2861,7 +2861,8 @@ MonoBehaviour:
   defaultBlock: {fileID: 11400000, guid: 89c03ff57d6e52e4986dfdfc50206759, type: 2}
   jsonPath: JSONFILES/ChunkMap.json
   dictionaryPath: JSONFILES/ChunMap.dat
-  buildingList: []
+  buildingList:
+  - {fileID: 11400000, guid: 0458738a639552b4ba8f90afd97207d6, type: 2}
 --- !u!1 &1258237801
 GameObject:
   m_ObjectHideFlags: 0

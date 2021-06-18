@@ -1,16 +1,18 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 [Serializable]
 public class Chunk : MonoBehaviour
 {
-
     public ChunkData chunkData;
+
     //public SerializableVector2Int Position;
     [SerializeField] private Tilemap baseTileMap, layerTileMap;
     private BoxCollider2D chunkCollider;
     private bool isUnloading = false;
+    private bool isSendToTCP = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +38,10 @@ public class Chunk : MonoBehaviour
 
     private void LoadChunk()
     {
+        if (SetupSetting.Instance.isMasterClient)
             StartCoroutine(GenerationManager.Instance.GenerateChunk(this));
+        else
+            StartCoroutine(LoadDataFromTCP());
     }
 
     public void UnloadChunk()
@@ -79,5 +84,35 @@ public class Chunk : MonoBehaviour
 
         Vector3Int relativePosition = position - new Vector3Int(chunkData.Position.x, chunkData.Position.y, 0);
         return chunkData.tileChunkLayer[relativePosition.x, relativePosition.y];
-    }    
+    }
+
+    private IEnumerator LoadDataFromTCP()
+    {
+        while (true)
+        {
+            if (!PlayerData.Instance.ChunkMap.ContainsKey(chunkData.Position) && !isSendToTCP)
+            {
+                TCPClient.Instance.SendMessageTCP(new Packet(Packet.SegmentID.GET_CHUNK_ID,
+                    Packet.StatusCode.OK_CODE, Packet.Body.OfInt("x", chunkData.Position.x),
+                    Packet.Body.OfInt("y", chunkData.Position.y)).ToString());
+                isSendToTCP = true;
+            }
+            else
+            {
+                if (!PlayerData.Instance.ChunkMap.ContainsKey(chunkData.Position))
+                    continue;
+                ChunkData ch = PlayerData.Instance.ChunkMap[chunkData.Position];
+                chunkData.Position = ch.Position;
+                chunkData.tileChunkLayer = ch.tileChunkLayer;
+              
+                
+                StartCoroutine(GenerationManager.Instance.GenerateChunk(this));
+                
+                Debug.Log("CHUNK FOUND" + ch.Position.x + " " + ch.Position.y);
+                break;
+            }
+
+            yield return null;
+        }
+    }
 }

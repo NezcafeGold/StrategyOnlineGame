@@ -1,8 +1,35 @@
+using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Threading;
+using Leguar.TotalJSON;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PacketHandler
 {
+    private static PacketHandler instance;
+    private static Thread th;
+
+    public static Queue<string> packets = new Queue<string>();
+    public static Queue<Action> actions = new Queue<Action>();
+
+
+    public static PacketHandler Instance()
+    {
+        if (instance == null)
+        {
+            instance = new PacketHandler();
+            th = new Thread(UpdateTick);
+            th.Start();
+        }
+
+        if (!th.IsAlive)
+            th.Start();
+
+        return instance;
+    }
+
+
     private bool CheckForCorrectPacket()
     {
         //TODO: Add method
@@ -14,48 +41,115 @@ public class PacketHandler
         if (!CheckForCorrectPacket())
             return;
 
-        HandleHeader(new JSONHandler(serverMessage).GetStringObject(Packet.PacketKey.HEADER));
+        packets.Enqueue(serverMessage);
     }
 
-    private void HandleHeader(string header)
+    private static void UpdateTick()
+    {
+        while (true)
+        {
+            while (actions.Count > 0)
+                actions.Dequeue().Invoke();
+
+            //TODO: КОРУТИНКА?
+            while (packets.Count > 0)
+            {
+                string serverMessage = packets.Dequeue();
+                HandleHeader(new JSONHandler(serverMessage).GetStringObject(Packet.PacketKey.HEADER),
+                    serverMessage);
+            }
+        }
+    }
+
+    private static void HandleHeader(string header, string serverMessage)
     {
         JSONHandler jh = new JSONHandler(header);
         if (jh.GetInt(Packet.PacketKey.STATUS_CODE).Equals(Packet.StatusCode.OK_CODE))
         {
-            HandleByID(jh.GetInt(Packet.PacketKey.ID));
+            HandleByID(jh.GetInt(Packet.PacketKey.ID), serverMessage);
         }
     }
 
-    private void HandleByID(int id)
+    private static void HandleByID(int id, string serverMessage)
     {
-        switch (id)
+        try
         {
-            case Packet.SegmentID.AUTHORIZATION_CODE:
-                CustomSceneManager.Instance.LoadScene();
-              break;
+            switch (id)
+            {
+                case Packet.SegmentID.AUTHORIZATION_ID:
+                    Messenger.Broadcast(GameEvent.AUTHORIZATION_SUCC);
+                    break;
 
-            case Packet.SegmentID.GET_TILE_CODE:
+                case Packet.SegmentID.GET_TILE_ID:
 
-                break;
+                    break;
 
-            case Packet.SegmentID.GET_USER_CODE:
+                case Packet.SegmentID.GET_USER_ID:
 
-                break;
-            case Packet.SegmentID.GET_CHUNK_CODE:
-                Debug.Log("HANDLE CHUNK");
-                break;
-            case Packet.SegmentID.GET_UNITS_CODE:
+                    break;
+                case Packet.SegmentID.GET_CHUNK_ID:
+                    HandleChunk(serverMessage);
+                    break;
+                case Packet.SegmentID.GET_UNITS_ID:
 
-                break;
-            case Packet.SegmentID.GET_DATA_MAP_CODE:
+                    break;
+                case Packet.SegmentID.GET_DATA_MAP_ID:
 
-                break;
-            case Packet.SegmentID.GET_INVENTORY_CODE:
+                    break;
+                case Packet.SegmentID.GET_INVENTORY_ID:
 
-                break;
-            case Packet.SegmentID.GET_RESOURCES_CODE:
+                    break;
+                case Packet.SegmentID.GET_RESOURCES_ID:
 
-                break;
+                    break;
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+        }
+    }
+
+    private static void HandleChunk(string serverMessage)
+    {
+        try
+        {
+            String body = new JSONHandler(serverMessage).GetStringObject(Packet.PacketKey.BODY);
+            JSON bodyJs = JSON.ParseString(body);
+            JSON chunkJs = bodyJs.GetJSON("chunk");
+            JArray tilesArray = chunkJs.GetJArray("tiles");
+
+            int chX = chunkJs.GetJSON("pos").GetInt("x");
+            int chY = chunkJs.GetJSON("pos").GetInt("y");
+            SerializableVector2Int pos = new SerializableVector2Int(chX, chY);
+            ChunkData ch = new ChunkData();
+            TileChunk[,]
+                tiles = new TileChunk[SetupSetting.Instance.chunkSize,
+                    SetupSetting.Instance.chunkSize]; //TODO получать из playerData
+
+            foreach (JSON v in tilesArray.Values)
+            {
+                TileChunk tile = new TileChunk();
+                JSON posTile = v.GetJSON("pos");
+
+                int x = posTile.GetInt("x");
+                int y = posTile.GetInt("y");
+                SerializableVector2Int posTileVect = new SerializableVector2Int(x, y);
+                TileType type = (TileType) v.GetInt("type");
+
+                tile.pos = posTileVect;
+                tile.tileType = type;
+                tiles[x - chX, y - chY] = tile;
+            }
+
+            ch.Position = pos;
+            ch.tileChunkLayer = tiles;
+            Debug.Log(Messenger.eventTable.ContainsKey(GameEvent.ADD_CHUNK) + "ADD CHUNK");
+            PlayerData.Instance.ChunkMap.Add(ch.Position, ch);
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Error when parse CHUNK from TCP" + e);
         }
     }
 }
