@@ -4,7 +4,8 @@ using System;
 [Serializable]
 public class TileChunk
 {
-    [NonSerialized] public TileType tileType;
+    [NonSerialized] public ResourceType resourceType;
+    [NonSerialized] public BiomType biomTypeType;
     public SerializableVector2Int pos;
     [NonSerialized]
     public SerializableVector2Int relPos;

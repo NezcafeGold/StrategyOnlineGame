@@ -105,10 +105,10 @@ public class Building : MonoBehaviour
             ch4 = ChunkLoadManager.Instance.GetChunk(pos4);
         }
 
-        return ch1.GetTileChunkData(pos1).tileType.Equals(TileType.NONE) &&
-               ch2.GetTileChunkData(pos2).tileType.Equals(TileType.NONE) &&
-               ch3.GetTileChunkData(pos3).tileType.Equals(TileType.NONE) &&
-               ch4.GetTileChunkData(pos4).tileType.Equals(TileType.NONE);
+        return ch1.GetTileChunkData(pos1).resourceType.Equals(ResourceType.NONE) &&
+               ch2.GetTileChunkData(pos2).resourceType.Equals(ResourceType.NONE) &&
+               ch3.GetTileChunkData(pos3).resourceType.Equals(ResourceType.NONE) &&
+               ch4.GetTileChunkData(pos4).resourceType.Equals(ResourceType.NONE);
     }
 
     public void BuildDone()

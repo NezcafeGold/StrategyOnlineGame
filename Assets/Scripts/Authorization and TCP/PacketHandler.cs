@@ -135,10 +135,10 @@ public class PacketHandler
                 int x = posTile.GetInt("x");
                 int y = posTile.GetInt("y");
                 SerializableVector2Int posTileVect = new SerializableVector2Int(x, y);
-                TileType type = (TileType) v.GetInt("type");
+                ResourceType type = (ResourceType) v.GetInt("type");
 
                 tile.pos = posTileVect;
-                tile.tileType = type;
+                tile.resourceType = type;
                 tiles[x - chX, y - chY] = tile;
             }
 

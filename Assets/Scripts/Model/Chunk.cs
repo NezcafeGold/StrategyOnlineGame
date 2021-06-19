@@ -25,6 +25,9 @@ public class Chunk : MonoBehaviour
         chunkData.tileChunkLayer = new TileChunk[
             SetupSetting.Instance.chunkSize,
             SetupSetting.Instance.chunkSize];
+        chunkData.baseLayer = new TileChunk[
+            SetupSetting.Instance.chunkSize,
+            SetupSetting.Instance.chunkSize];
 
         chunkCollider = GetComponent<BoxCollider2D>();
         chunkCollider.size = new Vector2(
@@ -57,24 +60,38 @@ public class Chunk : MonoBehaviour
         Vector3Int relativePosition = tilePosition - new Vector3Int(chunkData.Position.x, chunkData.Position.y, 0);
 
         if (isLayerTileMap)
-            layerTileMap.SetTile(relativePosition, blockTile);
+        {
+           // layerTileMap.SetTile(relativePosition, blockTile);
+        }
+           
         else
             baseTileMap.SetTile(relativePosition, blockTile);
     }
 
-    public void SetTileChunkData(Vector3Int position, TileType type)
+    public void SetTileChunkData(Vector3Int position, ResourceType resType, BiomType biomType, bool isLayerTile = false)
     {
         if (isUnloading)
             return;
 
         Vector3Int relativePosition = position - new Vector3Int(chunkData.Position.x, chunkData.Position.y, 0);
+
         TileChunk tileChunk = new TileChunk();
-        tileChunk.tileType = type;
-        tileChunk.type = (int) type;
+
+        
         tileChunk.pos = (Vector2Int) position;
         tileChunk.relPos = (Vector2Int) relativePosition;
-
-        chunkData.tileChunkLayer[relativePosition.x, relativePosition.y] = tileChunk;
+        if (isLayerTile)
+        {
+            tileChunk.type = (int) resType;
+            tileChunk.resourceType = resType;
+            chunkData.tileChunkLayer[relativePosition.x, relativePosition.y] = tileChunk;
+        }
+        else
+        {
+            tileChunk.type = (int) biomType;
+            tileChunk.biomTypeType = biomType;
+            chunkData.baseLayer[relativePosition.x, relativePosition.y] = tileChunk;
+        }
     }
 
     public TileChunk GetTileChunkData(Vector3Int position)

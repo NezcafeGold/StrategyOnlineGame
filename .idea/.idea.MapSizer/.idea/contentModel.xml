@@ -145,9 +145,13 @@
             <e p="Chunk.cs" t="Include" />
             <e p="ChunkData.cs" t="Include" />
             <e p="TileChunk.cs" t="Include" />
-            <e p="TileType.cs" t="Include" />
+            <e p="Type" t="Include">
+              <e p="BiomType.cs" t="Include" />
+              <e p="ResourceType.cs" t="Include" />
+            </e>
           </e>
           <e p="ScriptableObject" t="Include">
+            <e p="BiomData.cs" t="Include" />
             <e p="BlockData.cs" t="Include" />
             <e p="BuildingData.cs" t="Include" />
           </e>
@@ -215,6 +219,11 @@
           </e>
           <e p="ProjectSettings" t="Include">
             <e p="ProjectVersion.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Sprites" t="Include">
+          <e p="Pangea" t="Include">
+            <e p="SpecialThanks!.txt" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

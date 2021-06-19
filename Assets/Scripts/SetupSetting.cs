@@ -18,7 +18,8 @@ public class SetupSetting : Singleton<SetupSetting>
     public int seed = 123456;
     public int worldWidth = 256;
     public int worldHeight = 256;
-    public BlockData defaultBlock;
+    public BlockData defaultResourceBlock;
+    public BiomData defaultBiomBlock;
 
     [Header("DATA")]
     public string jsonPath = @"JSONFILES/ChunkMap.json";
