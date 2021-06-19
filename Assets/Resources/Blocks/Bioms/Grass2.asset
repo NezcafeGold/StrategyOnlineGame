@@ -15,5 +15,5 @@ MonoBehaviour:
   title: Grass2
   type: 0
   tile: {fileID: 11400000, guid: 8766ebe3bab24ee4d9c613721afa0056, type: 2}
-  perlinLevel: 0.161
-  perlinSpeed: 0.15
+  perlinLevel: 0.4
+  perlinSpeed: 0.00565231

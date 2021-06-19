@@ -15,5 +15,5 @@ MonoBehaviour:
   title: Snow
   type: 0
   tile: {fileID: 11400000, guid: 0684d5a291f7cc54380ba2509b7aa606, type: 2}
-  perlinLevel: 0.15212
-  perlinSpeed: 0.15
+  perlinLevel: 0.4
+  perlinSpeed: 0.00342343

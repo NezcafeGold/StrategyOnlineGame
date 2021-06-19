@@ -15,5 +15,5 @@ MonoBehaviour:
   title: Sand
   type: 0
   tile: {fileID: 11400000, guid: c63ca6e0d691686458c38fca452f7385, type: 2}
-  perlinLevel: 0.14752
-  perlinSpeed: 0.1
+  perlinLevel: 0.3
+  perlinSpeed: 0.00963463

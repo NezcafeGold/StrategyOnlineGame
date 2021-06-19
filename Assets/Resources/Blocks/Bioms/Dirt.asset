@@ -15,5 +15,5 @@ MonoBehaviour:
   title: Dirt
   type: 0
   tile: {fileID: 11400000, guid: 449fd2e37fa90d040ad7ac5ded6fe232, type: 2}
-  perlinLevel: 0.08
-  perlinSpeed: 0.15
+  perlinLevel: 0.25
+  perlinSpeed: 0.00538797
