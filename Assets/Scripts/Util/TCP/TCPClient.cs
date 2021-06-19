@@ -84,9 +84,9 @@ public class TCPClient : Singleton<TCPClient>
                 }
             }
         }
-        catch (SocketException socketException)
+        catch (Exception e)
         {
-            Debug.Log("Socket exception: " + socketException);
+            Debug.Log("Socket exception: " + e);
         }
     }
 
@@ -112,14 +112,14 @@ public class TCPClient : Singleton<TCPClient>
                 byte[] clientMessageAsByteArray = Encoding.UTF8.GetBytes(clientMessage.Replace("\u200B", ""));
                 // Write byte array to socketConnection stream.                 
                 stream.Write(clientMessageAsByteArray, 0, clientMessageAsByteArray.Length);
-                Debug.Log("Client sent his message - should be received by server");
+                //Debug.Log("Client sent his message - should be received by server");
             }
         }
         catch (SocketException socketException)
         {
             Debug.Log("Socket exception: " + socketException);
         }
-        catch (ObjectDisposedException e)
+        catch (Exception e)
         {
             Debug.Log(e);
         }

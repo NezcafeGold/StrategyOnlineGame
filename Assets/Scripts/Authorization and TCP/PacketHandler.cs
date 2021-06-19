@@ -144,7 +144,6 @@ public class PacketHandler
 
             ch.Position = pos;
             ch.tileChunkLayer = tiles;
-            Debug.Log(Messenger.eventTable.ContainsKey(GameEvent.ADD_CHUNK) + "ADD CHUNK");
             PlayerData.Instance.ChunkMap.Add(ch.Position, ch);
         }
         catch (Exception e)
