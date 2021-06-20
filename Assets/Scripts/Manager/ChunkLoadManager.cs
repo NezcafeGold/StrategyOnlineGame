@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,8 +9,8 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
     private GameObject chunkRoot;
     private int horizontalChunkVisible = 8;
     private int verticalChunkVisible = 6;
-    
-    
+
+
     private BoxCollider2D boxColl;
     private bool isUpdatingChunks = false;
     private Rect loadBoundaries;
@@ -66,7 +65,8 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
             Chunk chunk = child.GetComponent<Chunk>();
             if (chunk != null)
             {
-                if (!loadBoundaries.Contains(new Vector3Int(chunk.chunkData.ChunkPosition.x, chunk.chunkData.ChunkPosition.y, 0)))
+                if (!loadBoundaries.Contains(new Vector3Int(chunk.chunkData.ChunkPosition.x,
+                    chunk.chunkData.ChunkPosition.y, 0)))
                     chunksToUnload.Add(chunk);
             }
         }
@@ -75,9 +75,16 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
         {
             while (isUpdatingChunks)
                 yield return null;
-
             if (chunk != null)
-                chunk.UnloadChunk();
+            {
+                if (loadBoundaries.Contains(new Vector3Int(chunk.chunkData.ChunkPosition.x,
+                    chunk.chunkData.ChunkPosition.y, 0)))
+                {
+                    continue;
+                }
+                chunk.StartCoroutine(chunk.UnloadChunkCor());
+            }
+
             yield return null;
         }
     }
@@ -85,31 +92,9 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
     private IEnumerator PerformLoadChunks()
     {
         int chunkSize = SetupSetting.Instance.chunkSize;
-        
+
         loadBoundaries = GetChunkLoadBounds();
         List<Chunk> chunksToLoad = new List<Chunk>();
-//        for (int h = (int) loadBoundaries.xMax/2; h >= (int) loadBoundaries.xMin/2; h--)
-//        {
-//            for (int v = (int) loadBoundaries.yMax/2; v >= (int) loadBoundaries.yMin/2; v--)
-//            {
-//                if ((h < 0 || h >= SetupSetting.Instance.worldWidth / chunkSize) ||
-//                    (v < 0 || v >= SetupSetting.Instance.worldHeight / chunkSize))
-//                    continue;
-//                Vector3Int chunkPosition = new Vector3Int(h, v, 0);
-//                Vector3Int worldPosition = new Vector3Int(
-//                    h * chunkSize,
-//                    v * chunkSize, 0);
-//
-//                if (loadBoundaries.Contains(chunkPosition) && !GetChunk(worldPosition))
-//                {
-//                        Chunk ch = Instantiate(chunkPrefab, worldPosition, Quaternion.identity, chunkRoot.transform)
-//                            .GetComponent<Chunk>();
-//                        chunksToLoad.Add(ch);
-//                        yield return null;
-//                }
-//            }
-//        }
-        
         for (int h = (int) loadBoundaries.xMax; h >= (int) loadBoundaries.xMin; h--)
         {
             for (int v = (int) loadBoundaries.yMax; v >= (int) loadBoundaries.yMin; v--)
@@ -137,7 +122,6 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
     }
 
 
-
     // Возвращает чанк в заданной позиции по бохколлайдеру))
     public Chunk GetChunk(Vector3Int position)
     {
@@ -148,11 +132,6 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
             Vector2.zero, 0f, LayerMask.GetMask("Chunk"));
 
         return hit ? hit.collider.GetComponent<Chunk>() : null;
-    }
-
-    private void UpdateBounds()
-    {
-        Debug.Log(boxColl.bounds.max.x.ToString());
     }
 
     private Rect GetChunkLoadBounds()

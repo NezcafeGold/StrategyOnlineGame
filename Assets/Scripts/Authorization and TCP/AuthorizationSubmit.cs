@@ -29,7 +29,7 @@ public class AuthorizationSubmit : MonoBehaviour
 
     private IEnumerator SendMessageCor()
     {
-        tcpClient.ConnectToTcpServer();
+        tcpClient.actionsQueue.Enqueue(tcpClient.ConnectToTcpServer);
         yield return new WaitForSecondsRealtime(0.1f);
         tcpClient.SendMessageTCP(new Packet(Packet.SegmentID.AUTHORIZATION_ID,
             Packet.StatusCode.AUTHORIZATION_CODE,

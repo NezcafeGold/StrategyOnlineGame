@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Stone
   type: 2
-  tile: {fileID: 11400000, guid: e0ae9229c2b81fc4c8ed7a716f63f034, type: 2}
+  tile: {fileID: 11400000, guid: 59f9ec91801a2644199c0a1cf6ab50a6, type: 2}
   perlinLevel: 0.2
   perlinSpeed: 0.2

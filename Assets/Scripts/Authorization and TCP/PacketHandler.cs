@@ -5,30 +5,8 @@ using System.Threading;
 using Leguar.TotalJSON;
 using UnityEngine;
 
-public class PacketHandler
+public class PacketHandler 
 {
-    private static PacketHandler instance;
-    private static Thread th;
-
-    public static Queue<string> packets = new Queue<string>();
-    public static Queue<Action> actions = new Queue<Action>();
-
-
-    public static PacketHandler Instance()
-    {
-        if (instance == null)
-        {
-            instance = new PacketHandler();
-            th = new Thread(UpdateTick);
-            th.Start();
-        }
-
-        if (!th.IsAlive)
-            th.Start();
-
-        return instance;
-    }
-
 
     private bool CheckForCorrectPacket()
     {
@@ -38,39 +16,19 @@ public class PacketHandler
 
     public void Handle(string serverMessage)
     {
-        if (!CheckForCorrectPacket())
-            return;
-
-        packets.Enqueue(serverMessage);
+        HandleHeader(JSON.ParseString(serverMessage).GetJSON(Packet.PacketKey.HEADER),serverMessage);
     }
 
-    private static void UpdateTick()
-    {
-        while (true)
-        {
-            while (actions.Count > 0)
-                actions.Dequeue().Invoke();
 
-            //TODO: КОРУТИНКА?
-            while (packets.Count > 0)
-            {
-                string serverMessage = packets.Dequeue();
-                HandleHeader(new JSONHandler(serverMessage).GetStringObject(Packet.PacketKey.HEADER),
-                    serverMessage);
-            }
+    private void HandleHeader(JSON header, string serverMessage)
+    {
+        if (header.GetInt(Packet.PacketKey.STATUS_CODE).Equals(Packet.StatusCode.OK_CODE))
+        {
+            HandleByID(header.GetInt(Packet.PacketKey.ID), serverMessage);
         }
     }
 
-    private static void HandleHeader(string header, string serverMessage)
-    {
-        JSONHandler jh = new JSONHandler(header);
-        if (jh.GetInt(Packet.PacketKey.STATUS_CODE).Equals(Packet.StatusCode.OK_CODE))
-        {
-            HandleByID(jh.GetInt(Packet.PacketKey.ID), serverMessage);
-        }
-    }
-
-    private static void HandleByID(int id, string serverMessage)
+    private void HandleByID(int id, string serverMessage)
     {
         try
         {
@@ -110,12 +68,11 @@ public class PacketHandler
         }
     }
 
-    private static void HandleChunk(string serverMessage)
+    private void HandleChunk(string serverMessage)
     {
         try
         {
-            String body = new JSONHandler(serverMessage).GetStringObject(Packet.PacketKey.BODY);
-            JSON bodyJs = JSON.ParseString(body);
+            JSON bodyJs = JSON.ParseString(serverMessage).GetJSON(Packet.PacketKey.BODY);
             JSON chunkJs = bodyJs.GetJSON("chunk");
             JArray tilesArray = chunkJs.GetJArray("tiles");
 
@@ -136,7 +93,12 @@ public class PacketHandler
                 int y = posTile.GetInt("y");
                 SerializableVector2Int posTileVect = new SerializableVector2Int(x, y);
                 ResourceType type = (ResourceType) v.GetInt("type");
-
+                
+                //BiomType bType = (BiomType) v.GetInt("b_type");
+               
+                //TODO: парсить правильно, когда готов JSON
+                tile.biomIntType = 0;
+                
                 tile.pos = posTileVect;
                 tile.resourceType = type;
                 tiles[x - chX, y - chY] = tile;

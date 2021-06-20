@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class SetupSetting : Singleton<SetupSetting>
 {
@@ -14,7 +15,7 @@ public class SetupSetting : Singleton<SetupSetting>
     public int verticalChunkVisible = 80;
     
     [Header("GenerationManager")]
-    public int chunkSize = 40;
+    public  int chunkSize = 16;
     public int seed = 123456;
     public int worldWidth = 256;
     public int worldHeight = 256;
@@ -26,4 +27,7 @@ public class SetupSetting : Singleton<SetupSetting>
     public string dictionaryPath = @"JSONFILES/ChunMap.dat";
 
     [Header("Building")] public List<BuildingData> buildingList;
+
+    public Tilemap resourcesTileMap;
+    public Tilemap biomsTileMap;
 }

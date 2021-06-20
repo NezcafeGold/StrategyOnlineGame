@@ -11,5 +11,6 @@ public class BlockData : ScriptableObject
     public Tile tile;
     public float perlinLevel;
     public float perlinSpeed;
+    public TileBase tilebas;
 
 }

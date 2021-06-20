@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
@@ -11,16 +13,29 @@ public class TCPClient : Singleton<TCPClient>
 
     private TcpClient socketConnection;
     private Thread clientReceiveThread;
+    private Thread pingThread;
     [SerializeField] private string host = "46.0.193.126";
     [SerializeField] private int port = 33001;
-    private long milliseconds;
-    private int pingTime = 10;
+    private static long milliseconds;
+    private const int pingTime = 10;
+    private ConcurrentQueue<string> chunkQueue;
+    public Queue<Action> actionsQueue;
 
     #endregion
 
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        chunkQueue = new ConcurrentQueue<string>();
+        actionsQueue = new Queue<Action>();
+    }
+
+    private void Update()
+    {
+        if (actionsQueue.Count > 0)
+        {
+            actionsQueue.Dequeue().Invoke();
+        }
     }
 
     /// <summary> 	
@@ -30,11 +45,14 @@ public class TCPClient : Singleton<TCPClient>
     {
         try
         {
-            clientReceiveThread = new Thread(new ThreadStart(ListenForData));
-            clientReceiveThread.IsBackground = true;
+            clientReceiveThread = new Thread(ListenForData) {IsBackground = true};
+            pingThread = new Thread(PingTCP) {IsBackground = true};
             clientReceiveThread.Start();
+            pingThread.Start();
             milliseconds = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-            StartCoroutine(PingTCP());
+            //StartCoroutine(ListenForData());
+            //StartCoroutine(PingTCP());
+            //StartCoroutine(HandlePacket());
         }
         catch (Exception e)
         {
@@ -47,46 +65,36 @@ public class TCPClient : Singleton<TCPClient>
     /// </summary>     
     private void ListenForData()
     {
-        try
+        socketConnection = new TcpClient(host, port);
+        // yield return null;
+        Byte[] bytes = new Byte[10000];
+        while (true)
         {
-            socketConnection = new TcpClient(host, port);
-            Byte[] bytes = new Byte[10000];
-            while (true)
-            {
-                try
+            if (socketConnection.Connected)
+                using (NetworkStream stream = socketConnection.GetStream())
                 {
-                    using (NetworkStream stream = socketConnection.GetStream())
+                    int length;
+                    // Read incomming stream into byte arrary. 					
+                    while ((length = stream.Read(bytes, 0, bytes.Length)) != 0)
                     {
-                        int length;
-                        // Read incomming stream into byte arrary. 					
-                        while ((length = stream.Read(bytes, 0, bytes.Length)) != 0)
-                        {
-                            var incommingData = new byte[length];
-                            Array.Copy(bytes, 0, incommingData, 0, length);
-                            // Convert byte array to string message. 						
-                            string serverMessage = Encoding.ASCII.GetString(incommingData);
-                            Debug.Log("server message received as: " + serverMessage);
+                        var incommingData = new byte[length];
+                        Array.Copy(bytes, 0, incommingData, 0, length);
+                        // Convert byte array to string message. 						
+                        string serverMessage = Encoding.ASCII.GetString(incommingData);
+                        Debug.Log("server message received as: " + serverMessage);
 
-                            //HANDLE PACKET
-                            //PacketHandler.Instance.actions.Enqueue(() => PacketHandler.Instance.Handle(serverMessage));
-                            PacketHandler.Instance().Handle(serverMessage);
-                        }
+                        //HANDLE PACKET
+                        //PacketHandler.Instance.actions.Enqueue(() => PacketHandler.Instance.Handle(serverMessage));
+                        //chunkQueue.Enqueue(serverMessage);
+                        Thread handleThread = new Thread(()=>HandlePacket(serverMessage));
+                        handleThread.Start();
                     }
                 }
-                catch (Exception e)
-                {
-                    if (e is Leguar.TotalJSON.JValueTypeException)
-                        continue;
-                    Debug.Log(e);
-                    socketConnection.Close();
-                    Debug.Log("CLOSE!");
-                    break;
-                }
+            else
+            {
+                socketConnection.Close();
+                break;
             }
-        }
-        catch (Exception e)
-        {
-            Debug.Log("Socket exception: " + e);
         }
     }
 
@@ -103,6 +111,11 @@ public class TCPClient : Singleton<TCPClient>
         try
         {
             // Get a stream object for writing. 			
+            if (!socketConnection.Connected)
+            {
+                socketConnection.Close();
+            }
+
             NetworkStream stream = socketConnection.GetStream();
             if (stream.CanWrite)
             {
@@ -125,14 +138,24 @@ public class TCPClient : Singleton<TCPClient>
         }
     }
 
-    private IEnumerator PingTCP()
+    private void PingTCP()
     {
         while (true)
         {
-            yield return new WaitForSecondsRealtime(pingTime);
-            if (milliseconds > pingTime * 1000)
+            Thread.Sleep(1000);
+            if (milliseconds + pingTime * 1000 < DateTimeOffset.Now.ToUnixTimeMilliseconds())
+            {
                 SendMessageTCP(new Packet(Packet.SegmentID.PING_ID, Packet.StatusCode.OK_CODE).WithoutUUID()
                     .ToString());
+                milliseconds = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+                Debug.Log(milliseconds);
+            }
+                
         }
+    }
+
+    private void HandlePacket(string servMessage)
+    {
+        new PacketHandler().Handle(servMessage);
     }
 }

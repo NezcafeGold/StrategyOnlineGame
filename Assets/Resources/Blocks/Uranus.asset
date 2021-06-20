@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Uranus
   type: 9
-  tile: {fileID: 11400000, guid: 24465d6832ffa014ca80a620c83d7290, type: 2}
+  tile: {fileID: 11400000, guid: 7d4cbd7021fcb974ca4cf0eb50b62f33, type: 2}
   perlinLevel: 0.25
-  perlinSpeed: 0.2
+  perlinSpeed: 0.00342343

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Sulfur
   type: 5
-  tile: {fileID: 11400000, guid: 8cfd27de593973e49b94d3464c95667c, type: 2}
-  perlinLevel: 0.127
-  perlinSpeed: 0.1
+  tile: {fileID: 11400000, guid: 819a8eed47bd20a4d8e7796041d64c1c, type: 2}
+  perlinLevel: 0.12
+  perlinSpeed: 0.00342343

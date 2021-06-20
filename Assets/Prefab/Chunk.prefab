@@ -193,8 +193,8 @@ MonoBehaviour:
     Position:
       x: 0
       y: 0
-  baseTileMap: {fileID: 8195094281186411526}
-  layerTileMap: {fileID: 3976982019158387387}
+  resourcesTilemap: {fileID: 0}
+  biomsTilemap: {fileID: 0}
 --- !u!1 &1531213982317236
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4329366530344554
 Transform:
   m_ObjectHideFlags: 0

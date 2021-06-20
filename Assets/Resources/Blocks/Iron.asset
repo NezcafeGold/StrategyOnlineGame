@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Iron
   type: 7
-  tile: {fileID: 11400000, guid: d9d8a876d073196488968a1f6b34c021, type: 2}
+  tile: {fileID: 11400000, guid: d727701295a7e1841981fa297668e1ac, type: 2}
   perlinLevel: 0.21
   perlinSpeed: 0.1

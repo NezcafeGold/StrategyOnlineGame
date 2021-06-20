@@ -81,23 +81,6 @@ public class MapDataHandler : Singleton<MapDataHandler>
     public IEnumerator LoadMapFromJsonCor()
     {
         chunkDataMap = new SerializableDictionary<SerializableVector2Int, ChunkData>();
-
-//        var watch = System.Diagnostics.Stopwatch.StartNew();
-//// the code that you want to measure comes here
-//        
-//        BinaryFormatter formatter2 = new BinaryFormatter();
-//
-//        using (FileStream stream = new FileStream(dictionaryPath, FileMode.Open))
-//        {
-//            chunkDataMap = (SerializableDictionary<SerializableVector2Int, ChunkData>)formatter2.Deserialize(stream);
-//        }
-//        
-//        watch.Stop();
-//        Debug.Log(watch.ElapsedMilliseconds/1000);
-//        
-//        yield break;
-
-
         Debug.Log("Start Read JSON MAP");
         String text = File.ReadAllText(jsonPath);
 
