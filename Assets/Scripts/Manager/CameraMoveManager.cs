@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class CameraMoveManager : MonoBehaviour
@@ -22,6 +21,7 @@ public class CameraMoveManager : MonoBehaviour
         camSize = cam.orthographicSize;
         maxX = SetupSetting.Instance.worldWidth;
         maxY = SetupSetting.Instance.worldHeight;
+        
     }
 
     void LateUpdate()
@@ -40,8 +40,6 @@ public class CameraMoveManager : MonoBehaviour
 
     private void CamDrag()
     {
-        
-
         if (Input.GetKeyDown(keyCode) && !isDrag)
         {
             mouseClickPos = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -68,11 +66,11 @@ public class CameraMoveManager : MonoBehaviour
     {
         float horizExtent = camSize * Screen.width / Screen.height;
         float vertExtent = cam.orthographicSize;
-        
-        if (0+ horizExtent > dragVector.x) dragVector.x = 0 + horizExtent;
-        if (maxX- horizExtent < dragVector.x) dragVector.x = maxX - horizExtent;
-        if (0+ vertExtent > dragVector.y) dragVector.y = 0 + vertExtent;
-        if (maxY- vertExtent < dragVector.y) dragVector.y = maxY - vertExtent;    
-        transform.position = new Vector3(dragVector.x,dragVector.y,transform.position.z);
+
+        if (0 + horizExtent > dragVector.x) dragVector.x = 0 + horizExtent;
+        if (maxX - horizExtent < dragVector.x) dragVector.x = maxX - horizExtent;
+        if (0 + vertExtent > dragVector.y) dragVector.y = 0 + vertExtent;
+        if (maxY - vertExtent < dragVector.y) dragVector.y = maxY - vertExtent;
+        transform.position = new Vector3(dragVector.x, dragVector.y, transform.position.z);
     }
 }

@@ -15,5 +15,6 @@ MonoBehaviour:
   title: Wood
   type: 1
   tile: {fileID: 11400000, guid: 474cb040f4dc6cb40891b8b451a5c17f, type: 2}
-  perlinLevel: 0.3
-  perlinSpeed: 0.1
+  perlinLevel: 0.35
+  perlinSpeed: 0.00565231
+  tilebas: {fileID: 11400000, guid: dd6d5806bbb2ffc458b8a40f2b6e565e, type: 2}

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Gold
   type: 8
-  tile: {fileID: 11400000, guid: 46413b7f966bfc74b85180263880624e, type: 2}
+  tile: {fileID: 11400000, guid: 3a60bdbe53d736446a794eac0908f1df, type: 2}
   perlinLevel: 0.16
   perlinSpeed: 0.1

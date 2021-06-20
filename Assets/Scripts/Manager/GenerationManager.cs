@@ -9,10 +9,13 @@ public class GenerationManager : Singleton<GenerationManager>
     private int seed = 123456;
     private int worldWidth = 256;
     private int worldHeight = 256;
-    private BlockData defaultBlock;
+    private BlockData defaultResourceBlock;
+    private BiomData defaultBiomBlock;
 
     private Vector2 perlinOffset;
-    private List<ScriptableObject> scriptableObjects;
+    private List<BlockData> blockDataObjects;
+    private List<BiomData> biomDataObjects;
+    private bool isMasterClient;
 
 
     private void Awake()
@@ -22,16 +25,18 @@ public class GenerationManager : Singleton<GenerationManager>
         seed = setup.seed;
         worldWidth = setup.worldWidth;
         worldHeight = setup.worldHeight;
-        defaultBlock = setup.defaultBlock;
+        defaultResourceBlock = setup.defaultResourceBlock;
+        defaultBiomBlock = setup.defaultBiomBlock;
 
-        scriptableObjects = Resources.LoadAll<ScriptableObject>("Blocks").ToList();
+        blockDataObjects = Resources.LoadAll<BlockData>("Blocks").ToList();
+        biomDataObjects = Resources.LoadAll<BiomData>("Blocks").ToList();
+
+        isMasterClient = SetupSetting.Instance.isMasterClient;
     }
 
-    public IEnumerator GenerateChunk(Chunk chunk)
+    public IEnumerator GenerateChunk(Chunk chunk, bool isBiom = false)
     {
-        ChunkData ch = null;
-        if (!SetupSetting.Instance.isMasterClient)
-            ch = MapDataHandler.Instance.chunkDataMap[chunk.chunkData.Position];
+        //TODO: TCP
         for (int v = 0; v < chunkSize; v++)
         {
             for (int h = 0; h < chunkSize; h++)
@@ -42,46 +47,83 @@ public class GenerationManager : Singleton<GenerationManager>
                     (tilePosition.y < 0 || tilePosition.y >= worldHeight))
                     continue;
 
-                BlockData blockData = defaultBlock;
 
-                if (SetupSetting.Instance.isMasterClient)
+                BlockData resBlockData = defaultResourceBlock;
+                BiomData biomBlockData = defaultBiomBlock;
+
+
+                if (isMasterClient)
                 {
+                    #region generation resources
+
                     // Бегаем по блокам и проверяем шанс
-                    for (int i = 0; i < scriptableObjects.Count; i++)
+                    for (int i = 0; i < blockDataObjects.Count; i++)
                     {
-                        BlockData block = scriptableObjects[i] as BlockData;
-                        if (block != defaultBlock)
+                        BlockData block = blockDataObjects[i] as BlockData;
+                        if (block != defaultBiomBlock)
                         {
                             if (!CheckPerlinLevel(tilePosition, block.perlinSpeed, block.perlinLevel))
                             {
-                                blockData = block;
+                                resBlockData = block;
                                 break;
                             }
                         }
                     }
+
+                    #endregion
+
+                    #region generation bioms
+
+                    for (int i = 0; i < biomDataObjects.Count; i++)
+                    {
+                        BiomData block = biomDataObjects[i] as BiomData;
+                        if (block != defaultBiomBlock)
+                        {
+                            if (!CheckPerlinLevel(tilePosition, block.perlinSpeed, block.perlinLevel))
+                            {
+                                biomBlockData = block;
+                                break;
+                            }
+                        }
+                    }
+
+                    #endregion
                 }
                 else
                 {
-                    for (int i = 0; i < scriptableObjects.Count; i++)
+                    for (int i = 0; i < biomDataObjects.Count; i++)
                     {
-                        BlockData block = scriptableObjects[i] as BlockData;
-                        if (block.type.ToString().Equals(ch.tileChunkLayer[h, v].type))
+                        BiomData block = biomDataObjects[i] as BiomData;
+                        if (chunk.GetTileChunkData(tilePosition).resourceType.Equals(block.type))
                         {
-                            blockData = block;
+                            biomBlockData = block;
+                            break;
+                        }
+                    }
+
+                    for (int i = 0; i < blockDataObjects.Count; i++)
+                    {
+                        BlockData block = blockDataObjects[i] as BlockData;
+                        if (chunk.GetTileChunkData(tilePosition).resourceType.Equals(block.type))
+                        {
+                            resBlockData = block;
                             break;
                         }
                     }
                 }
 
-                chunk.SetChunkTile(tilePosition, defaultBlock.tile);
-                chunk.SetTileChunkData(tilePosition, TileType.NONE);
-                if (blockData.tile != defaultBlock.tile)
-                {
-                    chunk.SetChunkTile(tilePosition, blockData.tile, true);
-                    chunk.SetTileChunkData(tilePosition, blockData.type);
-                }
+
+                chunk.SetChunkTile(tilePosition, biomBlockData.tile);
+                
+                chunk.SetTileChunkData(tilePosition, resBlockData.type, biomBlockData.type); 
+
+                if (resBlockData.tilebas != null)
+                    chunk.SetChunkTile(tilePosition, resBlockData.tilebas, true);
+                else
+                    chunk.SetChunkTile(tilePosition, resBlockData.tile, true);
             }
         }
+
         yield return null;
     }
 

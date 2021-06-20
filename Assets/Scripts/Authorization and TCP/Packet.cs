@@ -96,22 +96,22 @@ public class Packet
 
     public class SegmentID
     {
-        public static readonly int PING_CODE = 0;
+        public static readonly int PING_ID = 0;
 
-        public const int AUTHORIZATION_CODE = 1;
+        public const int AUTHORIZATION_ID = 1;
 
-        public const int GET_USER_CODE = 2;
+        public const int GET_USER_ID = 2;
 
-        public const int GET_INVENTORY_CODE = 3;
+        public const int GET_INVENTORY_ID = 3;
 
-        public const int GET_UNITS_CODE = 4;
+        public const int GET_UNITS_ID = 4;
 
-        public const int GET_RESOURCES_CODE = 5;
+        public const int GET_RESOURCES_ID = 5;
 
-        public const int GET_CHUNK_CODE = 6;
+        public const int GET_CHUNK_ID = 6;
 
-        public const int GET_TILE_CODE = 7;
+        public const int GET_TILE_ID = 7;
 
-        public const int GET_DATA_MAP_CODE = 8;
+        public const int GET_DATA_MAP_ID = 8;
     }
 }

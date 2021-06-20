@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Food
   type: 3
-  tile: {fileID: 11400000, guid: 9dd52db67b0006646b6c741c5cae46a9, type: 2}
-  perlinLevel: 0.28
-  perlinSpeed: 0.11
+  tile: {fileID: 11400000, guid: 5bbf981380875bd4d85400e7c767e7ed, type: 2}
+  perlinLevel: 0.10414
+  perlinSpeed: 0.3

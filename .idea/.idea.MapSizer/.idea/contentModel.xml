@@ -7,6 +7,188 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="2d-extras-2020.3" t="Include">
+          <e p="Editor" t="Include">
+            <e p="Brushes" t="Include">
+              <e p="CoordinateBrush" t="Include">
+                <e p="CoordinateBrush.cs" t="Include" />
+              </e>
+              <e p="GameObjectBrush" t="Include">
+                <e p="GameObjectBrush.cs" t="Include" />
+              </e>
+              <e p="GroupBrush" t="Include">
+                <e p="GroupBrush.cs" t="Include" />
+              </e>
+              <e p="LineBrush" t="Include">
+                <e p="LineBrush.cs" t="Include" />
+              </e>
+              <e p="PrefabBrushes" t="Include">
+                <e p="BasePrefabBrush.cs" t="Include" />
+                <e p="BrushMenuItem.cs" t="Include" />
+                <e p="PrefabBrush" t="Include">
+                  <e p="PrefabBrush.cs" t="Include" />
+                </e>
+                <e p="PrefabRandomBrush" t="Include">
+                  <e p="PrefabRandomBrush.cs" t="Include" />
+                </e>
+              </e>
+              <e p="RandomBrush" t="Include">
+                <e p="RandomBrush.cs" t="Include" />
+              </e>
+              <e p="TintBrush" t="Include">
+                <e p="TintBrush.cs" t="Include" />
+              </e>
+              <e p="TintBrushSmooth" t="Include">
+                <e p="TintBrushSmooth.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Menu" t="Include">
+              <e p="CustomRuleTileMenu.cs" t="Include" />
+              <e p="MenuItemOrder.cs" t="Include" />
+            </e>
+            <e p="Tiles" t="Include">
+              <e p="HexagonalRuleTile" t="Include">
+                <e p="HexagonalRuleTileEditor.cs" t="Include" />
+              </e>
+              <e p="IsometricRuleTile" t="Include">
+                <e p="IsometricRuleTileEditor.cs" t="Include" />
+              </e>
+              <e p="Menu" t="Include">
+                <e p="PipelineTileMenu.cs" t="Include" />
+                <e p="RandomTileMenu.cs" t="Include" />
+                <e p="TerrainTileMenu.cs" t="Include" />
+                <e p="WeightedRandomTileMenu.cs" t="Include" />
+              </e>
+              <e p="RuleOverrideTile" t="Include">
+                <e p="AdvancedRuleOverrideTileEditor.cs" t="Include" />
+                <e p="PopulateRuleOverrideTileWizard.cs" t="Include" />
+                <e p="RuleOverrideTileEditor.cs" t="Include" />
+              </e>
+              <e p="RuleTile" t="Include">
+                <e p="RuleTileEditor.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Unity.2D.Tilemap.Extras.Editor.asmdef" t="Include" />
+          </e>
+          <e p="Runtime" t="Include">
+            <e p="Brushes" t="Include">
+              <e p="TintedTilemap.shader" t="Include" />
+              <e p="TintTextureGenerator.cs" t="Include" />
+            </e>
+            <e p="GridInformation" t="Include">
+              <e p="GridInformation.cs" t="Include" />
+            </e>
+            <e p="Tiles" t="Include">
+              <e p="AnimatedTile" t="Include">
+                <e p="AnimatedTile.cs" t="Include" />
+              </e>
+              <e p="HexagonalRuleTile" t="Include">
+                <e p="HexagonalRuleTile.cs" t="Include" />
+              </e>
+              <e p="IsometricRuleTile" t="Include">
+                <e p="IsometricRuleTile.cs" t="Include" />
+              </e>
+              <e p="PipelineTile" t="Include">
+                <e p="PipelineTile.cs" t="Include" />
+              </e>
+              <e p="RandomTile" t="Include">
+                <e p="RandomTile.cs" t="Include" />
+              </e>
+              <e p="RuleOverrideTile" t="Include">
+                <e p="AdvancedRuleOverrideTile.cs" t="Include" />
+                <e p="RuleOverrideTile.cs" t="Include" />
+              </e>
+              <e p="RuleTile" t="Include">
+                <e p="RuleTile.cs" t="Include" />
+              </e>
+              <e p="TerrainTile" t="Include">
+                <e p="TerrainTile.cs" t="Include" />
+              </e>
+              <e p="WeightedRandomTile" t="Include">
+                <e p="WeightedRandomTile.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Unity.2D.Tilemap.Extras.asmdef" t="Include" />
+          </e>
+          <e p="Tests" t="Include">
+            <e p="Editor" t="Include">
+              <e p="PlaceholderTests.cs" t="Include" />
+              <e p="Unity.2D.Tilemap.Extras.EditorTests.asmdef" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="BanyanUnityPackage" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="BanyanMessageListener.cs" t="Include" />
+            <e p="BanyanMessageSender.cs" t="Include" />
+            <e p="MessageProcessor.cs" t="Include" />
+            <e p="TcpConnectedClient.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Graphy - Ultimate Stats Monitor" t="Include">
+          <e p="Changelog.txt" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="GraphyDebuggerEditor.cs" t="Include" />
+            <e p="GraphyEditorStyle.cs" t="Include" />
+            <e p="GraphyManagerEditor.cs" t="Include" />
+            <e p="GraphyMenuItem.cs" t="Include" />
+            <e p="Tayx.Graphy.Editor.asmdef" t="Include" />
+          </e>
+          <e p="Font" t="Include">
+            <e p="Northwest-Bold" t="Include">
+              <e p="ERIC-TIRADO-NORTHWEST-LICENSE.txt" t="Include" />
+            </e>
+            <e p="Roboto" t="Include">
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Runtime" t="Include">
+            <e p="Advanced" t="Include">
+              <e p="G_AdvancedData.cs" t="Include" />
+            </e>
+            <e p="Audio" t="Include">
+              <e p="G_AudioGraph.cs" t="Include" />
+              <e p="G_AudioManager.cs" t="Include" />
+              <e p="G_AudioMonitor.cs" t="Include" />
+              <e p="G_AudioText.cs" t="Include" />
+            </e>
+            <e p="Fps" t="Include">
+              <e p="G_FpsGraph.cs" t="Include" />
+              <e p="G_FpsManager.cs" t="Include" />
+              <e p="G_FpsMonitor.cs" t="Include" />
+              <e p="G_FpsText.cs" t="Include" />
+            </e>
+            <e p="Graph" t="Include">
+              <e p="G_Graph.cs" t="Include" />
+            </e>
+            <e p="GraphyDebugger.cs" t="Include" />
+            <e p="GraphyManager.cs" t="Include" />
+            <e p="Ram" t="Include">
+              <e p="G_RamGraph.cs" t="Include" />
+              <e p="G_RamManager.cs" t="Include" />
+              <e p="G_RamMonitor.cs" t="Include" />
+              <e p="G_RamText.cs" t="Include" />
+            </e>
+            <e p="Shader" t="Include">
+              <e p="G_GraphShader.cs" t="Include" />
+            </e>
+            <e p="Tayx.Graphy.asmdef" t="Include" />
+            <e p="UI" t="Include">
+              <e p="IModifiableState.cs" t="Include" />
+              <e p="IMovable.cs" t="Include" />
+            </e>
+            <e p="Util" t="Include">
+              <e p="G_ExtensionMethods.cs" t="Include" />
+              <e p="G_FloatString.cs" t="Include" />
+              <e p="G_Intstring.cs" t="Include" />
+              <e p="G_Singleton.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="GraphMobile.shader" t="Include" />
+            <e p="GraphStandard.shader" t="Include" />
+          </e>
+        </e>
         <e p="Modern UI Pack" t="Include">
           <e p="Editor" t="Include">
             <e p="ContextMenu.cs" t="Include" />
@@ -121,15 +303,206 @@
             </e>
           </e>
         </e>
+        <e p="Plugins" t="Include">
+          <e p="EuNet" t="Include">
+            <e p="Editor" t="Include">
+              <e p="EuNet.Editor.asmdef" t="Include" />
+              <e p="ExecutionOrderManager.cs" t="Include" />
+              <e p="NetViewHandler.cs" t="Include" />
+            </e>
+            <e p="Runtime" t="Include">
+              <e p="EuNet.asmdef" t="Include" />
+              <e p="EuNet.Client" t="Include">
+                <e p="ClientOption.cs" t="Include" />
+                <e p="IClient.cs" t="Include" />
+                <e p="NetClient.cs" t="Include" />
+                <e p="P2p" t="Include">
+                  <e p="P2pConnectState.cs" t="Include" />
+                  <e p="P2pGroup.cs" t="Include" />
+                  <e p="P2pMember.cs" t="Include" />
+                  <e p="P2pSession.cs" t="Include" />
+                </e>
+              </e>
+              <e p="EuNet.Core" t="Include">
+                <e p="Channel" t="Include">
+                  <e p="ChannelBase.cs" t="Include" />
+                  <e p="IChannel.cs" t="Include" />
+                  <e p="IChannelOption.cs" t="Include" />
+                  <e p="ReliableChannel.cs" t="Include" />
+                  <e p="ReliableSendInfo.cs" t="Include" />
+                  <e p="SequencedChannel.cs" t="Include" />
+                  <e p="TcpChannel.cs" t="Include" />
+                  <e p="UdpChannel.cs" t="Include" />
+                  <e p="UnreliableChannel.cs" t="Include" />
+                </e>
+                <e p="Extensions" t="Include">
+                  <e p="Extensions.cs" t="Include" />
+                  <e p="ReflectionExtensions.cs" t="Include" />
+                  <e p="TaskExtensions.cs" t="Include" />
+                  <e p="TypeExtensions.cs" t="Include" />
+                </e>
+                <e p="Logger" t="Include">
+                  <e p="ConsoleLogger.cs" t="Include" />
+                  <e p="DefaultLogger.cs" t="Include" />
+                  <e p="DefaultLoggerFactory.cs" t="Include" />
+                  <e p="ILogger.cs" t="Include" />
+                  <e p="ILoggerFactory.cs" t="Include" />
+                  <e p="LoggerFactoryBuilder.cs" t="Include" />
+                  <e p="LogLevel.cs" t="Include" />
+                </e>
+                <e p="P2p" t="Include">
+                  <e p="P2pMemberBase.cs" t="Include" />
+                </e>
+                <e p="Packet" t="Include">
+                  <e p="BufferPool.cs" t="Include" />
+                  <e p="FragmentInfo.cs" t="Include" />
+                  <e p="NetDataBufferReader.cs" t="Include" />
+                  <e p="NetDataReader.cs" t="Include" />
+                  <e p="NetDataWriter.cs" t="Include" />
+                  <e p="NetDataWriterPool.cs" t="Include" />
+                  <e p="NetPacket.cs" t="Include" />
+                  <e p="NetPacketPool.cs" t="Include" />
+                  <e p="PacketFragments.cs" t="Include" />
+                  <e p="PacketProperty.cs" t="Include" />
+                </e>
+                <e p="PacketFilter" t="Include">
+                  <e p="IPacketFilter.cs" t="Include" />
+                  <e p="TeaPacketFilter.cs" t="Include" />
+                  <e p="XorPacketFilter.cs" t="Include" />
+                </e>
+                <e p="Serializer" t="Include">
+                  <e p="Formatter" t="Include">
+                    <e p="CollectionFormatter.cs" t="Include" />
+                    <e p="DictionaryFormatter.cs" t="Include" />
+                    <e p="GenericEnumFormatter.cs" t="Include" />
+                    <e p="MultiDimensionalArrayFormatter.cs" t="Include" />
+                    <e p="NullableFormatter.cs" t="Include" />
+                    <e p="PrimitiveFormatter.cs" t="Include" />
+                    <e p="StandardFormatter.cs" t="Include" />
+                    <e p="TupleFormatter.cs" t="Include" />
+                    <e p="ValueTupleFormatter.cs" t="Include" />
+                  </e>
+                  <e p="INetDataFormatter.cs" t="Include" />
+                  <e p="INetDataFormatterResolver.cs" t="Include" />
+                  <e p="NetDataAttributes.cs" t="Include" />
+                  <e p="NetDataSerializationException.cs" t="Include" />
+                  <e p="NetDataSerializer.cs" t="Include" />
+                  <e p="NetDataSerializerOptions.cs" t="Include" />
+                  <e p="Resolver" t="Include">
+                    <e p="BasicResolver.cs" t="Include" />
+                    <e p="CustomResolver.cs" t="Include" />
+                    <e p="DynamicGenericResolver.cs" t="Include" />
+                    <e p="StandardResolver.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Session" t="Include">
+                  <e p="ISession.cs" t="Include" />
+                  <e p="ISessionFactory.cs" t="Include" />
+                  <e p="SessionCreateInfo.cs" t="Include" />
+                  <e p="SessionInitializeInfo.cs" t="Include" />
+                  <e p="SessionRequest.cs" t="Include" />
+                  <e p="SessionState.cs" t="Include" />
+                </e>
+                <e p="Util" t="Include">
+                  <e p="AsyncObject.cs" t="Include" />
+                  <e p="AsyncObjectQueue.cs" t="Include" />
+                  <e p="ConcurrentCircularQueue.cs" t="Include" />
+                  <e p="ConcurrentObjectPool.cs" t="Include" />
+                  <e p="CryptTea.cs" t="Include" />
+                  <e p="CryptXor.cs" t="Include" />
+                  <e p="DeliveryMethod.cs" t="Include" />
+                  <e p="DeliveryTarget.cs" t="Include" />
+                  <e p="FastBitConverter.cs" t="Include" />
+                  <e p="INetSerializable.cs" t="Include" />
+                  <e p="IPool.cs" t="Include" />
+                  <e p="IRpcInvokable.cs" t="Include" />
+                  <e p="NetPool.cs" t="Include" />
+                  <e p="NetStatistic.cs" t="Include" />
+                  <e p="NetUtil.cs" t="Include" />
+                  <e p="SendingQueue.cs" t="Include" />
+                  <e p="UdpSocket.cs" t="Include" />
+                  <e p="UdpSocketEx.cs" t="Include" />
+                </e>
+              </e>
+              <e p="EuNet.Rpc" t="Include">
+                <e p="IAsyncInvokable.cs" t="Include" />
+                <e p="INetViewRpc.cs" t="Include" />
+                <e p="IRpc.cs" t="Include" />
+                <e p="IViewRpc.cs" t="Include" />
+                <e p="RequestWaiter" t="Include">
+                  <e p="DefaultRequestWaiter.cs" t="Include" />
+                  <e p="IRequestWaiter.cs" t="Include" />
+                </e>
+                <e p="RpcClassFactory.cs" t="Include" />
+                <e p="RpcRequester.cs" t="Include" />
+              </e>
+              <e p="EuNet.Unity" t="Include">
+                <e p="Client" t="Include">
+                  <e p="NetClientP2p.cs" t="Include" />
+                  <e p="NetProtocol.cs" t="Include" />
+                </e>
+                <e p="Extensions" t="Include">
+                  <e p="NetDataReaderExtensions.cs" t="Include" />
+                  <e p="NetDataWriterExtensions.cs" t="Include" />
+                  <e p="UnityTypes.cs" t="Include" />
+                </e>
+                <e p="Logger" t="Include">
+                  <e p="UnityDebugLogger.cs" t="Include" />
+                </e>
+                <e p="NetClientBehaviour.cs" t="Include" />
+                <e p="NetClientGlobal.cs" t="Include" />
+                <e p="NetClientP2pBehaviour.cs" t="Include" />
+                <e p="RequestWaiter" t="Include">
+                  <e p="NetViewRequestWaiter.cs" t="Include" />
+                </e>
+                <e p="SyncTypes" t="Include">
+                  <e p="SyncFloat.cs" t="Include" />
+                  <e p="SyncQuaternion.cs" t="Include" />
+                  <e p="SyncVector2.cs" t="Include" />
+                  <e p="SyncVector3.cs" t="Include" />
+                </e>
+                <e p="Util" t="Include">
+                  <e p="ExecutionOrder.cs" t="Include" />
+                  <e p="GameObjectPool.cs" t="Include" />
+                  <e p="PeriodicSyncType.cs" t="Include" />
+                  <e p="SceneSingleton.cs" t="Include" />
+                  <e p="Singleton.cs" t="Include" />
+                  <e p="SingletonAutoCreate.cs" t="Include" />
+                  <e p="UIResourceManager.cs" t="Include" />
+                </e>
+                <e p="View" t="Include">
+                  <e p="INetView.cs" t="Include" />
+                  <e p="INetViewHandler.cs" t="Include" />
+                  <e p="INetViewPeriodicSync.cs" t="Include" />
+                  <e p="NetView.cs" t="Include" />
+                  <e p="NetViews.cs" t="Include" />
+                </e>
+                <e p="ViewSync" t="Include">
+                  <e p="INetViewSync.cs" t="Include" />
+                  <e p="NetViewPosRotSync.cs" t="Include" />
+                  <e p="NetViewSyncType.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Authorization and TCP" t="Include">
             <e p="AuthorizationSubmit.cs" t="Include" />
+            <e p="Data" t="Include">
+              <e p="PlayerData.cs" t="Include" />
+            </e>
             <e p="JSONHandler.cs" t="Include" />
             <e p="Packet.cs" t="Include" />
             <e p="PacketHandler.cs" t="Include" />
+            <e p="TCP" t="Include">
+              <e p="TCPClient.cs" t="Include" />
+              <e p="TCPClientOld.cs" t="Include" />
+            </e>
           </e>
           <e p="ButtonBuilding.cs" t="Include" />
           <e p="Manager" t="Include">
+            <e p="BigTileMapManager.cs" t="Include" />
             <e p="BuildingManager.cs" t="Include" />
             <e p="CameraMoveManager.cs" t="Include" />
             <e p="ChunkLoadManager.cs" t="Include" />
@@ -142,9 +515,13 @@
             <e p="Chunk.cs" t="Include" />
             <e p="ChunkData.cs" t="Include" />
             <e p="TileChunk.cs" t="Include" />
-            <e p="TileType.cs" t="Include" />
+            <e p="Type" t="Include">
+              <e p="BiomType.cs" t="Include" />
+              <e p="ResourceType.cs" t="Include" />
+            </e>
           </e>
           <e p="ScriptableObject" t="Include">
+            <e p="BiomData.cs" t="Include" />
             <e p="BlockData.cs" t="Include" />
             <e p="BuildingData.cs" t="Include" />
           </e>
@@ -163,24 +540,16 @@
               <e p="World_Mesh.cs" t="Include" />
             </e>
             <e p="MapDataHandler.cs" t="Include" />
+            <e p="Messenger" t="Include">
+              <e p="Callback.cs" t="Include" />
+              <e p="GameEvent.cs" t="Include" />
+              <e p="Messenger.cs" t="Include" />
+            </e>
             <e p="SerializableDictionary.cs" t="Include" />
             <e p="SerializableVector2Int.cs" t="Include" />
             <e p="SerializableVector3Int.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
-            <e p="TCP" t="Include">
-              <e p="TCPClient.cs" t="Include" />
-              <e p="TCPClientOld.cs" t="Include" />
-            </e>
           </e>
-        </e>
-        <e p="ScriptTemplates" t="Include">
-          <e p="50-Mirror__Network Manager-NewNetworkManager.cs.txt" t="Include" />
-          <e p="51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" t="Include" />
-          <e p="52-Mirror__Network Behaviour-NewNetworkBehaviour.cs.txt" t="Include" />
-          <e p="53-Mirror__Network Observer-NewNetworkObserver.cs.txt" t="Include" />
-          <e p="54-Mirror__Network Room Manager-NewNetworkRoomManager.cs.txt" t="Include" />
-          <e p="55-Mirror__Network Room Player-NewNetworkRoomPlayer.cs.txt" t="Include" />
-          <e p="56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" t="Include" />
         </e>
         <e p="Simple Scene Fade Load System" t="Include">
           <e p="ReadMeFirst.txt" t="Include" />
@@ -207,6 +576,11 @@
           </e>
           <e p="ProjectSettings" t="Include">
             <e p="ProjectVersion.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Sprites" t="Include">
+          <e p="Pangea" t="Include">
+            <e p="SpecialThanks!.txt" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
@@ -300,13 +674,20 @@
           </e>
         </e>
       </e>
+      <e p="EuNet.csproj" t="IncludeRecursive" />
+      <e p="EuNet.Editor.csproj" t="IncludeRecursive" />
       <e p="Library" t="ExcludeRecursive" />
       <e p="MapSizer.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="Tayx.Graphy.csproj" t="IncludeRecursive" />
+      <e p="Tayx.Graphy.Editor.csproj" t="IncludeRecursive" />
       <e p="Temp" t="ExcludeRecursive">
         <e p="Bin" t="ExcludeRecursive" />
       </e>
+      <e p="Unity.2D.Tilemap.Extras.csproj" t="IncludeRecursive" />
+      <e p="Unity.2D.Tilemap.Extras.Editor.csproj" t="IncludeRecursive" />
+      <e p="Unity.2D.Tilemap.Extras.Placeholder.EditorTests.csproj" t="IncludeRecursive" />
     </e>
   </component>
 </project>

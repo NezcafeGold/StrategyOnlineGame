@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Copper
   type: 6
-  tile: {fileID: 11400000, guid: 9b18ffdc622be13458773163562cdbc8, type: 2}
+  tile: {fileID: 11400000, guid: 8497e4be0de2f9c47babc381d0845e09, type: 2}
   perlinLevel: 0.16
   perlinSpeed: 0.1

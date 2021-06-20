@@ -15,6 +15,7 @@ public class MapDataHandler : Singleton<MapDataHandler>
 
     private void Awake()
     {
+        if (!SetupSetting.Instance.isMasterClient) gameObject.SetActive(false);
         jsonPath = SetupSetting.Instance.jsonPath;
         chunks = SetupSetting.Instance.chunkRoot;
         dictionaryPath = SetupSetting.Instance.dictionaryPath;
@@ -23,7 +24,7 @@ public class MapDataHandler : Singleton<MapDataHandler>
     private void Start()
     {
         //if (!SetupSetting.Instance.isMasterClient)
-            //StartCoroutine(LoadMapFromJson());
+        //StartCoroutine(LoadMapFromJson());
     }
 
     public void SaveMapToJson()
@@ -51,7 +52,7 @@ public class MapDataHandler : Singleton<MapDataHandler>
         {
             JSON chunkJson = new JSON();
             JSON posJson = JSON.Serialize(ch.chunkData.Position);
-            chunkJson.Add("pos", posJson);  //pos:{x,y}
+            chunkJson.Add("pos", posJson); //pos:{x,y}
 
             JArray tilesArrayJson = new JArray();
 
@@ -59,11 +60,13 @@ public class MapDataHandler : Singleton<MapDataHandler>
             {
                 JSON tileChJson = JSON.Serialize(tileCh);
                 tilesArrayJson.Add(tileChJson);
+                //yield return null;
             }
 
             chunkJson.Add("tiles", tilesArrayJson);
 
             chunkArrayJson.Add(chunkJson);
+            //Debug.Log("Chunk Saved " + ch.chunkData.Position.x + " " + ch.chunkData.Position.y);
         }
 
         mapJson.Add("chunkSize", SetupSetting.Instance.chunkSize);
@@ -80,23 +83,6 @@ public class MapDataHandler : Singleton<MapDataHandler>
     public IEnumerator LoadMapFromJsonCor()
     {
         chunkDataMap = new SerializableDictionary<SerializableVector2Int, ChunkData>();
-        
-//        var watch = System.Diagnostics.Stopwatch.StartNew();
-//// the code that you want to measure comes here
-//        
-//        BinaryFormatter formatter2 = new BinaryFormatter();
-//
-//        using (FileStream stream = new FileStream(dictionaryPath, FileMode.Open))
-//        {
-//            chunkDataMap = (SerializableDictionary<SerializableVector2Int, ChunkData>)formatter2.Deserialize(stream);
-//        }
-//        
-//        watch.Stop();
-//        Debug.Log(watch.ElapsedMilliseconds/1000);
-//        
-//        yield break;
-        
-        
         Debug.Log("Start Read JSON MAP");
         String text = File.ReadAllText(jsonPath);
 
@@ -125,8 +111,8 @@ public class MapDataHandler : Singleton<MapDataHandler>
             ch.tileChunkLayer = tileChunkLayer;
             chunkDataMap.Add(pos, ch);
         }
-        
-        
+
+
 //        BinaryFormatter formatter = new BinaryFormatter();
 //
 //        using (FileStream stream = new FileStream(dictionaryPath, FileMode.Create))
