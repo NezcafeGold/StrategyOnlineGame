@@ -115,7 +115,7 @@ public class GenerationManager : Singleton<GenerationManager>
 
                 chunk.SetChunkTile(tilePosition, biomBlockData.tile);
                 
-                chunk.SetTileChunkData(tilePosition, resBlockData.type, biomBlockData.type); //ResourceType.NONE - заглушка
+                chunk.SetTileChunkData(tilePosition, resBlockData.type, biomBlockData.type); 
 
                 if (resBlockData.tilebas != null)
                     chunk.SetChunkTile(tilePosition, resBlockData.tilebas, true);

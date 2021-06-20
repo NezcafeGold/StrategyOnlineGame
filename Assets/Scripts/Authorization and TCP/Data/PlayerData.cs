@@ -8,6 +8,9 @@ public class PlayerData : Singleton<PlayerData>
     public Dictionary<SerializableVector2Int, ChunkData> ChunkMap;
     private Queue<Action> chunkQueue;
 
+    private string name;
+    private Dictionary<ResourceType, int> resourcesDictionary;
+    
     private void Awake()
     {
         ChunkMap = new Dictionary<SerializableVector2Int, ChunkData>();
@@ -15,31 +18,8 @@ public class PlayerData : Singleton<PlayerData>
         DontDestroyOnLoad(this);
     }
 
-    private void Update()
+    private void UodateData()
     {
-        if (chunkQueue.Count > 0)
-            chunkQueue.Dequeue().Invoke();
-    }
-
-    public void AddToChunkQueue(SerializableVector2Int pos)
-    {
-        chunkQueue.Enqueue(() => GetChunk(pos));
-    }
-    
         
-    private ChunkData GetChunk(SerializableVector2Int pos)
-    {
-        long milliseconds = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-        if (ChunkMap.ContainsKey(pos)) return ChunkMap[pos];
-        TCPClient.Instance.SendMessageTCP(new Packet(Packet.SegmentID.GET_CHUNK_ID,
-            Packet.StatusCode.OK_CODE, Packet.Body.OfInt("x", pos.x), Packet.Body.OfInt("y", pos.y)).ToString());
-        while (!ChunkMap.ContainsKey(pos))
-        {
-            if (milliseconds + 10000 < DateTimeOffset.Now.ToUnixTimeMilliseconds())
-                Debug.Log("CANT FIND CHUNK FROM TCP");
-                return null;
-        }
-
-        return ChunkMap[pos];
     }
 }

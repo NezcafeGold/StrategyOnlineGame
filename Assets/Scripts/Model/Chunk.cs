@@ -91,9 +91,10 @@ public class Chunk : MonoBehaviour
         tileChunk.pos = (Vector2Int) position;
         tileChunk.relPos = (Vector2Int) relativePosition;
 
-        tileChunk.resourcesIntType = (int) resType;
-        tileChunk.biomIntType = (int) biomType;
+        tileChunk.rtype = (int) resType;
+        tileChunk.btype = (int) biomType;
         tileChunk.resourceType = resType;
+        tileChunk.biomTypeType = biomType;
         chunkData.tileChunkLayer[relativePosition.x, relativePosition.y] = tileChunk;
     }
 

@@ -60,11 +60,13 @@ public class MapDataHandler : Singleton<MapDataHandler>
             {
                 JSON tileChJson = JSON.Serialize(tileCh);
                 tilesArrayJson.Add(tileChJson);
+                //yield return null;
             }
 
             chunkJson.Add("tiles", tilesArrayJson);
 
             chunkArrayJson.Add(chunkJson);
+            //Debug.Log("Chunk Saved " + ch.chunkData.Position.x + " " + ch.chunkData.Position.y);
         }
 
         mapJson.Add("chunkSize", SetupSetting.Instance.chunkSize);

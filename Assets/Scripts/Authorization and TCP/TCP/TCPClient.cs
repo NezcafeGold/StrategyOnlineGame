@@ -67,7 +67,7 @@ public class TCPClient : Singleton<TCPClient>
     {
         socketConnection = new TcpClient(host, port);
         // yield return null;
-        Byte[] bytes = new Byte[10000];
+        Byte[] bytes = new Byte[20000];
         while (true)
         {
             if (socketConnection.Connected)
@@ -84,8 +84,7 @@ public class TCPClient : Singleton<TCPClient>
                         Debug.Log("server message received as: " + serverMessage);
 
                         //HANDLE PACKET
-                        //PacketHandler.Instance.actions.Enqueue(() => PacketHandler.Instance.Handle(serverMessage));
-                        //chunkQueue.Enqueue(serverMessage);
+                        Debug.Log(serverMessage);
                         Thread handleThread = new Thread(()=>HandlePacket(serverMessage));
                         handleThread.Start();
                     }

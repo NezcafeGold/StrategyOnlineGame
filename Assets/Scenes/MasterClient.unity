@@ -3168,7 +3168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 177638, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22451668, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_Pivot.x
@@ -3545,15 +3545,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179f987861674ed44803bd984ca7f60d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMasterClient: 0
+  isMasterClient: 1
   chunkPrefab: {fileID: 1483419911697838, guid: dae560acaef8bc2449e752c38247d5c3, type: 3}
   chunkRoot: {fileID: 1716258529}
-  horizontalChunkVisible: 80
-  verticalChunkVisible: 60
+  horizontalChunkVisible: 50
+  verticalChunkVisible: 50
   chunkSize: 16
   seed: 23423
-  worldWidth: 512
-  worldHeight: 512
+  worldWidth: 1024
+  worldHeight: 1024
   defaultResourceBlock: {fileID: 11400000, guid: 89c03ff57d6e52e4986dfdfc50206759, type: 2}
   defaultBiomBlock: {fileID: 11400000, guid: 5b0be6c8059e5864ea8cd3757d12b307, type: 2}
   jsonPath: JSONFILES/ChunkMap.json

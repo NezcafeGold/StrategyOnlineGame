@@ -1,16 +1,21 @@
 
 using System;
-using UnityEditor;
+
+using Newtonsoft.Json;
+
 
 [Serializable]
 public class TileChunk
 {
     [NonSerialized] public ResourceType resourceType;
-    [NonSerialized] public BiomType biomType;
+    [NonSerialized] public BiomType biomTypeType;
     public SerializableVector2Int pos;
     [NonSerialized]
     public SerializableVector2Int relPos;
     //копирует tiletype из-за проблем в сериализации tyletype
-    public int resourcesIntType;
-    public int biomIntType;
+    public int rtype;
+    public int btype;
+
+
+    public int value = 1000;//DEFAULT
 }

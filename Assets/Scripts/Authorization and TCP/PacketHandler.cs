@@ -97,7 +97,7 @@ public class PacketHandler
                 //BiomType bType = (BiomType) v.GetInt("b_type");
                
                 //TODO: парсить правильно, когда готов JSON
-                tile.biomIntType = 0;
+                tile.btype = 0;
                 
                 tile.pos = posTileVect;
                 tile.resourceType = type;
