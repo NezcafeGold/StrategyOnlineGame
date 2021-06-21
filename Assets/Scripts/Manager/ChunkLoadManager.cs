@@ -107,7 +107,8 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
                     h * chunkSize,
                     v * chunkSize, 0);
 
-                if (loadBoundaries.Contains(chunkPosition) && !GetChunk(worldPosition))
+               //(loadBoundaries.Contains(chunkPosition) && !GetChunk(worldPosition))
+                if (loadBoundaries.Contains(chunkPosition) && !GetChunk(worldPosition)) 
                 {
                     Chunk ch = Instantiate(chunkPrefab, worldPosition, Quaternion.identity, chunkRoot.transform)
                         .GetComponent<Chunk>();

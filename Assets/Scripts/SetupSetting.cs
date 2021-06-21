@@ -19,7 +19,7 @@ public class SetupSetting : Singleton<SetupSetting>
     public int seed = 123456;
     public int worldWidth = 256;
     public int worldHeight = 256;
-    public BlockData defaultResourceBlock;
+    public ResourcesData defaultResourceResources;
     public BiomData defaultBiomBlock;
 
     [Header("DATA")]
@@ -28,6 +28,7 @@ public class SetupSetting : Singleton<SetupSetting>
 
     [Header("Building")] public List<BuildingData> buildingList;
 
+    [Header("TileMaps")]
     public Tilemap resourcesTileMap;
     public Tilemap biomsTileMap;
 }

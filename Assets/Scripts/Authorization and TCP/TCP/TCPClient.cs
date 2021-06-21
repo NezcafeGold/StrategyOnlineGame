@@ -65,7 +65,16 @@ public class TCPClient : Singleton<TCPClient>
     /// </summary>     
     private void ListenForData()
     {
-        socketConnection = new TcpClient(host, port);
+        try
+        {
+            socketConnection = new TcpClient(host, port);
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Cant establish connect with "+ host+" "+ port +" "+ e);
+           
+        }
+        
         // yield return null;
         Byte[] bytes = new Byte[20000];
         while (true)
@@ -130,10 +139,12 @@ public class TCPClient : Singleton<TCPClient>
         catch (SocketException socketException)
         {
             Debug.Log("Socket exception: " + socketException);
+            socketConnection.Close();
         }
         catch (Exception e)
         {
             Debug.Log(e);
+            socketConnection.Close();
         }
     }
 

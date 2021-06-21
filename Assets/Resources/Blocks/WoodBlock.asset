@@ -18,3 +18,4 @@ MonoBehaviour:
   perlinLevel: 0.35
   perlinSpeed: 0.00565231
   tilebas: {fileID: 11400000, guid: dd6d5806bbb2ffc458b8a40f2b6e565e, type: 2}
+  sprite: {fileID: -2165715985405750159, guid: 9301991f8bdca994887c9c765bdcb76f, type: 3}

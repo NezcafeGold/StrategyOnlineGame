@@ -9,11 +9,11 @@ public class GenerationManager : Singleton<GenerationManager>
     private int seed = 123456;
     private int worldWidth = 256;
     private int worldHeight = 256;
-    private BlockData defaultResourceBlock;
+    private ResourcesData defaultResourceResources;
     private BiomData defaultBiomBlock;
 
     private Vector2 perlinOffset;
-    private List<BlockData> blockDataObjects;
+    private List<ResourcesData> blockDataObjects;
     private List<BiomData> biomDataObjects;
     private bool isMasterClient;
 
@@ -25,10 +25,10 @@ public class GenerationManager : Singleton<GenerationManager>
         seed = setup.seed;
         worldWidth = setup.worldWidth;
         worldHeight = setup.worldHeight;
-        defaultResourceBlock = setup.defaultResourceBlock;
+        defaultResourceResources = setup.defaultResourceResources;
         defaultBiomBlock = setup.defaultBiomBlock;
 
-        blockDataObjects = Resources.LoadAll<BlockData>("Blocks").ToList();
+        blockDataObjects = Resources.LoadAll<ResourcesData>("Blocks").ToList();
         biomDataObjects = Resources.LoadAll<BiomData>("Blocks").ToList();
 
         isMasterClient = SetupSetting.Instance.isMasterClient;
@@ -48,7 +48,7 @@ public class GenerationManager : Singleton<GenerationManager>
                     continue;
 
 
-                BlockData resBlockData = defaultResourceBlock;
+                ResourcesData resResourcesData = defaultResourceResources;
                 BiomData biomBlockData = defaultBiomBlock;
 
 
@@ -59,12 +59,12 @@ public class GenerationManager : Singleton<GenerationManager>
                     // Бегаем по блокам и проверяем шанс
                     for (int i = 0; i < blockDataObjects.Count; i++)
                     {
-                        BlockData block = blockDataObjects[i] as BlockData;
-                        if (block != defaultBiomBlock)
+                        ResourcesData resources = blockDataObjects[i] as ResourcesData;
+                        if (resources != defaultBiomBlock)
                         {
-                            if (!CheckPerlinLevel(tilePosition, block.perlinSpeed, block.perlinLevel))
+                            if (!CheckPerlinLevel(tilePosition, resources.perlinSpeed, resources.perlinLevel))
                             {
-                                resBlockData = block;
+                                resResourcesData = resources;
                                 break;
                             }
                         }
@@ -94,7 +94,7 @@ public class GenerationManager : Singleton<GenerationManager>
                     for (int i = 0; i < biomDataObjects.Count; i++)
                     {
                         BiomData block = biomDataObjects[i] as BiomData;
-                        if (chunk.GetTileChunkData(tilePosition).resourceType.Equals(block.type))
+                        if (chunk.GetTileChunkData(tilePosition).biomTypeType.Equals(block.type))
                         {
                             biomBlockData = block;
                             break;
@@ -103,24 +103,23 @@ public class GenerationManager : Singleton<GenerationManager>
 
                     for (int i = 0; i < blockDataObjects.Count; i++)
                     {
-                        BlockData block = blockDataObjects[i] as BlockData;
-                        if (chunk.GetTileChunkData(tilePosition).resourceType.Equals(block.type))
+                        ResourcesData resources = blockDataObjects[i] as ResourcesData;
+                        if (chunk.GetTileChunkData(tilePosition).resourceType.Equals(resources.type))
                         {
-                            resBlockData = block;
+                            resResourcesData = resources;
                             break;
                         }
                     }
                 }
 
-
                 chunk.SetChunkTile(tilePosition, biomBlockData.tile);
-                
-                chunk.SetTileChunkData(tilePosition, resBlockData.type, biomBlockData.type); 
 
-                if (resBlockData.tilebas != null)
-                    chunk.SetChunkTile(tilePosition, resBlockData.tilebas, true);
+                chunk.SetTileChunkData(tilePosition, resResourcesData.type, biomBlockData.type);
+
+                if (resResourcesData.tilebas != null)
+                    chunk.SetChunkTile(tilePosition, resResourcesData.tilebas, true);
                 else
-                    chunk.SetChunkTile(tilePosition, resBlockData.tile, true);
+                    chunk.SetChunkTile(tilePosition, resResourcesData.tile, true);
             }
         }
 

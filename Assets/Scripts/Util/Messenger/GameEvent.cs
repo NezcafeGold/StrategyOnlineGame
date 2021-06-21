@@ -1,6 +1,5 @@
 public static class GameEvent
 {
-      public const string ADD_CHUNK = "ADD_CHUNK";
-      public const string AUTHORIZATION_SUCC = "AUTHORIZATION_SUCC";
-
+    public const string UPDATE_USER_STATS = "UPDATE_USER_STATS";
+    public const string AUTHORIZATION_SUCC = "AUTHORIZATION_SUCC";
 }

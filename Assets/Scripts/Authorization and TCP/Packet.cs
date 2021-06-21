@@ -98,20 +98,35 @@ public class Packet
     {
         public static readonly int PING_ID = 0;
 
-        public const int AUTHORIZATION_ID = 1;
+        public static readonly int SHUTDOWN_ID = 1;
+        
+        public const int AUTHORIZATION_ID = 2;
 
-        public const int GET_USER_ID = 2;
+        public const int GET_USER_ID = 100;
 
-        public const int GET_INVENTORY_ID = 3;
+        public const int GET_INVENTORY_ID = 101;
 
-        public const int GET_UNITS_ID = 4;
+        public const int GET_UNITS_ID = 102;
 
-        public const int GET_RESOURCES_ID = 5;
+        public const int GET_RESOURCES_ID = 103;
 
-        public const int GET_CHUNK_ID = 6;
+        public const int GET_CHUNK_ID = 200;
 
-        public const int GET_TILE_ID = 7;
+        public const int GET_TILE_ID = 201;
 
-        public const int GET_DATA_MAP_ID = 8;
+        public const int GET_DATA_MAP_ID = 202;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        public const int SET_FARM_ID = 300;
+        
     }
 }

@@ -17,3 +17,5 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: e46ced7822e664a40af8902ad01058b0, type: 2}
   perlinLevel: 0.19
   perlinSpeed: 0.004
+  tilebas: {fileID: 0}
+  sprite: {fileID: 21300000, guid: ed4dae812b3265e43b86c738f32dd805, type: 3}

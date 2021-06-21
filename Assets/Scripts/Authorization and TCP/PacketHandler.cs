@@ -5,9 +5,8 @@ using System.Threading;
 using Leguar.TotalJSON;
 using UnityEngine;
 
-public class PacketHandler 
+public class PacketHandler
 {
-
     private bool CheckForCorrectPacket()
     {
         //TODO: Add method
@@ -16,7 +15,14 @@ public class PacketHandler
 
     public void Handle(string serverMessage)
     {
-        HandleHeader(JSON.ParseString(serverMessage).GetJSON(Packet.PacketKey.HEADER),serverMessage);
+        try
+        {
+            HandleHeader(JSON.ParseString(serverMessage).GetJSON(Packet.PacketKey.HEADER), serverMessage);
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Error with parse " + serverMessage + " " + e);
+        }
     }
 
 
@@ -43,7 +49,7 @@ public class PacketHandler
                     break;
 
                 case Packet.SegmentID.GET_USER_ID:
-
+                    HandleUserData(serverMessage);
                     break;
                 case Packet.SegmentID.GET_CHUNK_ID:
                     HandleChunk(serverMessage);
@@ -60,13 +66,40 @@ public class PacketHandler
                 case Packet.SegmentID.GET_RESOURCES_ID:
 
                     break;
-            }
+                default:
+                   
+                    break;
+            } 
         }
         catch (Exception e)
         {
             Debug.Log(e);
         }
     }
+
+    private void HandleUserData(string serverMessage)
+    {
+        PlayerData pd = PlayerData.Instance;
+        JSON bodyJs = JSON.ParseString(serverMessage).GetJSON(Packet.PacketKey.BODY);
+        JSON userJs = bodyJs.GetJSON("user");
+        pd.Nickname = userJs.GetString("nickname");
+        JSON playerJs = userJs.GetJSON("player");
+        pd.Level = playerJs.GetInt("level");
+        pd.Experience = playerJs.GetInt("experience");
+        JSON resources = playerJs.GetJSON("resources");
+        Dictionary<ResourceType, int> resourcesDictionary = new Dictionary<ResourceType, int>();
+        resourcesDictionary.Add(ResourceType.COAL, resources.GetInt("coal"));
+        resourcesDictionary.Add(ResourceType.SULFUR, resources.GetInt("sulfur"));
+        resourcesDictionary.Add(ResourceType.COPPER, resources.GetInt("copper"));
+        resourcesDictionary.Add(ResourceType.IRON, resources.GetInt("iron"));
+        resourcesDictionary.Add(ResourceType.GOLD, resources.GetInt("gold"));
+        resourcesDictionary.Add(ResourceType.URANUS, resources.GetInt("uranus"));
+        resourcesDictionary.Add(ResourceType.STONE, resources.GetInt("stone"));
+        resourcesDictionary.Add(ResourceType.WOOD, resources.GetInt("wood"));
+        resourcesDictionary.Add(ResourceType.FOOD, resources.GetInt("food"));
+        pd.ResourcesDictionary = resourcesDictionary;
+    }
+
 
     private void HandleChunk(string serverMessage)
     {
@@ -75,38 +108,45 @@ public class PacketHandler
             JSON bodyJs = JSON.ParseString(serverMessage).GetJSON(Packet.PacketKey.BODY);
             JSON chunkJs = bodyJs.GetJSON("chunk");
             JArray tilesArray = chunkJs.GetJArray("tiles");
-
             int chX = chunkJs.GetJSON("pos").GetInt("x");
             int chY = chunkJs.GetJSON("pos").GetInt("y");
             SerializableVector2Int pos = new SerializableVector2Int(chX, chY);
             ChunkData ch = new ChunkData();
+
             TileChunk[,]
                 tiles = new TileChunk[SetupSetting.Instance.chunkSize,
                     SetupSetting.Instance.chunkSize]; //TODO получать из playerData
-
             foreach (JSON v in tilesArray.Values)
             {
-                TileChunk tile = new TileChunk();
-                JSON posTile = v.GetJSON("pos");
+                try
+                {
+                    TileChunk tile = new TileChunk();
+                    JSON posTile = v.GetJSON("pos");
 
-                int x = posTile.GetInt("x");
-                int y = posTile.GetInt("y");
-                SerializableVector2Int posTileVect = new SerializableVector2Int(x, y);
-                ResourceType type = (ResourceType) v.GetInt("type");
-                
-                //BiomType bType = (BiomType) v.GetInt("b_type");
-               
-                //TODO: парсить правильно, когда готов JSON
-                tile.btype = 0;
-                
-                tile.pos = posTileVect;
-                tile.resourceType = type;
-                tiles[x - chX, y - chY] = tile;
+                    int x = posTile.GetInt("x");
+                    int y = posTile.GetInt("y");
+                    SerializableVector2Int posTileVect = new SerializableVector2Int(x, y);
+                    ResourceType rtype = (ResourceType) v.GetInt("rtype");
+                    BiomType btype = (BiomType) v.GetInt("btype");
+
+                    //tile.btype = 0;
+
+                    tile.pos = posTileVect;
+                    tile.resourceType = rtype;
+                    tile.biomTypeType = btype;
+                    tiles[x - chX, y - chY] = tile;
+                }
+                catch (Exception e)
+                {
+                    Debug.Log("Error when parse tile from TCP" + e);
+                    break;
+                }
             }
 
             ch.Position = pos;
             ch.tileChunkLayer = tiles;
             PlayerData.Instance.ChunkMap.Add(ch.Position, ch);
+           
         }
         catch (Exception e)
         {

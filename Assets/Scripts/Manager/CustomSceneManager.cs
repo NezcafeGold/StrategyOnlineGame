@@ -2,12 +2,13 @@
 
 using System;
 using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
 
-public class CustomSceneManager : MonoBehaviour
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class CustomSceneManager : Singleton<CustomSceneManager>
 {
-    [SerializeField] private SceneAsset scene;
+    
     [SerializeField] private Color color;
     [SerializeField] private float time;
     [SerializeField] private GameObject[] gameObjects;
@@ -16,6 +17,7 @@ public class CustomSceneManager : MonoBehaviour
     
     private void Awake()
     {
+        Messenger.MarkAsPermanent(GameEvent.AUTHORIZATION_SUCC);
         Messenger.AddListener(GameEvent.AUTHORIZATION_SUCC, AddLoadJob);
     }
 
@@ -42,6 +44,6 @@ public class CustomSceneManager : MonoBehaviour
             g.SetActive(false);
         }
 
-        Initiate.Fade(scene.name, color, time);
+        Initiate.Fade( "MasterClient", color, time);
     }
 }

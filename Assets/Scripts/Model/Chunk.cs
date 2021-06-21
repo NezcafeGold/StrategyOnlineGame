@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -78,6 +79,8 @@ public class Chunk : MonoBehaviour
 
         else
             biomsTilemap.SetTile(tilePosition, blockTile);
+
+        
     }
 
     public void SetTileChunkData(Vector3Int position, ResourceType resType, BiomType biomType)
@@ -96,6 +99,7 @@ public class Chunk : MonoBehaviour
         tileChunk.resourceType = resType;
         tileChunk.biomTypeType = biomType;
         chunkData.tileChunkLayer[relativePosition.x, relativePosition.y] = tileChunk;
+ 
     }
 
     public TileChunk GetTileChunkData(Vector3Int position)
