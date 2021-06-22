@@ -24,7 +24,7 @@ public class ResourcesManager : MonoBehaviour
     {
         while (true)
         {
-            if (PlayerData.Instance.ResourcesDictionary.Count > 0 && !isSet)
+            if (PlayerData.GetInstance().ResourcesDictionary.Count > 0 && !isSet)
             {
                 foreach (var rdo in resDataObjects)
                 {

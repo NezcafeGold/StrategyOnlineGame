@@ -1,40 +1,38 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Net.NetworkInformation;
-using System.Net.Sockets;
+using Model.BuildData;
 using UnityEngine;
 
-public class PlayerData : Singleton<PlayerData>
+public class PlayerData 
 {
     public SerializableVector2Int SpawnCoord = new SerializableVector2Int(0, 0);
-    public Dictionary<SerializableVector2Int, ChunkData> ChunkMap;
-    private Queue<Action> chunkQueue;
+    public Dictionary<SerializableVector2Int, ChunkData> ChunkMap = new Dictionary<SerializableVector2Int, ChunkData>();
+    private Queue<Action> chunkQueue = new Queue<Action>();
 
-    [SerializeField] public string Nickname;
-    [SerializeField] public int Level;
-    [SerializeField] public int Experience;
-    [SerializeField] public Dictionary<ResourceType, int> ResourcesDictionary;
-    [SerializeField] public InventoryData InventoryData;
-
-
-    private void Awake()
+    public string Nickname;
+    public int Level;
+    public int Experience;
+    public Dictionary<ResourceType, int> ResourcesDictionary = new Dictionary<ResourceType, int>();
+    public InventoryData InventoryData;
+    public PlayerBaseData baseData;
+    
+    
+    private bool isLoad = false;
+    
+    private static readonly PlayerData instance = new PlayerData();
+    public string Date { get; private set; }
+ 
+    private PlayerData()
     {
-        ResourcesDictionary = new Dictionary<ResourceType, int>();
-        ChunkMap = new Dictionary<SerializableVector2Int, ChunkData>();
-        chunkQueue = new Queue<Action>();
-        DontDestroyOnLoad(this);
-        AskData();
+        Date = DateTime.Now.TimeOfDay.ToString();
+    }
+ 
+    public static PlayerData GetInstance()
+    {
+        return instance;
     }
     
-
-    private void AskData()
-    {
-        TCPClient.Instance.SendMessageTCP(new Packet(Packet.SegmentID.GET_USER_ID,
-            Packet.StatusCode.OK_CODE).ToString());
-    }
-
-
-
     public int GetValueForType(ResourceType resType)
     {
         foreach (var k in ResourcesDictionary.Keys)
@@ -42,7 +40,16 @@ public class PlayerData : Singleton<PlayerData>
             if (resType.Equals(k))
                 return ResourcesDictionary[k];
         }
-
         return 0;
+    }
+
+    public void LoadTrue()
+    {
+        Messenger.Broadcast(GameEvent.UPDATE_USER_STATS);
+    }
+
+    public  bool isLoadDone()
+    {
+        return isLoad;
     }
 }

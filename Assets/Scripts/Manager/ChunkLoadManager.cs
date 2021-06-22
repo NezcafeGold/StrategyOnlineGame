@@ -14,6 +14,8 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
     private BoxCollider2D boxColl;
     private bool isUpdatingChunks = false;
     private Rect loadBoundaries;
+    private int chunkSize;
+    public static Queue<ChunkData> chunkQueue;
 
     public List<Chunk> chunksToMasterMapSave;
 
@@ -29,11 +31,26 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
 
     void Start()
     {
+        chunkSize = SetupSetting.Instance.chunkSize;
+        chunkQueue = new Queue<ChunkData>();
         chunksToMasterMapSave = new List<Chunk>();
         boxColl = Camera.main.GetComponent<BoxCollider2D>();
         StartCoroutine(LoadChunks());
         StartCoroutine(UnloadChunks());
     }
+
+    // private IEnumerator LoadChunksFromTCP()
+    // {
+    //     while (true)
+    //     {
+    //         if (chunkQueue.Count > 0)
+    //         {
+    //             ChunkData chD = chunkQueue.Dequeue();
+    //             Chunk ch = GetChunk(new Vector3Int(chD.Position.x, chD.Position.y, 0));
+    //             ch.SetData();
+    //         }
+    //     }
+    // }
 
     private IEnumerator LoadChunks()
     {
@@ -82,6 +99,7 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
                 {
                     continue;
                 }
+
                 chunk.StartCoroutine(chunk.UnloadChunkCor());
             }
 
@@ -91,8 +109,6 @@ public class ChunkLoadManager : Singleton<ChunkLoadManager>
 
     private IEnumerator PerformLoadChunks()
     {
-        int chunkSize = SetupSetting.Instance.chunkSize;
-
         loadBoundaries = GetChunkLoadBounds();
         List<Chunk> chunksToLoad = new List<Chunk>();
         for (int h = (int) loadBoundaries.xMax; h >= (int) loadBoundaries.xMin; h--)

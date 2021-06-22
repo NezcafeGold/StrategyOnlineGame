@@ -38,6 +38,12 @@ public class TCPClient : Singleton<TCPClient>
         }
     }
 
+    private void OnDestroy()
+    {
+        clientReceiveThread.Abort();
+        pingThread.Abort();
+    }
+
     /// <summary> 	
     /// Setup socket connection. 	
     /// </summary> 	
@@ -76,7 +82,7 @@ public class TCPClient : Singleton<TCPClient>
         }
         
         // yield return null;
-        Byte[] bytes = new Byte[20000];
+        Byte[] bytes = new Byte[50000];
         while (true)
         {
             if (socketConnection.Connected)
@@ -92,8 +98,7 @@ public class TCPClient : Singleton<TCPClient>
                         string serverMessage = Encoding.ASCII.GetString(incommingData);
                         Debug.Log("server message received as: " + serverMessage);
 
-                        //HANDLE PACKET
-                        Debug.Log(serverMessage);
+                        
                         Thread handleThread = new Thread(()=>HandlePacket(serverMessage));
                         handleThread.Start();
                     }
@@ -158,7 +163,7 @@ public class TCPClient : Singleton<TCPClient>
                 SendMessageTCP(new Packet(Packet.SegmentID.PING_ID, Packet.StatusCode.OK_CODE).WithoutUUID()
                     .ToString());
                 milliseconds = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-                Debug.Log(milliseconds);
+                Debug.Log("PING!");
             }
                 
         }

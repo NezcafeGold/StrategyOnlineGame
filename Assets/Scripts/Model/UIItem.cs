@@ -28,7 +28,7 @@ public class UIItem : MonoBehaviour
     public void UpdateStat()
     {
         valueUI.SetText(Value.ToString());
-        Value = PlayerData.Instance.GetValueForType(resType);
+        Value = PlayerData.GetInstance().GetValueForType(resType);
         valueUI.SetText(Value.ToString());
         iconUI.sprite = iconSprite;
     }

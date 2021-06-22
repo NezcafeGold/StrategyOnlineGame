@@ -3,6 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading;
 using Leguar.TotalJSON;
+using Model.BuildData;
 using UnityEngine;
 
 public class PacketHandler
@@ -41,7 +42,6 @@ public class PacketHandler
             switch (id)
             {
                 case Packet.SegmentID.AUTHORIZATION_ID:
-                    Messenger.Broadcast(GameEvent.AUTHORIZATION_SUCC);
                     break;
 
                 case Packet.SegmentID.GET_TILE_ID:
@@ -67,9 +67,9 @@ public class PacketHandler
 
                     break;
                 default:
-                   
+
                     break;
-            } 
+            }
         }
         catch (Exception e)
         {
@@ -79,7 +79,7 @@ public class PacketHandler
 
     private void HandleUserData(string serverMessage)
     {
-        PlayerData pd = PlayerData.Instance;
+        PlayerData pd = PlayerData.GetInstance();
         JSON bodyJs = JSON.ParseString(serverMessage).GetJSON(Packet.PacketKey.BODY);
         JSON userJs = bodyJs.GetJSON("user");
         pd.Nickname = userJs.GetString("nickname");
@@ -98,6 +98,15 @@ public class PacketHandler
         resourcesDictionary.Add(ResourceType.WOOD, resources.GetInt("wood"));
         resourcesDictionary.Add(ResourceType.FOOD, resources.GetInt("food"));
         pd.ResourcesDictionary = resourcesDictionary;
+        JSON baseJs = playerJs.GetJSON("base");
+        PlayerBaseData baseData = new PlayerBaseData();
+        baseData.OwnerId = baseJs.GetString("OwnerID");
+        baseData.OwnerName = baseJs.GetString("Owner");
+        baseData.Level = baseJs.GetInt("level");
+        string[] v = baseJs.GetString("Coordinates").Split('_');
+        baseData.Position = new Vector2Int(int.Parse(v[0]), int.Parse(v[1]));
+        pd.baseData = baseData;
+        Messenger.Broadcast(GameEvent.AUTHORIZATION_SUCC);
     }
 
 
@@ -145,8 +154,9 @@ public class PacketHandler
 
             ch.Position = pos;
             ch.tileChunkLayer = tiles;
-            PlayerData.Instance.ChunkMap.Add(ch.Position, ch);
-           
+            PlayerData.GetInstance().ChunkMap.Add(ch.Position, ch);
+            //ChunkLoadManager.chunkQueue.Enqueue(ch); 
+            
         }
         catch (Exception e)
         {

@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class CameraMoveManager : MonoBehaviour
@@ -20,8 +21,10 @@ public class CameraMoveManager : MonoBehaviour
         cam = Camera.main;
         camSize = cam.orthographicSize;
         maxX = SetupSetting.Instance.worldWidth;
-        maxY = SetupSetting.Instance.worldHeight;
-        
+        maxY = SetupSetting.Instance.worldHeight;        
+        Vector2Int v = PlayerData.GetInstance().baseData.Position;
+        cam.transform.position = new Vector3Int(v.x, v.x, -10);
+        dragVector = new Vector3Int(v.x, v.x, -10);
     }
 
     void LateUpdate()

@@ -35,5 +35,8 @@ public class AuthorizationSubmit : MonoBehaviour
             Packet.StatusCode.AUTHORIZATION_CODE,
             Packet.Body.Of("email", email),
             Packet.Body.Of("password", password)).ToString());
+        yield return new WaitForSecondsRealtime(0.5f);
+        tcpClient.SendMessageTCP(new Packet(Packet.SegmentID.GET_USER_ID,
+            Packet.StatusCode.OK_CODE).ToString());
     }
 }

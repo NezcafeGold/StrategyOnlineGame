@@ -1454,7 +1454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 89, y: 51}
+  m_AnchoredPosition: {x: 88, y: 48}
   m_SizeDelta: {x: 178, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &539437320
@@ -3241,7 +3241,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1231306405}
-  - component: {fileID: 1231306406}
   - component: {fileID: 1231306407}
   - component: {fileID: 1231306408}
   m_Layer: 0
@@ -3265,18 +3264,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1231306406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1231306404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3395c3215f4644d4987dff0da7b4c707, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1231306407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3292,13 +3279,13 @@ MonoBehaviour:
   isMasterClient: 0
   chunkPrefab: {fileID: 1483419911697838, guid: dae560acaef8bc2449e752c38247d5c3, type: 3}
   chunkRoot: {fileID: 1716258529}
-  horizontalChunkVisible: 80
-  verticalChunkVisible: 60
+  horizontalChunkVisible: 60
+  verticalChunkVisible: 40
   chunkSize: 16
   seed: 23423
   worldWidth: 1024
   worldHeight: 1024
-  defaultResourceResources: {fileID: 0}
+  defaultResourceResources: {fileID: 11400000, guid: 89c03ff57d6e52e4986dfdfc50206759, type: 2}
   defaultBiomBlock: {fileID: 11400000, guid: 5b0be6c8059e5864ea8cd3757d12b307, type: 2}
   jsonPath: JSONFILES/ChunkMap.json
   dictionaryPath: JSONFILES/ChunMap.dat
@@ -4610,7 +4597,7 @@ RectTransform:
   m_GameObject: {fileID: 1704116752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 472681286}
   - {fileID: 1738283723}

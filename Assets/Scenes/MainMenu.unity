@@ -2052,7 +2052,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ae10041fdf4ea19a9a85707925d055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
   color: {r: 0.67058825, g: 0.42352942, b: 0.07450981, a: 1}
   time: 1
   gameObjects:

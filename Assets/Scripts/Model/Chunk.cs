@@ -14,30 +14,41 @@ public class Chunk : MonoBehaviour
     private BoxCollider2D chunkCollider;
     private bool isUnloading = false;
     private bool isSendToTCP = false;
+    private bool isSet = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        int chunkSize = SetupSetting.Instance.chunkSize;
         resourcesTilemap = SetupSetting.Instance.resourcesTileMap;
         biomsTilemap = SetupSetting.Instance.biomsTileMap;
 
         chunkData = new ChunkData();
         chunkData.Position = new Vector2Int((int) transform.position.x, (int) transform.position.y);
         chunkData.ChunkPosition = new Vector2Int(
-            chunkData.Position.x / SetupSetting.Instance.chunkSize,
-            chunkData.Position.y / SetupSetting.Instance.chunkSize);
+            chunkData.Position.x / chunkSize,
+            chunkData.Position.y / chunkSize);
         chunkData.tileChunkLayer = new TileChunk[
             SetupSetting.Instance.chunkSize,
             SetupSetting.Instance.chunkSize];
 
         chunkCollider = GetComponent<BoxCollider2D>();
         chunkCollider.size = new Vector2(
-            SetupSetting.Instance.chunkSize,
-            SetupSetting.Instance.chunkSize);
+            chunkSize,
+            chunkSize);
         chunkCollider.offset = new Vector2(
-            SetupSetting.Instance.chunkSize / 2,
-            SetupSetting.Instance.chunkSize / 2);
+            chunkSize / 2,
+            chunkSize / 2);
         LoadChunk();
+    }
+
+    private void Update()
+    {
+        if (PlayerData.GetInstance().ChunkMap.ContainsKey(chunkData.Position))
+        {
+            SetData();
+            isSet = true;
+        }
     }
 
     private void LoadChunk()
@@ -45,7 +56,7 @@ public class Chunk : MonoBehaviour
         if (SetupSetting.Instance.isMasterClient)
             StartCoroutine(GenerationManager.Instance.GenerateChunk(this));
         else
-            StartCoroutine(LoadDataFromTCP());
+            LoadDataFromTCP();
     }
 
 
@@ -79,8 +90,6 @@ public class Chunk : MonoBehaviour
 
         else
             biomsTilemap.SetTile(tilePosition, blockTile);
-
-        
     }
 
     public void SetTileChunkData(Vector3Int position, ResourceType resType, BiomType biomType)
@@ -99,7 +108,6 @@ public class Chunk : MonoBehaviour
         tileChunk.resourceType = resType;
         tileChunk.biomTypeType = biomType;
         chunkData.tileChunkLayer[relativePosition.x, relativePosition.y] = tileChunk;
- 
     }
 
     public TileChunk GetTileChunkData(Vector3Int position)
@@ -111,32 +119,25 @@ public class Chunk : MonoBehaviour
         return chunkData.tileChunkLayer[relativePosition.x, relativePosition.y];
     }
 
-    private IEnumerator LoadDataFromTCP()
+    private void LoadDataFromTCP()
     {
-        while (true)
+        if (!PlayerData.GetInstance().ChunkMap.ContainsKey(chunkData.Position) && !isSendToTCP)
         {
-            if (!PlayerData.Instance.ChunkMap.ContainsKey(chunkData.Position) && !isSendToTCP)
-            {
-                TCPClient.Instance.SendMessageTCP(new Packet(Packet.SegmentID.GET_CHUNK_ID,
-                    Packet.StatusCode.OK_CODE, Packet.Body.OfInt("x", chunkData.Position.x),
-                    Packet.Body.OfInt("y", chunkData.Position.y)).ToString());
-                isSendToTCP = true;
-            }
-            else
-            {
-                if (!PlayerData.Instance.ChunkMap.ContainsKey(chunkData.Position))
-                    continue;
-                ChunkData ch = PlayerData.Instance.ChunkMap[chunkData.Position];
-                chunkData.Position = ch.Position;
-                chunkData.tileChunkLayer = ch.tileChunkLayer;
-                yield return null;
-                StartCoroutine(GenerationManager.Instance.GenerateChunk(this));
-                
-                Debug.Log("CHUNK FOUND" + ch.Position.x + " " + ch.Position.y);
-                break;
-            }
-
-            yield return null;
+            TCPClient.Instance.SendMessageTCP(new Packet(Packet.SegmentID.GET_CHUNK_ID,
+                Packet.StatusCode.OK_CODE, Packet.Body.OfInt("x", chunkData.Position.x),
+                Packet.Body.OfInt("y", chunkData.Position.y)).ToString());
+            isSendToTCP = true;
         }
+    }
+
+    public void SetData()
+    {
+        if (isSet) return;
+        ChunkData ch = PlayerData.GetInstance().ChunkMap[chunkData.Position];
+        chunkData.Position = ch.Position;
+        chunkData.tileChunkLayer = ch.tileChunkLayer;
+        StartCoroutine(GenerationManager.Instance.GenerateChunk(this));
+        isSet = true;
+        Debug.Log("CHUNK FOUND" + ch.Position.x + " " + ch.Position.y);
     }
 }

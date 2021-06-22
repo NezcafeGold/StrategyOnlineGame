@@ -1,14 +1,11 @@
-
-
 using System;
+using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CustomSceneManager : Singleton<CustomSceneManager>
 {
-    
     [SerializeField] private Color color;
     [SerializeField] private float time;
     [SerializeField] private GameObject[] gameObjects;
@@ -28,7 +25,7 @@ public class CustomSceneManager : Singleton<CustomSceneManager>
 
     private void Update()
     {
-        while (jobs.Count > 0) 
+        while (jobs.Count > 0)
             jobs.Dequeue().Invoke();
     }
 
@@ -37,13 +34,13 @@ public class CustomSceneManager : Singleton<CustomSceneManager>
         jobs.Enqueue(LoadGameScene);
     }
 
-    private void  LoadGameScene()
+    private void LoadGameScene()
     {
         foreach (var g in gameObjects)
         {
             g.SetActive(false);
         }
 
-        Initiate.Fade( "MasterClient", color, time);
+        Initiate.Fade("MasterClient", color, time);
     }
 }

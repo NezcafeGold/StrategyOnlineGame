@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,7 +35,7 @@ public class GenerationManager : Singleton<GenerationManager>
         isMasterClient = SetupSetting.Instance.isMasterClient;
     }
 
-    public IEnumerator GenerateChunk(Chunk chunk, bool isBiom = false)
+    public IEnumerator GenerateChunk(Chunk chunk)
     {
         //TODO: TCP
         for (int v = 0; v < chunkSize; v++)
@@ -60,7 +61,7 @@ public class GenerationManager : Singleton<GenerationManager>
                     for (int i = 0; i < blockDataObjects.Count; i++)
                     {
                         ResourcesData resources = blockDataObjects[i] as ResourcesData;
-                        if (resources != defaultBiomBlock)
+                        if (resources != defaultResourceResources)
                         {
                             if (!CheckPerlinLevel(tilePosition, resources.perlinSpeed, resources.perlinLevel))
                             {
@@ -113,7 +114,6 @@ public class GenerationManager : Singleton<GenerationManager>
                 }
 
                 chunk.SetChunkTile(tilePosition, biomBlockData.tile);
-
                 chunk.SetTileChunkData(tilePosition, resResourcesData.type, biomBlockData.type);
 
                 if (resResourcesData.tilebas != null)
