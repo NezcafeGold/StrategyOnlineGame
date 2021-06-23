@@ -38,5 +38,9 @@ public class AuthorizationSubmit : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.5f);
         tcpClient.SendMessageTCP(new Packet(Packet.SegmentID.GET_USER_ID,
             Packet.StatusCode.OK_CODE).ToString());
+        tcpClient.SendMessageTCP(new Packet(Packet.SegmentID.GET_USER_ID,
+            Packet.StatusCode.OK_CODE).ToString());
+        tcpClient.SendMessageTCP(new Packet(Packet.SegmentID.GET_USER_ID,
+            Packet.StatusCode.OK_CODE).ToString());
     }
 }

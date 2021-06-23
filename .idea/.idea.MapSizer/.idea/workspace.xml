@@ -1,37 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b42def61-79ec-4ee7-91d9-b88f49e7685e" name="Default Changelist" comment="fix freezing">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BuildData.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BuildData/BuildData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BuildData/BuildData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BuildData/FarmData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BuildData/FarmData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BuildData/PlayerBaseData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BuildData/PlayerBaseData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/indexLayout.xml" afterDir="false" />
+    <list default="true" id="b42def61-79ec-4ee7-91d9-b88f49e7685e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/PlayerData.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/PlayerData.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MapSizer/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GenerateMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GenerateMap.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MasterClient.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MasterClient.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/AuthorizationSubmit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/AuthorizationSubmit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/Data/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/Data/PlayerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/Data/PlayerData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/Data/PlayerData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/PacketHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/PacketHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/TCP/TCPClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/TCP/TCPClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/CameraMoveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/CameraMoveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/CameraMoveManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/CameraMoveManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/ChunkLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ChunkLoadManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/CustomSceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/CustomSceneManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GenerationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GenerationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/ResourcesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ResourcesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Chunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Chunk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/ChunkData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/ChunkData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/UIItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/UIItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Documentation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Documentation.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Fonts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Fonts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Fonts/LiberationSans - OFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Fonts/LiberationSans - OFL.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Fonts/LiberationSans.ttf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Fonts/LiberationSans.ttf.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Sprite Assets.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Sprite Assets.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Style Sheets.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Style Sheets.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/TMP Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/TMP Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/TMP Settings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/TMP Settings.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Bitmap.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Bitmap.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Bitmap.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Bitmap.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF Overlay.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF Overlay.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Surface.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Surface.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Sprite.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Sprite.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Sprite.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_Sprite.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMPro.cginc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMPro.cginc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMPro.cginc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMPro.cginc.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMPro_Properties.cginc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMPro_Properties.cginc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMPro_Surface.cginc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMPro_Surface.cginc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMPro_Surface.cginc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMPro_Surface.cginc.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Sprites.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Sprites.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Sprites/EmojiOne.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Sprites/EmojiOne.json.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Sprites/EmojiOne.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Sprites/EmojiOne.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Sprites/EmojiOne.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Sprites/EmojiOne.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,6 +117,11 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="bigtilemap_not_generator+UI" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -93,21 +137,33 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/Graphy - Ultimate Stats Monitor/Runtime/GraphyManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/ResourcesManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/e7/21de0f40/ConcurrentQueue`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA976C21-0410-4B7C-A9E1-785715722C9D/b3/b0d1fa47/Queue`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/MapDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/SerializableDictionary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/SerializableVector2Int.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/GenerationManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/SerializableVector3Int.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/CustomSceneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/AuthorizationSubmit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/TotalJSON/Examples/SaveAndLoadFile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/TCP/TCPClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/ChunkData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/Simple Scene Fade Load System/Scripts/Fader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/Messenger/Callback.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/Messenger/GameEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/Messenger/Messenger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/90/ca494460/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BCE5E9CF-72A6-4554-937D-40E2CE78291E/9d/7e9195e4/Tilemap.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FB3709D4-3DAE-4F5F-B978-5D5202B86B97/37/dc0a6f43/Enum.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/CodeMonkeyUtils/FunctionTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/CodeMonkeyUtils/UtilsClass.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/32/2a9508e7/File.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/75/ca067f6c/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA976C21-0410-4B7C-A9E1-785715722C9D/fc/ba1dd2a1/TcpClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/CodeMonkeyUtils/FunctionUpdater.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/Data/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -119,84 +175,51 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FB3709D4-3DAE-4F5F-B978-5D5202B86B97/b5/e958756d/Encoding.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0061EBE7-04E1-4329-8A09-6EC5CDD83AE3/17/75a444fc/ProgressBar.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/TileChunk.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/39/e842b297/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Building.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/eb/95b5beda/Encoding.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Type/BiomType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Type/ResourceType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/BuildingManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/Simple Scene Fade Load System/Scripts/Initiate.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/BigTileMapManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObject/ResourcesData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObject/BuildingData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObject/BiomData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/Packet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/Data/InventoryData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA976C21-0410-4B7C-A9E1-785715722C9D/46/94924b39/Socket.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/04/981994e2/Rect.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/ResourcesManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/GenerationManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/CustomSceneManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/AuthorizationSubmit.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/TCP/TCPClient.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/ChunkData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/Simple Scene Fade Load System/Scripts/Fader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/Messenger/GameEvent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BCE5E9CF-72A6-4554-937D-40E2CE78291E/9d/7e9195e4/Tilemap.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FB3709D4-3DAE-4F5F-B978-5D5202B86B97/37/dc0a6f43/Enum.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/32/2a9508e7/File.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/75/ca067f6c/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/39/e842b297/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefab/Chunk.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Type/ResourceType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/2d-extras-2020.3/Editor/Brushes/GameObjectBrush/GameObjectBrush.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MasterClient.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SetupSetting.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/CameraMoveManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA976C21-0410-4B7C-A9E1-785715722C9D/8d/e8521249/NetworkStream.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/30/13ebb437/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/BuildData/BuildData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/BuildingManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/BuildData/FarmData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/Simple Scene Fade Load System/Scripts/Initiate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/TotalJSON/Scripts/JSON.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/BigTileMapManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/BuildData/PlayerBaseData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/UIItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObject/ResourcesData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObject/BuildingData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B0E795E4-8CF0-4D7A-9193-EA9447AF406A/c9/14599715/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObject/BiomData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/Packet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/3d/36c53de5/ThreadPoolWorkQueue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA976C21-0410-4B7C-A9E1-785715722C9D/4d/338bce36/NetworkStream.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/Data/InventoryData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FB3709D4-3DAE-4F5F-B978-5D5202B86B97/9a/471fad7f/SerializableAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BCE5E9CF-72A6-4554-937D-40E2CE78291E/dc/9f6789a6/TileBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/de/7e0596c1/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/Modern UI Pack/Scripts/UI Manager/UIManagerButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/af/7f45f827/Vector3Int.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/Graphy - Ultimate Stats Monitor/Runtime/Util/G_Singleton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/31/ed37d32d/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA976C21-0410-4B7C-A9E1-785715722C9D/46/94924b39/Socket.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/PointerEventData.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/bd/6f5f5710/ThreadHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7E358363-73B7-4B12-BDE8-BA7FA4D53641/b0/57c2a8b1/TcpClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/04/981994e2/Rect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/Modern UI Pack/Scripts/Progress Bar/ProgressBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/91/bc547aee/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Manager/CameraMoveManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Model/Chunk.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/TCP/TCPClient.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/Data/PlayerData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/PacketHandler.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/AuthorizationSubmit.cs" />
-    </changedPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="15" />
@@ -212,11 +235,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
-      <pane id="AssemblyExplorer" />
       <pane id="UnityExplorer">
         <subPane>
           <expand>
@@ -349,6 +371,7 @@
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -380,10 +403,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23852">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="23852" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -391,7 +414,7 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -429,11 +452,14 @@
       <workItem from="1624383073684" duration="157000" />
       <workItem from="1624383622063" duration="724000" />
       <workItem from="1624384920825" duration="1113000" />
+      <workItem from="1624438540822" duration="609000" />
+      <workItem from="1624439530972" duration="7000" />
+      <workItem from="1624442037848" duration="1031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="305085000" />
+    <option name="totallyTimeSpent" value="305092000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -447,8 +473,8 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8544396" visible="true" weight="0.16897655" />
-      <window_info id="Structure" order="1" sideWeight="0.14556041" side_tool="true" visible="true" weight="0.16897655" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.852984" visible="true" weight="0.1705757" />
+      <window_info id="Structure" order="1" sideWeight="0.14701602" side_tool="true" visible="true" weight="0.1705757" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
@@ -467,7 +493,7 @@
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Unit Tests" order="13" />
       <window_info anchor="bottom" id="Terminal" order="14" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.31236672" side_tool="true" visible="true" weight="0.25568798" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="15" sideWeight="0.31236672" side_tool="true" visible="true" weight="0.25568798" />
       <window_info anchor="bottom" id="Change Signature" order="16" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -479,7 +505,7 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
@@ -1543,42 +1569,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/StrategyCameraLite/Scripts/StrategyCamera.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="44" column="25" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="25" />
-          <folding>
-            <marker date="1601485235000" expanded="false" signature="6:78" ph="..." />
-            <marker date="1601485235000" expanded="true" signature="123:5994" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="1993:2041" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="2067:2192" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="2230:2417" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="2257:2414" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="2469:2731" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="2515:2560" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="2567:2590" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="2757:3737" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="2857:3066" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="3073:3189" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="3638:3734" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="3760:4329" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="3818:3837" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="3984:4017" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="4041:4074" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="4364:4963" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="4391:4426" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="4757:4933" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="4966:5027" ph="/// Perform the zoom operation ... " />
-            <marker date="1601485235000" expanded="true" signature="5061:5427" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="5175:5283" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="5430:5507" ph="/// Listen for input to determine target zoom. ... " />
-            <marker date="1601485235000" expanded="true" signature="5533:5889" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="5777:5801" ph="{...}" />
-            <marker date="1601485235000" expanded="true" signature="5915:5992" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/StrategyCameraLite/Scripts/StrategyCamera.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Model/Building.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1719,24 +1710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Manager/CameraMoveManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-589">
-          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
-          <folding>
-            <marker date="1624376884735" expanded="true" signature="6:101" ph="..." />
-            <marker date="1624376884735" expanded="true" signature="149:2387" ph="{...}" />
-            <marker date="1624376884735" expanded="true" signature="589:958" ph="{...}" />
-            <marker date="1624376884735" expanded="true" signature="981:1031" ph="{...}" />
-            <marker date="1624376884735" expanded="true" signature="1059:1251" ph="{...}" />
-            <marker date="1624376884735" expanded="true" signature="1279:1818" ph="{...}" />
-            <marker date="1624376884735" expanded="true" signature="1335:1455" ph="{...}" />
-            <marker date="1624376884735" expanded="true" signature="1477:1746" ph="{...}" />
-            <marker date="1624376884735" expanded="true" signature="1851:2385" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Model/UIItem.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
@@ -1818,15 +1791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
-          <folding>
-            <marker date="1624382345036" expanded="false" signature="6:89" ph="..." />
-            <marker date="1624382345036" expanded="true" signature="821:883" ph="{...}" />
-            <marker date="1624382345036" expanded="true" signature="928:965" ph="{...}" />
-            <marker date="1624382345036" expanded="true" signature="1023:1207" ph="{...}" />
-            <marker date="1624382345036" expanded="true" signature="1081:1183" ph="{...}" />
-            <marker date="1624382345036" expanded="true" signature="1235:1305" ph="{...}" />
-            <marker date="1624382345036" expanded="true" signature="1336:1371" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1961,6 +1925,23 @@
             <marker date="1624385858701" expanded="true" signature="3946:4358" ph="{...}" />
             <marker date="1624385858701" expanded="true" signature="4048:4352" ph="{...}" />
             <marker date="1624385858701" expanded="true" signature="4385:4764" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Manager/CameraMoveManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="24" column="66" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#101#0" expanded="true" />
+            <marker date="1624386117052" expanded="true" signature="507:876" ph="{...}" />
+            <marker date="1624386117052" expanded="true" signature="899:949" ph="{...}" />
+            <marker date="1624386117052" expanded="true" signature="977:1169" ph="{...}" />
+            <marker date="1624386117052" expanded="true" signature="1197:1736" ph="{...}" />
+            <marker date="1624386117052" expanded="true" signature="1253:1373" ph="{...}" />
+            <marker date="1624386117052" expanded="true" signature="1395:1664" ph="{...}" />
+            <marker date="1624386117052" expanded="true" signature="1769:2303" ph="{...}" />
           </folding>
         </state>
       </provider>
