@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
 
 public class SetupSetting : Singleton<SetupSetting>
@@ -19,14 +20,14 @@ public class SetupSetting : Singleton<SetupSetting>
     public int seed = 123456;
     public int worldWidth = 256;
     public int worldHeight = 256;
-    public ResourcesData defaultResourceResources;
-    public BiomData defaultBiomBlock;
+    [FormerlySerializedAs("defaultResourceResources")] public ResourcesObjectData defaultResourceObjectResourcesObject;
+    [FormerlySerializedAs("defaultBiomBlock")] public BiomObjectData defaultBiomObjectBlock;
 
     [Header("DATA")]
     public string jsonPath = @"JSONFILES/ChunkMap.json";
     public string dictionaryPath = @"JSONFILES/ChunMap.dat";
 
-    [Header("Building")] public List<BuildingData> buildingList;
+    [Header("Building")] public List<BuildingObjectData> buildingList;
 
     [Header("TileMaps")]
     public Tilemap resourcesTileMap;
