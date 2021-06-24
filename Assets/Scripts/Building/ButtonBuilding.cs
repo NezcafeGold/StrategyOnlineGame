@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonBuilding : MonoBehaviour
 {
-    [SerializeField] private Building d;
+    [SerializeField] private BuildingByMenu d;
     [SerializeField] private GameObject buttons;
     [SerializeField] private Type type;
 

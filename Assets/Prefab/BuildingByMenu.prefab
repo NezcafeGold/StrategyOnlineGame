@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 1404891572806455847}
   - component: {fileID: 6248643361931985982}
   m_Layer: 0
-  m_Name: Build
+  m_Name: BuildingByMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,7 +298,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.007446289, y: -0.38583374}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -309,7 +309,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 3.8891602, y: 3.2510376}
   m_EdgeRadius: 0
 --- !u!114 &6248643361931985982
 MonoBehaviour:
@@ -326,7 +326,6 @@ MonoBehaviour:
   zone: {fileID: 8873959318073745753}
   buildCollider: {fileID: 1404891572806455847}
   buildSprite: {fileID: 4367112516402584159}
-  canDrag: 1
   canBuild: 0
 --- !u!1 &4367112516402584157
 GameObject:

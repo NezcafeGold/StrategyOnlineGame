@@ -7,13 +7,14 @@ using UnityEngine;
 public class PlayerData 
 {
     public SerializableVector2Int SpawnCoord = new SerializableVector2Int(0, 0);
-    public Dictionary<SerializableVector2Int, ChunkData> ChunkMap = new Dictionary<SerializableVector2Int, ChunkData>();
     private Queue<Action> chunkQueue = new Queue<Action>();
 
     public string Nickname;
     public int Level;
     public int Experience;
     public Dictionary<ResourceType, int> ResourcesDictionary = new Dictionary<ResourceType, int>();
+    public Dictionary<SerializableVector2Int, ChunkData> ChunkMap = new Dictionary<SerializableVector2Int, ChunkData>();
+    public Dictionary<SerializableVector2Int, BuildData> BuildMap = new Dictionary<SerializableVector2Int, BuildData>();
     public InventoryData InventoryData;
     public PlayerBaseData baseData;
     

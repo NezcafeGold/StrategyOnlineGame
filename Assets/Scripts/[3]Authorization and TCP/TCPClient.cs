@@ -18,6 +18,7 @@ public class TCPClient : Singleton<TCPClient>
     [SerializeField] private int port = 33001;
     private static long milliseconds;
     private const int pingTime = 10;
+    private bool isPingTcp = true;
     private ConcurrentQueue<string> chunkQueue;
     public Queue<Action> actionsQueue;
 
@@ -40,6 +41,7 @@ public class TCPClient : Singleton<TCPClient>
 
     private void OnDestroy()
     {
+        isPingTcp = false;
         if (clientReceiveThread.ThreadState == ThreadState.WaitSleepJoin)
             clientReceiveThread.Interrupt();
         if (pingThread.ThreadState == ThreadState.WaitSleepJoin)
@@ -157,7 +159,7 @@ public class TCPClient : Singleton<TCPClient>
 
     private void PingTCP()
     {
-        while (true)
+        while (isPingTcp)
         {
             Thread.Sleep(1000);
             if (milliseconds + pingTime * 1000 < DateTimeOffset.Now.ToUnixTimeMilliseconds())

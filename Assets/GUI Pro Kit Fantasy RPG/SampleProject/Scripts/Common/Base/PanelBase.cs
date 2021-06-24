@@ -14,6 +14,6 @@ public class PanelBase : MonoBehaviour
     public virtual void Close()
     {
         this.gameObject.SetActive(false);
-        (PlayManager.Instance.CurrentCtr as CtrHome).SetHome();
+        //(PlayManager.Instance.CurrentCtr as CtrHome).SetHome();
     }
 }

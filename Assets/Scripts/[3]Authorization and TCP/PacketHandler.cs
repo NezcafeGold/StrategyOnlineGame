@@ -79,33 +79,41 @@ public class PacketHandler
 
     private void HandleUserData(string serverMessage)
     {
-        PlayerData pd = PlayerData.GetInstance();
-        JSON bodyJs = JSON.ParseString(serverMessage).GetJSON(Packet.PacketKey.BODY);
-        JSON userJs = bodyJs.GetJSON("user");
-        pd.Nickname = userJs.GetString("nickname");
-        JSON playerJs = userJs.GetJSON("player");
-        pd.Level = playerJs.GetInt("level");
-        pd.Experience = playerJs.GetInt("experience");
-        JSON resources = playerJs.GetJSON("resources");
-        Dictionary<ResourceType, int> resourcesDictionary = new Dictionary<ResourceType, int>();
-        resourcesDictionary.Add(ResourceType.COAL, resources.GetInt("coal"));
-        resourcesDictionary.Add(ResourceType.SULFUR, resources.GetInt("sulfur"));
-        resourcesDictionary.Add(ResourceType.COPPER, resources.GetInt("copper"));
-        resourcesDictionary.Add(ResourceType.IRON, resources.GetInt("iron"));
-        resourcesDictionary.Add(ResourceType.GOLD, resources.GetInt("gold"));
-        resourcesDictionary.Add(ResourceType.URANUS, resources.GetInt("uranus"));
-        resourcesDictionary.Add(ResourceType.STONE, resources.GetInt("stone"));
-        resourcesDictionary.Add(ResourceType.WOOD, resources.GetInt("wood"));
-        resourcesDictionary.Add(ResourceType.FOOD, resources.GetInt("food"));
-        pd.ResourcesDictionary = resourcesDictionary;
-        JSON baseJs = playerJs.GetJSON("base");
-        PlayerBaseData baseData = new PlayerBaseData();
-        baseData.OwnerId = baseJs.GetString("OwnerID");
-        baseData.OwnerName = baseJs.GetString("Owner");
-        baseData.Level = baseJs.GetInt("level");
-        string[] v = baseJs.GetString("Coordinates").Split('_');
-        baseData.Position = new Vector2Int(int.Parse(v[0]), int.Parse(v[1]));
-        pd.baseData = baseData;
+        try
+        {
+            PlayerData pd = PlayerData.GetInstance();
+            JSON bodyJs = JSON.ParseString(serverMessage).GetJSON(Packet.PacketKey.BODY);
+            JSON userJs = bodyJs.GetJSON("user");
+            pd.Nickname = userJs.GetString("nickname");
+            JSON playerJs = userJs.GetJSON("player");
+            pd.Level = playerJs.GetInt("level");
+            pd.Experience = playerJs.GetInt("experience");
+            JSON resources = playerJs.GetJSON("resources");
+            Dictionary<ResourceType, int> resourcesDictionary = new Dictionary<ResourceType, int>();
+            resourcesDictionary.Add(ResourceType.COAL, resources.GetInt("coal"));
+            resourcesDictionary.Add(ResourceType.SULFUR, resources.GetInt("sulfur"));
+            resourcesDictionary.Add(ResourceType.COPPER, resources.GetInt("copper"));
+            resourcesDictionary.Add(ResourceType.IRON, resources.GetInt("iron"));
+            resourcesDictionary.Add(ResourceType.GOLD, resources.GetInt("gold"));
+            resourcesDictionary.Add(ResourceType.URANUS, resources.GetInt("uranus"));
+            resourcesDictionary.Add(ResourceType.STONE, resources.GetInt("stone"));
+            resourcesDictionary.Add(ResourceType.WOOD, resources.GetInt("wood"));
+            resourcesDictionary.Add(ResourceType.FOOD, resources.GetInt("food"));
+            pd.ResourcesDictionary = resourcesDictionary;
+            JSON baseJs = playerJs.GetJSON("base");
+            PlayerBaseData baseData = new PlayerBaseData();
+            baseData.OwnerId = baseJs.GetString("OwnerID");
+            baseData.OwnerName = baseJs.GetString("Owner");
+            baseData.Level = baseJs.GetInt("level");
+            string[] v = baseJs.GetString("Coordinates").Split('_');
+            baseData.Position = new Vector2Int(int.Parse(v[0]), int.Parse(v[1]));
+            pd.baseData = baseData;
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Cant parse GET_USER_ID " + e);
+        }
+
         Messenger.Broadcast(GameEvent.AUTHORIZATION_SUCC);
     }
 
@@ -133,11 +141,23 @@ public class PacketHandler
                     int x = posTile.GetInt("x");
                     int y = posTile.GetInt("y");
                     SerializableVector2Int posTileVect = new SerializableVector2Int(x, y);
-                    ResourceType rtype = (ResourceType) v.GetInt("rtype");
+
                     BiomType btype = (BiomType) v.GetInt("btype");
-                    tile.pos = posTileVect;
-                    tile.resourceType = rtype;
                     tile.biomTypeType = btype;
+                    tile.pos = posTileVect;
+
+                    int resOrBuild = v.GetInt("rtype");
+                    if (resOrBuild < 100)
+                    {
+                        ResourceType rtype = (ResourceType) resOrBuild;
+                        tile.resourceType = rtype;
+                    }
+                    else if (resOrBuild >= 100)
+                    {
+                        BuildType rtype = (BuildType) resOrBuild;
+                        tile.buildType = rtype;
+                    }
+
                     tiles[x - chX, y - chY] = tile;
                 }
                 catch (Exception e)

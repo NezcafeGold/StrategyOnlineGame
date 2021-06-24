@@ -23,8 +23,8 @@ public class CameraMoveManager : MonoBehaviour
         maxX = SetupSetting.Instance.worldWidth;
         maxY = SetupSetting.Instance.worldHeight;
         Vector2Int v = PlayerData.GetInstance().baseData.Position;
-        cam.transform.position = new Vector3Int(v.x, v.x, -10);
-        dragVector = new Vector3Int(v.x, v.x, -10);
+        cam.transform.position = new Vector3Int(v.x, v.y, -10);
+        dragVector = new Vector3Int(v.x, v.y, -10);
     }
 
     void LateUpdate()
@@ -97,5 +97,10 @@ public class CameraMoveManager : MonoBehaviour
         if (0 + vertExtent > dragVector.y) dragVector.y = 0 + vertExtent;
         if (maxY - vertExtent < dragVector.y) dragVector.y = maxY - vertExtent;
         transform.position = new Vector3(dragVector.x, dragVector.y, transform.position.z);
+    }
+
+    public void SetPosition(Vector3 position)
+    {
+        
     }
 }

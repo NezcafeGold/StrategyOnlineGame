@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36b070d885a8443f99365e189fa3dd59, type: 3}
-  m_Name: House
+  m_Name: FarmObject
   m_EditorClassIdentifier: 
   prefab: {fileID: 4367112516354374544, guid: cecbe36ade5e51b4dad291e6553bd88a, type: 3}
   buildTime: 10
-  sprite: {fileID: 21300000, guid: 77366796bc263fe4a9563169c816d40b, type: 3}
-  type: 1
+  sprite: {fileID: 5769092335582205871, guid: 61c3f69fdd5e3ec47a5c60e22b35c5cd, type: 3}
+  type: 101

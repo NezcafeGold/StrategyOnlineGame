@@ -7,8 +7,10 @@ namespace Model.BuildData
         private string ownerId;
         private string ownerName;
         private int level;
-        private Vector2Int position; 
-
+        private Vector2Int position;
+        private BuildType buildType;
+        
+        
         public string OwnerId
         {
             get => ownerId;
@@ -31,6 +33,12 @@ namespace Model.BuildData
         {
             get => position;
             set => position = value;
+        }
+
+        public BuildType BuildType
+        {
+            get => buildType;
+            set => buildType = value;
         }
     }
 }

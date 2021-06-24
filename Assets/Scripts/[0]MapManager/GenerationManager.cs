@@ -16,7 +16,9 @@ public class GenerationManager : Singleton<GenerationManager>
     private Vector2 perlinOffset;
     private List<ResourcesObjectData> blockDataObjects;
     private List<BiomObjectData> biomDataObjects;
+    private List<BuildingObjectData> buildingDataObjects;
     private bool isMasterClient;
+    private Building buildingPrefab;
 
 
     private void Awake()
@@ -28,16 +30,17 @@ public class GenerationManager : Singleton<GenerationManager>
         worldHeight = setup.worldHeight;
         _defaultResourceObjectResourcesObject = setup.defaultResourceObjectResourcesObject;
         _defaultBiomObjectBlock = setup.defaultBiomObjectBlock;
+        buildingPrefab = setup.buildingPrefab;
 
         blockDataObjects = Resources.LoadAll<ResourcesObjectData>("Blocks").ToList();
         biomDataObjects = Resources.LoadAll<BiomObjectData>("Blocks").ToList();
+        buildingDataObjects = Resources.LoadAll<BuildingObjectData>("Building").ToList();
 
         isMasterClient = SetupSetting.Instance.isMasterClient;
     }
 
     public IEnumerator GenerateChunk(Chunk chunk)
     {
-        //TODO: TCP
         for (int v = 0; v < chunkSize; v++)
         {
             for (int h = 0; h < chunkSize; h++)
@@ -63,7 +66,8 @@ public class GenerationManager : Singleton<GenerationManager>
                         ResourcesObjectData resourcesObject = blockDataObjects[i] as ResourcesObjectData;
                         if (resourcesObject != _defaultResourceObjectResourcesObject)
                         {
-                            if (!CheckPerlinLevel(tilePosition, resourcesObject.perlinSpeed, resourcesObject.perlinLevel))
+                            if (!CheckPerlinLevel(tilePosition, resourcesObject.perlinSpeed,
+                                resourcesObject.perlinLevel))
                             {
                                 resResourcesObjectData = resourcesObject;
                                 break;
@@ -92,25 +96,66 @@ public class GenerationManager : Singleton<GenerationManager>
                 }
                 else
                 {
-                    for (int i = 0; i < biomDataObjects.Count; i++)
-                    {
-                        BiomObjectData block = biomDataObjects[i] as BiomObjectData;
-                        if (chunk.GetTileChunkData(tilePosition).biomTypeType.Equals(block.type))
+                    #region biom set for tcp
+
+                    BiomType biomType = chunk.GetTileChunkData(tilePosition).biomTypeType;
+                    if (!biomType.Equals(_defaultBiomObjectBlock.type))
+                        for (int i = 0; i < biomDataObjects.Count; i++)
                         {
-                            biomObjectBlockData = block;
-                            break;
+                            BiomObjectData block = biomDataObjects[i] as BiomObjectData;
+                            if (biomType.Equals(block.type))
+                            {
+                                biomObjectBlockData = block;
+                                break;
+                            }
+                        }
+
+                    #endregion
+
+                    #region resources set for tcp
+
+                    ResourceType resourceType = chunk.GetTileChunkData(tilePosition).resourceType;
+                    if ((int) resourceType != 0 && (int) resourceType < 100)
+                        for (int i = 0; i < blockDataObjects.Count; i++)
+                        {
+                            ResourcesObjectData resourcesObject = blockDataObjects[i] as ResourcesObjectData;
+                            if (resourceType.Equals(resourcesObject.type))
+                            {
+                                resResourcesObjectData = resourcesObject;
+                                break;
+                            }
+                        }
+
+                    #endregion
+
+                    #region build
+
+                    BuildType buildType = chunk.GetTileChunkData(tilePosition).buildType;
+                    if (buildType != BuildType.NONE)
+                    {
+                        for (int i = 0; i < buildingDataObjects.Count; i++)
+                        {
+                            BuildingObjectData buildingObject = buildingDataObjects[i] as BuildingObjectData;
+                            if (buildType.Equals(buildingObject.type))
+                            {
+                                int xAct = 0;
+                                int yAct = 0;
+                                if (buildType == BuildType.BASE)
+                                {
+                                    xAct = -1;
+                                    yAct = -1;
+                                }
+
+                                Vector3Int vpos = new Vector3Int(tilePosition.x + xAct, tilePosition.y + yAct, 0);
+                                Building b = Instantiate(buildingPrefab, vpos, Quaternion.identity);
+                                b.SetBuildType(buildingObject);
+                                b.BuildDone(true);
+                                break;
+                            }
                         }
                     }
 
-                    for (int i = 0; i < blockDataObjects.Count; i++)
-                    {
-                        ResourcesObjectData resourcesObject = blockDataObjects[i] as ResourcesObjectData;
-                        if (chunk.GetTileChunkData(tilePosition).resourceType.Equals(resourcesObject.type))
-                        {
-                            resResourcesObjectData = resourcesObject;
-                            break;
-                        }
-                    }
+                    #endregion
                 }
 
                 chunk.SetChunkTile(tilePosition, biomObjectBlockData.tile);

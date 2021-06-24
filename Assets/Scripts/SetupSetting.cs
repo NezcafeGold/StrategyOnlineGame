@@ -28,6 +28,8 @@ public class SetupSetting : Singleton<SetupSetting>
     public string dictionaryPath = @"JSONFILES/ChunMap.dat";
 
     [Header("Building")] public List<BuildingObjectData> buildingList;
+     public Building buildingPrefab;
+     public BuildingManager buildingManager;
 
     [Header("TileMaps")]
     public Tilemap resourcesTileMap;

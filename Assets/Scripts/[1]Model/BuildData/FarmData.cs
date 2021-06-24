@@ -1,6 +1,6 @@
 namespace Model.BuildData
 {
-    public class FarmData
+    public class FarmData : BuildData
     {
         
     }

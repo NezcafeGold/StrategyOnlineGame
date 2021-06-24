@@ -9,6 +9,7 @@ public class TileChunk
 {
     [NonSerialized] public ResourceType resourceType;
     [NonSerialized] public BiomType biomTypeType;
+    [NonSerialized] public BuildType buildType;
     public SerializableVector2Int pos;
     [NonSerialized]
     public SerializableVector2Int relPos;
