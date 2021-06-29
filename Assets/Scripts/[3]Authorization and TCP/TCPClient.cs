@@ -123,7 +123,6 @@ public class TCPClient : Singleton<TCPClient>
         {
             return;
         }
-
         try
         {
             // Get a stream object for writing. 			

@@ -1,13 +1,20 @@
 
+using Model.BuildData;
 using UnityEngine;
 using Plane = UnityEngine.Plane;
 using Vector3 = UnityEngine.Vector3;
 
 
 [RequireComponent(typeof(BoxCollider2D))]
-public class BuildingByMenu : Building
+public class BuildingByMenu : MonoBehaviour
 {
-    
+    [SerializeField] protected SpriteRenderer zone;
+    [SerializeField] protected BoxCollider2D buildCollider;
+    [SerializeField] protected SpriteRenderer buildSprite;
+    [SerializeField] private Building building;
+    private BuildingObjectData buildingObjectData;
+    protected Camera myMainCamera;
+
     private bool canDrag = true;
     public bool canBuild = false; 
 
@@ -16,9 +23,10 @@ public class BuildingByMenu : Building
     
     void Start()
     {
-        base.Start();
+        
         buildSprite.color = new Color(1f, 1f, 1f, 0.5f);
         SetColorForZone(Vector3Int.RoundToInt(zone.transform.position));
+        myMainCamera = Camera.main;
     }
 
     void OnMouseDown()
@@ -110,7 +118,18 @@ public class BuildingByMenu : Building
         canDrag = false;
         buildSprite.color = new Color(1,1,1,1f);
         zone.color = new Color(1, 1, 1, 0.5f);
+
+        Building b = Instantiate(building, transform.position, Quaternion.identity, BuildingManager.Instance.transform);
+        b.SetBuildType(buildingObjectData);
+        b.BuildDone();
+        Destroy(gameObject);
         
-        base.BuildDone(isLoaded);
+        //base.BuildDone(isLoaded);
+    }
+    
+    public void SetBuildType(BuildingObjectData bod)
+    {
+        buildingObjectData = bod;
+        buildSprite.sprite = bod.sprite;
     }
 }

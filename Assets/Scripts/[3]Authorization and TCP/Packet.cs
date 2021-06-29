@@ -128,5 +128,13 @@ public class Packet
         
         public const int SET_FARM_ID = 301;
         
+        
+        
+        
+        
+        public const int GET_INFO_BASE_ID = 350;
+        public const int GET_INFO_FARM_ID = 351;
+        
+        
     }
 }

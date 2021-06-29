@@ -14,9 +14,8 @@ public class UIPlayerManager : MonoBehaviour
         text.text = PlayerData.GetInstance().Nickname;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShowPlayerBase()
     {
-        
+        CameraMoveManager.Instance.SetPosition(PlayerData.GetInstance().baseData.Position);
     }
 }

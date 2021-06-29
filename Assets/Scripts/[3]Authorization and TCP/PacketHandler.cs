@@ -66,6 +66,16 @@ public class PacketHandler
                 case Packet.SegmentID.GET_RESOURCES_ID:
 
                     break;
+
+
+                //INFO BUILDING
+                case Packet.SegmentID.GET_INFO_BASE_ID:
+                    HandleBaseInfo(serverMessage);
+                    break;
+
+                case Packet.SegmentID.GET_INFO_FARM_ID:
+                    HandleFarmInfo(serverMessage);
+                    break;
                 default:
 
                     break;
@@ -73,7 +83,7 @@ public class PacketHandler
         }
         catch (Exception e)
         {
-            Debug.Log(e);
+            Debug.Log("Cant find segmentID " + e);
         }
     }
 
@@ -178,5 +188,71 @@ public class PacketHandler
         {
             Debug.Log("Error when parse CHUNK from TCP" + e);
         }
+    }
+
+
+    private void HandleFarmInfo(string serverMessage)
+    {
+        try
+        {
+            JSON bodyJs = JSON.ParseString(serverMessage).GetJSON(Packet.PacketKey.BODY);
+            JSON farmJs = bodyJs.GetJSON("farm");
+            HandleBuildData(farmJs, BuildType.FARM);
+
+            //BuildingManager.Instance.StartCoroutine(BuildingManager.Instance.AddNewBuilding(buildData, true));
+        }
+        catch (Exception e)
+        {
+            Debug.LogWarning("Error when parse Farm Info from TCP" + e);
+        }
+    }
+
+    private void HandleBaseInfo(string serverMessage)
+    {
+        try
+        {
+            JSON bodyJs = JSON.ParseString(serverMessage).GetJSON(Packet.PacketKey.BODY);
+            JSON farmJs = bodyJs.GetJSON("base");
+            HandleBuildData(farmJs, BuildType.BASE);
+        }
+        catch (Exception e)
+        {
+            Debug.LogWarning("Error when parse Base Info from TCP" + e);
+        }
+    }
+
+    private void HandleBuildData(JSON jsonBuild, BuildType buildType)
+    {
+        String pos = jsonBuild.GetString("Coordinates");
+        String[] posArray = pos.Split('_');
+        int x = int.Parse(posArray[0]);
+        int y = int.Parse(posArray[1]);
+        Vector2Int posVec = new Vector2Int(x, y); // KEY
+
+        BuildData buildData;
+
+        switch (buildType)
+        {
+            case BuildType.FARM:
+                buildData = new FarmData();
+                break;
+            
+            case BuildType.BASE:
+                buildData = new BaseData();
+                Debug.Log("BASE!");
+                break;
+            
+            default:
+                buildData = new BaseData();
+                Debug.LogWarning("CANT HANDLE DATA IN PACKET HANDLER!");
+                break;
+        }
+        
+        buildData.OwnerId = jsonBuild.GetString("OwnerID");
+        buildData.OwnerName = jsonBuild.GetString("Owner");
+        buildData.Level = jsonBuild.GetInt("level");
+        buildData.Position = posVec;
+            
+        BuildingManager.Instance.AddBuildingQueue.Enqueue(buildData);
     }
 }

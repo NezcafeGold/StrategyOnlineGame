@@ -39,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: CameraBack
+    uniqueID: 1755831391
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

@@ -142,14 +142,22 @@ public class GenerationManager : Singleton<GenerationManager>
                                 int yAct = 0;
                                 if (buildType == BuildType.BASE)
                                 {
-                                    xAct = -1;
-                                    yAct = -1;
+                                    xAct = 0;
+                                    yAct = 0;
                                 }
 
                                 Vector3Int vpos = new Vector3Int(tilePosition.x + xAct, tilePosition.y + yAct, 0);
                                 Building b = Instantiate(buildingPrefab, vpos, Quaternion.identity);
+                                
+                                //TODO: ГЕНЕРАЦИЯ ЗДАНИЯ
+                                
+                                //ЕСЛИ ЕСТЬ ДАТА ТО ПУСТЬ БЕРЕТ
+                                
+                                //ЕСЛИ НЕТ ТО УСТАНАВЛИВАЕТ И СПРАШИВАЕТ
                                 b.SetBuildType(buildingObject);
-                                b.BuildDone(true);
+                                b.AskData();
+                                BuildingManager.Instance.AskDataTcp(b.buildData);
+                                //StartCoroutine(BuildingManager.Instance.AddNewBuilding(b.buildData));
                                 break;
                             }
                         }

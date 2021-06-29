@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CameraMoveManager : MonoBehaviour
+public class CameraMoveManager : Singleton<CameraMoveManager>
 {
     [SerializeField] private float minZoom = 10f;
     [SerializeField] private float maxZoom = 50f;
@@ -99,8 +99,9 @@ public class CameraMoveManager : MonoBehaviour
         transform.position = new Vector3(dragVector.x, dragVector.y, transform.position.z);
     }
 
-    public void SetPosition(Vector3 position)
+    public void SetPosition(Vector2Int position)
     {
-        
+        cam.transform.position = new Vector3Int(position.x, position.y, -10);
+        dragVector = new Vector3Int(position.x, position.y, -10);
     }
 }

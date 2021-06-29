@@ -14,7 +14,6 @@ public class PlayerData
     public int Experience;
     public Dictionary<ResourceType, int> ResourcesDictionary = new Dictionary<ResourceType, int>();
     public Dictionary<SerializableVector2Int, ChunkData> ChunkMap = new Dictionary<SerializableVector2Int, ChunkData>();
-    public Dictionary<SerializableVector2Int, BuildData> BuildMap = new Dictionary<SerializableVector2Int, BuildData>();
     public InventoryData InventoryData;
     public PlayerBaseData baseData;
     
