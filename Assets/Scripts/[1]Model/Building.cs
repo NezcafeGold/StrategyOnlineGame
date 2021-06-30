@@ -58,8 +58,17 @@ public class Building : MonoBehaviour
             buildSprite.sprite = bod.sprite;
             buildData.BuildType = bod.type;
 
+            //ОБРАТНОЕ СМЕЩЕНИЕ ДЛЯ БАЗЫ ИЗ GENERATIONMANAGER
+            int xAct = 0, yAct = 0;
+            if (buildData.BuildType == BuildType.BASE)
+            {
+                xAct = 1;
+                yAct = 1;
+            }
+
             Vector3Int vec = Vector3Int.CeilToInt(buildCollider.transform.position);
-            Vector2Int vec2Int = new Vector2Int(vec.x, vec.y);
+            Vector2Int vec2Int = new Vector2Int(vec.x + xAct, vec.y + yAct);
+
             buildData.Position = vec2Int;
             buildData.OwnerName = PlayerData.GetInstance().Nickname;
 

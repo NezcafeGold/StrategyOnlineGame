@@ -140,10 +140,11 @@ public class GenerationManager : Singleton<GenerationManager>
                             {
                                 int xAct = 0;
                                 int yAct = 0;
+                                // СМЕЩЕНИЕ ДЛЯ БАЗЫ. ОБРАТНОЕ В BUILDING.SetBuildType
                                 if (buildType == BuildType.BASE)
                                 {
-                                    xAct = 0;
-                                    yAct = 0;
+                                    xAct = -1;
+                                    yAct = -1;
                                 }
 
                                 Vector3Int vpos = new Vector3Int(tilePosition.x + xAct, tilePosition.y + yAct, 0);

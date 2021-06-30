@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UIResourcesManager : MonoBehaviour
 {
-    [SerializeField] private UIItem uiItem;
+    [SerializeField] private UIResourceItem uiResourceItem;
     private List<ResourcesObjectData> resDataObjects;
     private bool isSet = false;
 
@@ -29,10 +29,10 @@ public class UIResourcesManager : MonoBehaviour
                 foreach (var rdo in resDataObjects)
                 {
                     if (rdo.type.Equals(ResourceType.NONE)) continue;
-                    UIItem item = Instantiate(uiItem, transform, true);
-                    item.iconSprite = rdo.sprite;
-                    item.resType = rdo.type;
-                    item.UpdateStat();
+                    UIResourceItem resourceItem = Instantiate(uiResourceItem, transform, true);
+                    resourceItem.iconSprite = rdo.sprite;
+                    resourceItem.resType = rdo.type;
+                    resourceItem.UpdateStat();
                     yield return null;
                 }
                 break;

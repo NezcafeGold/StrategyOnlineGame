@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Model.BuildData;
-using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class BuildingManager : Singleton<BuildingManager>

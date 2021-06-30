@@ -5,26 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b42def61-79ec-4ee7-91d9-b88f49e7685e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory/DetailInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory/DetailInfo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory/UIInventoryPanel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory/UIInventoryPanel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[1]Model/Type/WeaponType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[1]Model/Type/WeaponType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[2]ScriptableObject/Inventory.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[2]ScriptableObject/Inventory/ItemObjectData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[2]ScriptableObject/Inventory/ItemObjectData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[2]ScriptableObject/Inventory/WeaponObjectData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[2]ScriptableObject/Inventory/WeaponObjectData.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Base.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Base.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Building.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Building.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/BuildingByMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/BuildingByMenu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/BuildingByMenu.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/BuildingByMenu.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GUI Pro Kit Fantasy RPG/SampleProject/Scripts/Home/PanelInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GUI Pro Kit Fantasy RPG/SampleProject/Scripts/Home/PanelInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GenerateMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GenerateMap.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MasterClient.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MasterClient.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Building/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Building/BuildingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/Messenger/GameEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/Messenger/GameEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[0]MapManager/CameraMoveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[0]MapManager/CameraMoveManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/[0]MapManager/GenerationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[0]MapManager/GenerationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/UIPlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/UIPlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/UIResourcesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/UIResourcesManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/[1]Model/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[1]Model/Building.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[1]Model/BuildingByMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[1]Model/BuildingByMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[2]ScriptableObject/BuildingObjectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[2]ScriptableObject/BuildingObjectData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[3]Authorization and TCP/Packet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[3]Authorization and TCP/Packet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[3]Authorization and TCP/PacketHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[3]Authorization and TCP/PacketHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[3]Authorization and TCP/TCPClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[3]Authorization and TCP/TCPClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[4]PlayerData/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[4]PlayerData/PlayerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Pangea/Objects/Towns.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Pangea/Objects/Towns.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[1]Model/UIItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[1]Model/UIResourceItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[1]Model/UIItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[1]Model/UIResourceItem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +98,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/e7/21de0f40/ConcurrentQueue`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderInitializer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA976C21-0410-4B7C-A9E1-785715722C9D/b3/b0d1fa47/Queue`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/MapDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/SerializableDictionary.cs" root0="FORCE_HIGHLIGHTING" />
@@ -146,7 +148,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/Simple Scene Fade Load System/Scripts/Initiate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/TotalJSON/Scripts/JSON.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/Utilities/MarkerModifier.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B0E795E4-8CF0-4D7A-9193-EA9447AF406A/c9/14599715/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Editors/2020.3.11f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Tests/Runtime/Graphic/GraphicTests.cs" root0="SKIP_HIGHLIGHTING" />
@@ -171,9 +172,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Model/BaseBuilding.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Model/BuildingHose.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Model/BuildingHouse.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ButtonBuilding.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Model/PutBuilding.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/BuildingObjectData.cs" />
@@ -211,11 +209,20 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/[3]Authorization and TCP/Packet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/[1]Model/BuildingByMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Util/Messenger/GameEvent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/[1]Model/Building.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/[4]PlayerData/PlayerData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/[3]Authorization and TCP/PacketHandler.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Building/BuildingManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/[1]Model/Building.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/[0]MapManager/GenerationManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Building/BuildingManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/GUI Pro Kit Fantasy RPG/SampleProject/Scripts/Home/PanelInventory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/[2]ScriptableObject/ItemObjectData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/[1]Model/UIResourceItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/[1]Model/Type/WeaponType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/[2]ScriptableObject/Inventory/WeaponObjectData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/UIInventoryPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory/UIInventoryPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory/DetailInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory/InventoryItem.cs" />
     </changedPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -384,10 +391,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21300">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17264">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="21300" />
+      <option name="pid" value="17264" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -446,7 +453,8 @@
       <workItem from="1624572405017" duration="2921000" />
       <workItem from="1624612490978" duration="9100000" />
       <workItem from="1624885782478" duration="1198000" />
-      <workItem from="1624956394004" duration="12129000" />
+      <workItem from="1624956394004" duration="14090000" />
+      <workItem from="1625068536686" duration="9390000" />
     </task>
     <servers />
   </component>
@@ -559,40 +567,14 @@
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/[3]Authorization and TCP/PacketHandler.cs</url>
-          <line>240</line>
-          <properties documentPath="D:\Unity\MapSizer\Assets\Scripts\[3]Authorization and TCP\PacketHandler.cs" initialLine="240" containingFunctionPresentation="method 'HandleBuildData'">
-            <startOffsets>
-              <option value="8301" />
-            </startOffsets>
-            <endOffsets>
-              <option value="8328" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="95" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/[3]Authorization and TCP/PacketHandler.cs</url>
-          <line>72</line>
-          <properties documentPath="D:\Unity\MapSizer\Assets\Scripts\[3]Authorization and TCP\PacketHandler.cs" initialLine="72" containingFunctionPresentation="method 'HandleByID'">
-            <startOffsets>
-              <option value="1872" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1902" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Building/BuildingManager.cs</url>
-          <line>57</line>
+          <line>56</line>
           <properties documentPath="D:\Unity\MapSizer\Assets\Scripts\Building\BuildingManager.cs" initialLine="57" containingFunctionPresentation="method 'SendToTcp'">
             <startOffsets>
-              <option value="1857" />
+              <option value="1823" />
             </startOffsets>
             <endOffsets>
-              <option value="1881" />
+              <option value="1847" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="101" />

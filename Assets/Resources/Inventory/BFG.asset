@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a94a406bf374af48622cc0759b46915, type: 3}
+  m_Name: BFG
+  m_EditorClassIdentifier: 
+  Title: Big FuckIn GuN
+  Sprite: {fileID: -287763524560535101, guid: 6c7df71c22b6f4b4ba20f95efed8aa49, type: 3}
+  Description: OMG OMG OMG ITS A BFG!
+  damage: 1000
+  type: 0
