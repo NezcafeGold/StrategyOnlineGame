@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class AuthorizationSubmit : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI emailText;
-    [SerializeField] private TextMeshProUGUI passwordText;
+    [SerializeField] private TMP_InputField emailText;
+    [SerializeField] private TMP_InputField passwordText;
     private TCPClient tcpClient;
 
     private string email;
@@ -21,7 +21,6 @@ public class AuthorizationSubmit : MonoBehaviour
 
     public void Submit()
     {
-        //tcpClient.CloseClient();
         email = emailText.text;
         password = passwordText.text;
         StartCoroutine(SendMessageCor());
@@ -35,7 +34,7 @@ public class AuthorizationSubmit : MonoBehaviour
             Packet.StatusCode.AUTHORIZATION_CODE,
             Packet.Body.Of("email", email),
             Packet.Body.Of("password", password)).ToString());
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.1f);
         tcpClient.SendMessageTCP(new Packet(Packet.SegmentID.GET_USER_ID,
             Packet.StatusCode.OK_CODE).ToString());
     }

@@ -5,28 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b42def61-79ec-4ee7-91d9-b88f49e7685e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory/DetailInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory/DetailInfo.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory/UIInventoryPanel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory/UIInventoryPanel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[1]Model/Type/WeaponType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[1]Model/Type/WeaponType.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[2]ScriptableObject/Inventory.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[2]ScriptableObject/Inventory/ItemObjectData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[2]ScriptableObject/Inventory/ItemObjectData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[2]ScriptableObject/Inventory/WeaponObjectData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/[2]ScriptableObject/Inventory/WeaponObjectData.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MapSizer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI Pro Kit Fantasy RPG/SampleProject/Scripts/Home/PanelInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GUI Pro Kit Fantasy RPG/SampleProject/Scripts/Home/PanelInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GenerateMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GenerateMap.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MasterClient.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MasterClient.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Building/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Building/BuildingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[0]MapManager/GenerationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[0]MapManager/GenerationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/UIResourcesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/UIResourcesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[1]Model/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[1]Model/Building.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[1]Model/UIItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[1]Model/UIResourceItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[1]Model/UIItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[1]Model/UIResourceItem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GUI Pro Kit Fantasy RPG/Font/Alata-Regular-Outline 72 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GUI Pro Kit Fantasy RPG/Font/Alata-Regular-Outline 72 SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/[3]Authorization and TCP/AuthorizationSubmit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/[3]Authorization and TCP/AuthorizationSubmit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StoreStuff/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,6 +106,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/CodeMonkeyUtils/FunctionUpdater.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Editor/TMP_SpriteAssetEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Runtime/Playables/PrefabControlPlayable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/StoreStuff/Modern UI Pack/Scripts/Button/ButtonManagerBasicIcon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/CodeMonkeyUtils/Button_Sprite.cs" root0="FORCE_HIGHLIGHTING" />
@@ -134,6 +118,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/eb/95b5beda/Encoding.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.8/Editor/Messaging/TcpListener.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/43/1f7e1088/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefab/Chunk.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/7d/0b5c4e53/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E81E1-CB34-41CC-97D2-6B1910DAAE77/7c/3210a74b/Debug.cs" root0="SKIP_HIGHLIGHTING" />
@@ -151,6 +136,7 @@
     <setting file="file://$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B0E795E4-8CF0-4D7A-9193-EA9447AF406A/c9/14599715/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Editors/2020.3.11f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Tests/Runtime/Graphic/GraphicTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/3d/36c53de5/ThreadPoolWorkQueue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BE5F9D07-12AA-4746-82F4-895E8CF62944/28/53f84f7e/TcpClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FB3709D4-3DAE-4F5F-B978-5D5202B86B97/9a/471fad7f/SerializableAttribute.cs" root0="SKIP_HIGHLIGHTING" />
@@ -172,7 +158,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/ButtonBuilding.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Model/PutBuilding.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/BuildingObjectData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Model/Building.cs" />
@@ -223,6 +208,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory/UIInventoryPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory/DetailInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/[0]UIManager/Inventory/InventoryItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/[3]Authorization and TCP/AuthorizationSubmit.cs" />
     </changedPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -391,10 +377,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17264">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7376">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="17264" />
+      <option name="pid" value="7376" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -454,7 +440,8 @@
       <workItem from="1624612490978" duration="9100000" />
       <workItem from="1624885782478" duration="1198000" />
       <workItem from="1624956394004" duration="14090000" />
-      <workItem from="1625068536686" duration="9390000" />
+      <workItem from="1625068536686" duration="10333000" />
+      <workItem from="1625149261672" duration="1205000" />
     </task>
     <servers />
   </component>
@@ -566,25 +553,13 @@
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Authorization and TCP/Data/PlayerData.cs" initialLine="48" />
           <option name="timeStamp" value="78" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Building/BuildingManager.cs</url>
-          <line>56</line>
-          <properties documentPath="D:\Unity\MapSizer\Assets\Scripts\Building\BuildingManager.cs" initialLine="57" containingFunctionPresentation="method 'SendToTcp'">
-            <startOffsets>
-              <option value="1823" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1847" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="101" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
         <watch expression="bod.type" language="C#" />
-        <watch expression="vpos" language="C#" />
+        <watch expression="email" language="C#" />
+        <watch expression="password" language="C#" />
       </configuration>
     </watches-manager>
   </component>
