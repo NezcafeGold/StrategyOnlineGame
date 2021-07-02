@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
@@ -23,6 +24,8 @@ public class TCPClient : Singleton<TCPClient>
     public Queue<Action> actionsQueue;
 
     #endregion
+
+    public static bool isRunning = false;
 
     private void Awake()
     {
@@ -46,6 +49,7 @@ public class TCPClient : Singleton<TCPClient>
             clientReceiveThread.Interrupt();
         if (pingThread.ThreadState == ThreadState.WaitSleepJoin)
             pingThread.Interrupt();
+        isRunning = false;
     }
 
     /// <summary> 	
@@ -60,9 +64,8 @@ public class TCPClient : Singleton<TCPClient>
             clientReceiveThread.Start();
             pingThread.Start();
             milliseconds = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-            //StartCoroutine(ListenForData());
-            //StartCoroutine(PingTCP());
-            //StartCoroutine(HandlePacket());
+            isRunning = true;
+            Debug.Log("Server has connected");
         }
         catch (Exception e)
         {
@@ -89,26 +92,29 @@ public class TCPClient : Singleton<TCPClient>
         while (true)
         {
             if (socketConnection.Connected)
-                using (NetworkStream stream = socketConnection.GetStream())
+                using (StreamReader reader = new StreamReader(socketConnection.GetStream()))
                 {
                     int length;
-                    // Read incomming stream into byte arrary. 					
-                    while ((length = stream.Read(bytes, 0, bytes.Length)) != 0)
+                    // Read incomming stream into byte arrary. 				
+                    string serverMessage;
+                    while (((serverMessage = reader.ReadLine()) !=""))
                     {
-                        var incommingData = new byte[length];
-                        Array.Copy(bytes, 0, incommingData, 0, length);
+                        //var incommingData = new byte[length];
+                        //Array.Copy(bytes, 0, incommingData, 0, length);
                         // Convert byte array to string message. 						
-                        string serverMessage = Encoding.ASCII.GetString(incommingData);
+                        //string serverMessage = Encoding.ASCII.GetString(incommingData);
                         Debug.Log("server message received as: " + serverMessage);
 
 
-                        Thread handleThread = new Thread(() => HandlePacket(serverMessage));
+                        var message = serverMessage;
+                        Thread handleThread = new Thread(() => HandlePacket(message));
                         handleThread.Start();
                     }
                 }
             else
             {
                 socketConnection.Close();
+                isRunning = false;
                 break;
             }
         }
@@ -132,14 +138,16 @@ public class TCPClient : Singleton<TCPClient>
             }
 
             NetworkStream stream = socketConnection.GetStream();
+            StreamWriter writer = new StreamWriter(stream);
             if (stream.CanWrite)
             {
                 milliseconds = DateTimeOffset.Now.ToUnixTimeMilliseconds();
 
                 // Convert string message to byte array.                 
-                byte[] clientMessageAsByteArray = Encoding.UTF8.GetBytes(clientMessage.Replace("\u200B", ""));
+                //byte[] clientMessageAsByteArray = Encoding.UTF8.GetBytes(clientMessage.Replace("\u200B", ""));
                 // Write byte array to socketConnection stream.                 
-                stream.Write(clientMessageAsByteArray, 0, clientMessageAsByteArray.Length);
+                writer.Write(clientMessage);
+                writer.Flush();
                 Debug.Log("client sent message: " + clientMessage);
                 //Debug.Log("Client sent his message - should be received by server");
             }
@@ -152,6 +160,7 @@ public class TCPClient : Singleton<TCPClient>
         catch (Exception e)
         {
             Debug.Log(e);
+            isRunning = false;
             socketConnection.Close();
         }
     }

@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class PacketHandler
 {
+    public static bool IsAuthorizationDone = false;
     private bool CheckForCorrectPacket()
     {
         //TODO: Add method
@@ -42,6 +43,7 @@ public class PacketHandler
             switch (id)
             {
                 case Packet.SegmentID.AUTHORIZATION_ID:
+                    IsAuthorizationDone = true;
                     break;
 
                 case Packet.SegmentID.GET_TILE_ID:

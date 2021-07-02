@@ -23,6 +23,7 @@ public class AuthorizationSubmit : MonoBehaviour
     {
         email = emailText.text;
         password = passwordText.text;
+        Debug.Log(email + " " + password);
         StartCoroutine(SendMessageCor());
     }
 

@@ -14,7 +14,7 @@ public class CameraMoveManager : Singleton<CameraMoveManager>
     private bool isDrag = false;
     private Vector3 dragVector;
     private int maxX, maxY;
-    //private int speed = 5;
+    private int speed = 5;
 
     void Awake()
     {
